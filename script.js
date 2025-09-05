@@ -73,8 +73,29 @@ document.addEventListener('DOMContentLoaded', function() {
             menuDiv.innerHTML = `
                 <div class="flex flex-col space-y-4">
                     <a href="#home" class="text-navy-900 hover:text-gold transition">Home</a>
+                    
+                    <!-- Mobile Who We Are Section -->
+                    <div class="border-b border-gray-200 pb-2">
+                        <button data-dropdown="who-we-are" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition font-medium">
+                            Who We Are
+                            <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div data-dropdown-menu="who-we-are" class="hidden mt-2 ml-4 space-y-2">
+                            <a href="#our-group" class="block text-navy-900 hover:text-gold transition text-sm">Our Group</a>
+                            <div class="border-l-2 border-gray-200 pl-4">
+                                <button data-dropdown="our-people" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition text-sm">
+                                    Our People
+                                    <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                                </button>
+                                <div data-dropdown-menu="our-people" class="hidden mt-2 ml-4 space-y-1">
+                                    <a href="#board-directors" class="block text-navy-900 hover:text-gold transition text-xs">Board of Directors</a>
+                                    <a href="#management-team" class="block text-navy-900 hover:text-gold transition text-xs">Management Team</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <a href="#subsidiaries" class="text-navy-900 hover:text-gold transition">Subsidiaries</a>
-                    <a href="#about" class="text-navy-900 hover:text-gold transition">About Us</a>
                     <a href="#careers" class="text-navy-900 hover:text-gold transition">Careers</a>
                 </div>
             `;
@@ -90,6 +111,43 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Dropdown menu functionality
+    const dropdownButtons = document.querySelectorAll('[data-dropdown]');
+    const dropdowns = document.querySelectorAll('[data-dropdown-menu]');
+    
+    // Handle dropdown toggles on mobile
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-dropdown');
+            const targetDropdown = document.querySelector(`[data-dropdown-menu="${targetId}"]`);
+            
+            if (targetDropdown) {
+                targetDropdown.classList.toggle('hidden');
+                const chevron = this.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.classList.toggle('rotate-180');
+                }
+            }
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('[data-dropdown]') && !e.target.closest('[data-dropdown-menu]')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.add('hidden');
+            });
+            
+            dropdownButtons.forEach(button => {
+                const chevron = button.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.classList.remove('rotate-180');
+                }
+            });
+        }
+    });
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
