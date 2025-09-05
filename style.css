@@ -92,37 +92,40 @@
     background-attachment: fixed;
 }
 
-/* Text Slider Styles - FSDH Style */
-.text-slider-container {
+/* Visual Slider Styles - FSDH Style with Images */
+.slider-container {
     position: relative;
-    height: 300px;
     overflow: hidden;
+    height: 100vh;
 }
 
-.text-slide {
+.slide {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
+    height: 100%;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 2s ease-in-out;
+    background-attachment: fixed;
 }
 
-.text-slide.active {
+.slide.active {
     opacity: 1;
+    position: relative;
 }
 
-.text-slide h1,
-.text-slide h2 {
+.slide h1,
+.slide h2 {
     line-height: 1.1;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.text-slide p {
+.slide p {
     font-weight: 700;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Enhanced fade animations */
@@ -141,18 +144,18 @@
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Mobile responsiveness for text slider */
+/* Mobile responsiveness for visual slider */
 @media (max-width: 768px) {
-    .text-slider-container {
-        height: 250px;
+    .slide {
+        background-attachment: scroll;
     }
     
-    .text-slide h1,
-    .text-slide h2 {
+    .slide h1,
+    .slide h2 {
         font-size: 2rem !important;
     }
     
-    .text-slide p {
+    .slide p {
         font-size: 1.2rem !important;
     }
 }

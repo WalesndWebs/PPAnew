@@ -1,8 +1,8 @@
-// Text Slider Functionality - FSDH Style
-class TextSlider {
+// Visual Slider Functionality - FSDH Style with Images
+class VisualSlider {
     constructor() {
         this.currentSlide = 0;
-        this.slides = document.querySelectorAll('.text-slide');
+        this.slides = document.querySelectorAll('.slide');
         this.autoPlayInterval = null;
         this.autoPlayDelay = 3000; // 3 seconds like FSDH
         
@@ -57,8 +57,8 @@ class TextSlider {
 
 // Mobile menu toggle and other functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize text slider
-    const textSlider = new TextSlider();
+    // Initialize visual slider
+    const visualSlider = new VisualSlider();
     
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -200,10 +200,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('🚀 Prodigy Group website loaded successfully!');
     console.log('💡 Features:');
-    console.log('- FSDH-style text slider with auto-advance');
-    console.log('- Subsidiaries showcase');
+    console.log('- FSDH-style visual slider with background images');
+    console.log('- Professional subsidiary cards with images');
     console.log('- Company values and mission');
     console.log('- Smooth scrolling navigation');
     console.log('- Responsive design');
-    console.log('- Professional styling matching FSDH Group');
+    console.log('- Visual styling matching FSDH Group');
 });
