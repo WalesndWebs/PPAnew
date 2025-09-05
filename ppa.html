@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodigy Group - Financial Excellence Across Multiple Sectors</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="font-sans">
+  <!-- Header Section -->
+  <header class="bg-navy-900 text-white fixed w-full top-0 z-50 shadow-lg">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="attached_assets/logo3_1753018782452.png" alt="Prodigy Group Logo" class="h-10 mr-3">
+          <span class="text-xl font-bold">Prodigy Portfolio Advisers</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-gold transition font-semibold">Home</a>
+
+          <a href="#services" class="hover:text-gold transition font-semibold">Portfolio Services</a>
+          <a href="#about" class="hover:text-gold transition font-semibold">About Us</a>
+          <a href="#advisors" class="hover:text-gold transition font-semibold">Our Architects</a>
+          <a href="#contact" class="hover:text-gold transition font-semibold">Contact</a>
+        </div>
+        <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+          Schedule Consultation
+        </button>
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-white">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-navy-900 z-40">
+    <div class="container mx-auto px-6 py-8">
+      <div class="flex justify-end">
+        <button id="close-menu-btn" class="text-white text-3xl">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <a href="#home" class="text-white hover:text-gold transition">Home</a>
+
+        <a href="#services" class="text-white hover:text-gold transition">Portfolio Services</a>
+        <a href="#about" class="text-white hover:text-gold transition">About Us</a>
+        <a href="#advisors" class="text-white hover:text-gold transition">Our Team</a>
+        <a href="#contact" class="text-white hover:text-gold transition">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center text-white">
+        <!-- Main Brand Introduction -->
+        <div class="mb-12">
+          <p> </p>
+          <p class="text-2xl md:text-3xl font-semibold text-gold mb-5">Where sophisticated strategy meets the
+            serenity,you desserve.</p>
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">Prodigy Portfolio Advisers</h1>
+
+        </div>
+
+        <!-- Group Companies Showcase -->
+        <div class="mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Prodigy Finance -->
+            <div
+              class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-30 transition duration-300 border-2 border-gold">
+              <div class="text-gold mb-4">
+                <i class="fas fa-hand-holding-usd text-4xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-gold">Prodigy Finance</h3>
+              <p class="text-yellow-100 text-sm mb-3">Lending Solutions</p>
+              <p class="text-white text-sm">Comprehensive lending solutions for individuals and businesses with
+                competitive rates and personalized service</p>
+            </div>
+
+            <!-- Prodigy Portfolio Advisers -->
+            <div
+              class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-30 transition duration-300 border-2 border-gold">
+              <div class="text-gold mb-4">
+                <i class="fas fa-chart-line text-4xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-gold">Prodigy Portfolio Advisers</h3>
+              <p class="text-yellow-100 text-sm mb-3">Asset Management Company</p>
+              <p class="text-white text-sm">Where sophisticated strategy meets the serenity you deserve</p>
+            </div>
+
+            <!-- Prodigy BrokerCom -->
+            <div
+              class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-30 transition duration-300 border-2 border-gold">
+              <div class="text-gold mb-4">
+                <i class="fas fa-seedling text-4xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-gold">Prodigy BrokerCom</h3>
+              <p class="text-yellow-100 text-sm mb-3">Commodities Company</p>
+              <p class="text-white text-sm">Leading commodities trading excellence with global market access and expert
+                risk management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})"
+          class="bg-gold text-navy-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+          Learn about our services
+        </button>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-navy-900 transition">
+          Book Free Consultation
+        </button>
+      </div>
+
+      <!-- Combined Group Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold text-gold">65</div>
+          <div class="text-sm">Years Experience</div>
+        </div>
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold text-gold">₦10B+</div>
+          <div class="text-sm">Assets Under Management</div>
+        </div>
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold text-gold">500+</div>
+          <div class="text-sm">Satisfied Clients</div>
+        </div>
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold text-gold">98+</div>
+          <div class="text-sm">Client Retention Rate</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Who We Are Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-navy-900 mb-12">Who We Are</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Video Section -->
+        <div class="relative">
+          <div class="bg-navy-900 rounded-2xl shadow-2xl overflow-hidden relative">
+            <video class="w-full h-80 object-cover rounded-2xl" controls poster="attached_assets/logo1.png"
+              preload="metadata">
+              <source src="../attached_assets/WEBSITE VIDEO_1752958756597.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-gold">
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Who We Are</h3>
+            <p class="text-gray-700 leading-relaxed mb-4 text-lg">
+              At Prodigy Portfolio Advisers, we are a team of seasoned financial professionals dedicated to transforming
+              your financial aspirations into reality. Our certified advisors combine deep market expertise with
+              personalized service to empower clients in navigating complex financial landscapes.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              With over 65 years of combined experience, we specialize in strategic wealth management, investment
+              advisory, and comprehensive financial planning tailored to your unique goals and risk tolerance.
+            </p>
+            <div class="flex items-center space-x-4 mt-6">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-gold mr-2"></i>
+
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-shield-alt text-gold mr-2"></i>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Services Section -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-navy-900 mb-4">Financial Services</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Comprehensive wealth management solutions tailored to
+        your unique financial goals</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
+          <i class="fas fa-chart-pie text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Investment Management</h3>
+          <p class="text-gray-600">Professional portfolio management with diversified investment strategies</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
+          <i class="fas fa-piggy-bank text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Retirement Planning</h3>
+          <p class="text-gray-600">Secure your future with comprehensive retirement planning solutions</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
+          <i class="fas fa-handshake text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Collateralized Lending</h3>
+          <p class="text-gray-600">Access liquidity while maintaining your investment positions</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
+          <i class="fas fa-user-tie text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Bespoke Advisory</h3>
+          <p class="text-gray-600">Personalized financial advice tailored to your specific needs</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
+          <i class="fas fa-shield-alt text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Wealth Preservation</h3>
+          <p class="text-gray-600">Protect and preserve your wealth for future generations</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition">
+          <i class="fas fa-tint text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Liquidity Management</h3>
+          <p class="text-gray-600">Optimize cash flow and maintain optimal liquidity levels</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section id="about" class="py-20 bg-navy-900 text-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8">
+          <h3 class="text-2xl font-bold text-gold mb-4">Our Mission</h3>
+          <p class="text-lg leading-relaxed">To empower financial prosperity through unwavering trust, impenetrable
+            security, radical transparency, and relentless excellence-forging lifelong partnerships that elevate wealth
+            and well-being </p>
+        </div>
+        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8">
+          <h3 class="text-2xl font-bold text-gold mb-4">Our Vision</h3>
+          <p class="text-lg leading-relaxed">
+            To create shared prosperity for every stakeholder through a collaborative family culture that rewards
+            excellence and multiplies wealth for all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-gray-50 why-choose-us-bg">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-navy-900 mb-12">Why Choose Us</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center">
+          <i class="fas fa-graduation-cap text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-2">Certified Excellence</h3>
+          <p class="text-gray-600">Professional certifications and continuous education</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-chart-line text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-2">Proven Track Record</h3>
+          <p class="text-gray-600">Consistent performance over 65 years</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-users text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-2">Expert Team</h3>
+          <p class="text-gray-600">Certified financial professionals</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-lock text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-2">Secure & Trusted</h3>
+          <p class="text-gray-600">Bank-level security and compliance</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-cog text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-2">Personalized Service</h3>
+          <p class="text-gray-600">Tailored solutions for every client</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-clock text-4xl text-gold mb-4"></i>
+          <h3 class="text-xl font-bold text-navy-900 mb-2">24/7 Support</h3>
+          <p class="text-gray-600">Round-the-clock client assistance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisory Process Section -->
+  <section class="py-20 bg-white advisory-process-bg">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-navy-900 mb-12">Our Advisory Process</h2>
+
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+        <div class="text-center flex-1">
+          <div
+            class="bg-gold text-navy-900 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            1</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2">Discovery</h3>
+          <p class="text-gray-600">Understanding your goals and current situation</p>
+        </div>
+        <i class="fas fa-arrow-right text-gold text-2xl hidden md:block"></i>
+        <div class="text-center flex-1">
+          <div
+            class="bg-gold text-navy-900 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            2</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2">Analysis</h3>
+          <p class="text-gray-600">Comprehensive financial analysis and planning</p>
+        </div>
+        <i class="fas fa-arrow-right text-gold text-2xl hidden md:block"></i>
+        <div class="text-center flex-1">
+          <div
+            class="bg-gold text-navy-900 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            3</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2">Strategy</h3>
+          <p class="text-gray-600">Developing customized investment strategies</p>
+        </div>
+        <i class="fas fa-arrow-right text-gold text-2xl hidden md:block"></i>
+        <div class="text-center flex-1">
+          <div
+            class="bg-gold text-navy-900 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            4</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2">Implementation</h3>
+          <p class="text-gray-600">Executing your personalized plan</p>
+        </div>
+        <i class="fas fa-arrow-right text-gold text-2xl hidden md:block"></i>
+        <div class="text-center flex-1">
+          <div
+            class="bg-gold text-navy-900 rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            5</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2">Monitoring</h3>
+          <p class="text-gray-600">Ongoing review and adjustment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Success Stories -->
+  <section class="py-20 bg-gray-50 success-stories-bg">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-navy-900 mb-12">Client Success Stories</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="flex items-center mb-4">
+            <div class="text-gold">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">" The customer experience with Prodigy has been fantastic so far.
+            I have not had a cause to regret embarking on my wealth journey with them."</p>
+          <div class="font-bold text-navy-900">Nancy Nwachukwu</div>
+          <div class="text-sm text-gray-500">EX- pension administrator</div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="flex items-center mb-4">
+            <div class="text-gold">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">Client Success Stories
+            Hear from our clients about how we've helped them achieve their financial goals.
+            " The customer service is top notch. Prodigy Portfolio advisers has remained focused and accommodative to
+            all my requests with premium returns to my Portfolio. They are highly recommended"</p>
+          <div class="font-bold text-navy-900">Ekundayo Steve</div>
+          <div class="text-sm text-gray-500">CIO, Financial guru</div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="flex items-center mb-4">
+            <div class="text-gold">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">" My mum introduced me to Prodigy Portfolio Advisers to start my targeted
+            savings and investments in the Nigerian stock market.
+            I can safely say that their portfolio advisory services are transparent, simplified, and motivating.I can
+            already envisage my future wealth. Thank you, Prodigy Portfolios"</p>
+          <div class="font-bold text-navy-900">Daniel Eghiebade</div>
+          <div class="text-sm text-gray-500">Student </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Architects -->
+  <section id="advisors" class="py-20 bg-gradient-to-br from-gray-50 to-white architects-bg">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-navy-900 mb-4">Meet the Architects</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Our experienced team of financial professionals brings decades of
+          expertise to guide your wealth management journey</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="architect-card group">
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <div class="relative">
+              <div
+                class="architect-image-container bg-gradient-to-br from-navy-900 to-blue-800 h-80 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <img src="attached_assets/isabella.png" alt="Isabella Chizoba Ozobu"
+                  class="w-full h-full object-cover relative z-10">
+                <div class="absolute top-4 right-4">
+                  <div class="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg">
+                  <i class="fas fa-chart-line text-navy-900 text-lg"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 pt-10 text-center">
+              <h3 class="text-2xl font-bold text-navy-900 mb-2">Isabella Chizoba Ozobu</h3>
+              <p class="text-gold font-semibold mb-3 text-lg">Business Developer</p>
+              <p class="text-gray-600 mb-4">Dynamic Business Development & Operational Leadership</p>
+
+              <!-- Expandable content -->
+              <div class="architect-details hidden text-left bg-gray-50 p-4 rounded-lg mt-4">
+                <p class="text-gray-700 text-sm leading-relaxed mb-3">
+                  Isabella Chizoba Ozobu is a results-driven professional with a BA in History & International Studies
+                  from Lagos State University and a strong track record in business development and operational
+                  management. In her current role, she excels at identifying growth opportunities, building client
+                  relationships, and negotiating strategic terms to drive customer satisfaction and revenue.
+                </p>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  Her prior experience as an Operations Supervisor involved team leadership, inventory oversight, and
+                  logistics coordination—demonstrating strong organizational planning and decision-making skills. While
+                  her background spans multiple industries, Isabella brings proven capabilities in client engagement,
+                  business expansion, and operational efficiency, making her a valuable asset in the financial services
+                  environment.
+                </p>
+              </div>
+
+              <button
+                class="read-more-btn bg-gold text-navy-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition text-sm mt-4">
+                Read More
+              </button>
+              <a href="navigators.html"
+                class="inline-block bg-navy-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition text-sm mt-2">
+                Meet the Navigators
+              </a>
+
+              <div class="flex justify-center space-x-3 mt-4">
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                  <i class="fab fa-linkedin text-sm"></i>
+                </div>
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                  <i class="fas fa-envelope text-sm"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="architect-card group">
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <div class="relative">
+              <div
+                class="architect-image-container bg-gradient-to-br from-purple-600 to-pink-600 h-80 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <img src="attached_assets/chidi.png" alt="Chidi Egubjor Paschal"
+                  class="w-full h-full object-cover relative z-10">
+                <div class="absolute top-4 right-4">
+                  <div class="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg">
+                  <i class="fas fa-piggy-bank text-navy-900 text-lg"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 pt-10 text-center">
+              <h3 class="text-2xl font-bold text-navy-900 mb-2">Chidi Egubjor Paschal</h3>
+              <p class="text-gold font-semibold mb-3 text-lg">Chief Operating Officer</p>
+              <p class="text-gray-600 mb-4">Leveraging IT Excellence for Operational Efficiency & Security</p>
+
+              <!-- Expandable content -->
+              <div class="architect-details hidden text-left bg-gray-50 p-4 rounded-lg mt-4">
+                <p class="text-gray-700 text-sm leading-relaxed mb-3">
+                  Chidi Egubjor Paschal brings over 19 years of extensive post-graduate experience in Computer
+                  Engineering and Information Technology, with a strong foundation in Mathematics from Obafemi Awolowo
+                  University, Ile-Ife, Osun State. His expertise spans critical areas such as Computer Hardware/Software
+                  Installation, Management, Network Administration (Windows 2008/2012 platforms), Systems Security,
+                  Integration, Configuration, and Disaster Planning
+                  As a Chief Operating Officer and former Group Head of ICT at leading pension management firms in
+                  Nigeria, Chidi has a proven track record of overseeing day-to-day business operations, preparing
+                  strategic ICT plans, implementing IT policies and security strategies, managing IT infrastructure, and
+                  ensuring regulatory compliance. His background includes significant roles in managing critical
+                  financial software like Fundfusion Manager and overseeing data integrity and backup procedures.
+                  A Senior Member of the Chartered Portfolio Management Institute and an Associate Chartered Economist,
+                  Chidi combines technical prowess with a deep understanding of financial sector operations. He is adept
+                  at leading teams, managing complex projects, and ensuring continuous improvement in ICT services,
+                  making him a valuable asset for driving technological advancement and operational resilience within
+                  financial institutions.
+                </p>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  A former Group Head of ICT and now COO, Chidi has successfully overseen strategic planning,
+                  implementation of critical financial software, and enforcement of IT governance. He is a Senior
+                  Member of the Chartered Portfolio Management Institute and an Associate Chartered Economist,
+                  combining technical leadership with financial sector insight—driving innovation, security, and
+                  efficiency in financial operations.
+                </p>
+              </div>
+
+              <button
+                class="read-more-btn bg-gold text-navy-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition text-sm mt-4">
+                Read More
+              </button>
+              <a href="navigators.html"
+                class="inline-block bg-navy-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition text-sm mt-2">
+                Meet the Navigators
+              </a>
+
+              <div class="flex justify-center space-x-3 mt-4">
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                  <i class="fab fa-linkedin text-sm"></i>
+                </div>
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                  <i class="fas fa-envelope text-sm"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="architect-card group">
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <div class="relative">
+              <div
+                class="architect-image-container bg-gradient-to-br from-green-600 to-teal-600 h-80 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <img src="attached_assets/felicia.png" alt="Adekemi Felicia Adebgola"
+                  class="w-full h-full object-cover relative z-10">
+                <div class="absolute top-4 right-4">
+                  <div class="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg">
+                  <i class="fas fa-calculator text-navy-900 text-lg"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 pt-10 text-center">
+              <h3 class="text-2xl font-bold text-navy-900 mb-2">Adekemi Felicia Adebgola</h3>
+              <p class="text-gold font-semibold mb-3 text-lg">Legal Counsel & Compliance Specialist</p>
+              <p class="text-gray-600 mb-4">Expert Legal Counsel & Regulatory Compliance for Financial Services</p>
+
+              <!-- Expandable content -->
+              <div class="architect-details hidden text-left bg-gray-50 p-4 rounded-lg mt-4">
+                <p class="text-gray-700 text-sm leading-relaxed mb-3">
+                  Adekemi Felicia Adebgola is a seasoned legal professional with expertise in corporate commercial law,
+                  regulatory compliance, and company secretarial services, particularly within the financial services
+                  and energy sectors. She holds an LL.B from Ekiti State University, a B.L from the Nigerian Law School,
+                  Yenagoa, and an LL.M in Energy Law from the University of Ibadan's CPEEL.
+                </p>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  With certifications in Arbitration and Chartered Secretarial Practice, Adekemi brings a well-rounded
+                  legal perspective to asset and wealth management. As former Deputy Head Legal & Company Secretary at
+                  Sky Capital and Financial Allied International Limited, she has led initiatives to strengthen
+                  compliance, draft key legal frameworks, and reduce non-performing loan portfolios—achieving a 40% drop
+                  in a single financial year. Her strengths in contract drafting, policy formulation, corporate
+                  governance, and regulatory risk management ensure secure, transparent, and compliant operations.
+                  Adekemi is a strategic legal asset for financial institutions navigating Nigeria's evolving regulatory
+                  landscape.
+                </p>
+              </div>
+
+              <button
+                class="read-more-btn bg-gold text-navy-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition text-sm mt-4">
+                Read More
+              </button>
+              <a href="navigators.html"
+                class="inline-block bg-navy-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition text-sm mt-2">
+                Meet the Navigators
+              </a>
+
+              <div class="flex justify-center space-x-3 mt-4">
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                  <i class="fab fa-linkedin text-sm"></i>
+                </div>
+                <div
+                  class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                  <i class="fas fa-envelope text-sm"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Consultation Section -->
+  <section id="contact" class="py-20 bg-navy-900 text-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Schedule Consultation</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold text-gold mb-6">Get in Touch</h3>
+          <form action="https://formsubmit.co/prodigyportfolioadvisers@gmail.com" method="POST" class="space-y-4">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Consultation Request - Prodigy Portfolio Advisors">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="thank-you.html">
+
+            <div>
+              <input type="text" name="name" placeholder="Full Name" required
+                class="w-full px-4 py-3 rounded-lg bg-white text-navy-900">
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email Address" required
+                class="w-full px-4 py-3 rounded-lg bg-white text-navy-900">
+            </div>
+            <div>
+              <input type="tel" name="phone" placeholder="Phone Number" required
+                class="w-full px-4 py-3 rounded-lg bg-white text-navy-900">
+            </div>
+            <div>
+              <textarea name="financial_goals" placeholder="Financial Goals" rows="4"
+                class="w-full px-4 py-3 rounded-lg bg-white text-navy-900"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-gold text-navy-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+              Request Consultation
+            </button>
+          </form>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-gold mb-6">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-phone text-gold mr-4"></i>
+              <span>+234 (0)916-762-9178</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-gold mr-4 mt-1"></i>
+              <div>
+                <p>investments@prodigyportfolioadvisers.com</p>
+                <p>credits@prodigyportfolioadvisers.com</p>
+                <p>info@prodigyportfolioadvisers.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt text-gold mr-4 mt-1"></i>
+              <div>
+                <p>17th Floor,</p>
+                <p>Elephant House,Marina Lagos</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-clock text-gold mr-4"></i>
+              <span>Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div>
+              <div id="consultation-benefits">
+                <h1
+                  style="color: #e0cb0aef; font-size: 36px; font-weight: bold; font-family: Arial, sans-serif; line-height: 1.2; margin-bottom: 20px;">
+                  Why Schedule a<br>Consultation?
+                </h1>
+                <ul
+                  style="list-style-type: disc; padding-left: 20px; color: #f5ececee; font-size: 18px; font-family: Arial, sans-serif;">
+                  <li style="margin-bottom: 10px;">Complimentary financial health assessment</li>
+                  <li style="margin-bottom: 10px;">Personalized investment strategy recommendations</li>
+                  <li style="margin-bottom: 10px;">No obligation or hidden fees</li>
+                  <li style="margin-bottom: 10px;">Meet with certified financial planners</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="attached_assets/logo3_1753018782452.png" alt="Prodigy Portfolio Advisors Logo" class="h-8 mr-3">
+            <span class="text-xl font-bold">Prodigy Portfolio Advisers</span>
+          </div>
+          <p class="text-gray-400">'Where sophisticated strategy meets the serenity, you deserve'</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#home" class="hover:text-gold transition">Home</a></li>
+            <li><a href="#services" class="hover:text-gold transition">Services</a></li>
+            <li><a href="#about" class="hover:text-gold transition">About Us</a></li>
+            <li><a href="#advisors" class="hover:text-gold transition">Advisors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>Investment Management</li>
+            <li>Retirement Planning</li>
+            <li>Wealth Preservation</li>
+            <li>Financial Advisory</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <i class="fab fa-linkedin text-2xl text-gray-400 hover:text-gold transition cursor-pointer"></i>
+            <i class="fab fa-twitter text-2xl text-gray-400 hover:text-gold transition cursor-pointer"></i>
+            <i class="fab fa-facebook text-2xl text-gray-400 hover:text-gold transition cursor-pointer"></i>
+            <i class="fab fa-instagram text-2xl text-gray-400 hover:text-gold transition cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Prodigy Portfolio Advisors. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

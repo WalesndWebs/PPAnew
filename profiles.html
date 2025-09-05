@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Modals - Prodigy Portfolio Advisors</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Modal Overlay -->
+    <div id="profileModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-90vh overflow-y-auto relative">
+            <!-- Close Button -->
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <!-- Profile Content Container -->
+            <div id="profileContent" class="p-8">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Templates (Hidden) -->
+    <div class="hidden">
+        <!-- Architect Profiles -->
+        <div id="isabella-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-user-tie text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Isabella Chizoba Ozobu</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Business Developer</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Isabella Chizoba Ozobu is a results-driven professional with a BA in History & International
+                        Studies from Lagos State University and a strong track record in business development and
+                        operational management. In her current role, she excels at identifying growth opportunities,
+                        building client relationships, and negotiating strategic terms to drive customer satisfaction
+                        and revenue.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Her prior experience as an Operations Supervisor involved team leadership, inventory oversight,
+                        and logistics coordination—demonstrating strong organizational planning and decision-making
+                        skills. While her background spans multiple industries, Isabella brings proven capabilities in
+                        client engagement, business expansion, and operational efficiency, making her a valuable asset
+                        in the financial services environment.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Business Development & Strategy</li>
+                        <li>Client Relationship Management</li>
+                        <li>Operational Leadership</li>
+                        <li>Strategic Negotiations</li>
+                        <li>Team Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="chidi-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-user-graduate text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Chidi Egubjor Paschal<br>: Leveraging IT
+                        Excellence for Financial Operational Efficiency and Security</br></h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Chief Operating Officer</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Chidi Egubjor Paschal brings over 19 years of extensive post-graduate experience in Computer
+                        Engineering and Information Technology, with a strong foundation in Mathematics from Obafemi
+                        Awolowo University, Ile-Ife, Osun State. His expertise spans critical areas such as Computer
+                        Hardware/Software Installation, Management, Network Administration (Windows 2008/2012
+                        platforms), Systems Security, Integration, Configuration, and Disaster Planning
+                        As a Chief Operating Officer and former Group Head of ICT at leading pension management firms in
+                        Nigeria, Chidi has a proven track record of overseeing day-to-day business operations, preparing
+                        strategic ICT plans, implementing IT policies and security strategies, managing IT
+                        infrastructure, and ensuring regulatory compliance. His background includes significant roles in
+                        managing critical financial software like Fundfusion Manager and overseeing data integrity and
+                        backup procedures.
+                        A Senior Member of the Chartered Portfolio Management Institute and an Associate Chartered
+                        Economist, Chidi combines technical prowess with a deep understanding of financial sector
+                        operations. He is adept at leading teams, managing complex projects, and ensuring continuous
+                        improvement in ICT services, making him a valuable asset for driving technological advancement
+                        and operational resilience within financial institutions.
+
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        A former Group Head of ICT and now COO, Chidi has successfully overseen strategic planning,
+                        implementation of critical financial software, and enforcement of IT governance. He is a Senior
+                        Member of the Chartered Portfolio Management Institute and an Associate Chartered Economist,
+                        combining technical leadership with financial sector insight—driving innovation, security, and
+                        efficiency in financial operations.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>IT Infrastructure & Security</li>
+                        <li>Financial Software Implementation</li>
+                        <li>Strategic Planning & Governance</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Portfolio Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="adekemi-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-green-600 to-teal-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-user-check text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Adekemi Felicia Adebgola</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Legal Counsel & Compliance Specialist</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Adekemi Felicia Adebgola is a seasoned legal professional with expertise in corporate commercial
+                        law, regulatory compliance, and company secretarial services, particularly within the financial
+                        services and energy sectors. She holds an LL.B from Ekiti State University, a B.L from the
+                        Nigerian Law School, Yenagoa, and an LL.M in Energy Law from the University of Ibadan's CPEEL.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        With certifications in Arbitration and Chartered Secretarial Practice, Adekemi brings a
+                        well-rounded legal perspective to asset and wealth management. As former Deputy Head Legal &
+                        Company Secretary at Sky Capital and Financial Allied International Limited, she has led
+                        initiatives to strengthen compliance, draft key legal frameworks, and reduce non-performing loan
+                        portfolios—achieving a 40% drop in a single financial year.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Corporate Commercial Law</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Contract Drafting & Negotiation</li>
+                        <li>Risk Management</li>
+                        <li>Corporate Governance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Board Member Profiles -->
+        <div id="mohammed-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-user-tie text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Mohammed Yunusa</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Chairman</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Mohammed Yunusa brings over two decades of executive leadership experience in the financial
+                        services industry. As Chairman, he provides strategic oversight and ensures corporate governance
+                        excellence. His expertise spans across investment banking, asset management, and regulatory
+                        compliance, making him instrumental in guiding Prodigy Portfolio Advisors' strategic direction
+                        and growth initiatives.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Throughout his distinguished career, Mohammed has held senior positions in leading financial
+                        institutions, where he has successfully led major transformational initiatives, mergers and
+                        acquisitions, and strategic partnerships. His deep understanding of the Nigerian financial
+                        markets and regulatory environment has been crucial in positioning organizations for sustainable
+                        growth and market leadership.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Strategic Leadership & Governance</li>
+                        <li>Investment Banking</li>
+                        <li>Asset Management</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Mergers & Acquisitions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="bode-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <img src="attached_assets/bode1_1753582062137.png" alt="Bode Ojeniyi" class="w-full h-full object-cover rounded-full">
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Bode Ojeniyi</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Executive Director</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Bode Ojeniyi has over 25 years of cognate financial services industry experience principally in banking and insurance. His experience covers Banking Operations, Sales and Business Development, Credit and Financial Analysis, Loan Structuring, Private Equity Investments, Risk Assets Review, Finance & Strategy, Enterprise Risk Management, Audit & Compliance, HR, Facilities Management, Training and People Development, Process Review Consulting and General Administration.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        He holds a Bachelor of Science Degree and a Masters of Science Degree in Agricultural Economics from the University of Ibadan. He also holds a Masters in Business Administration (Strategic Management) from Ogun State University. Mr. Ojeniyi is a Fellow of the Institute of Strategic Management of Nigeria and the Institute of Credit Administration of Nigeria. He is a member of the Chartered Insurance Institute of Nigeria (CIIN) and the Chartered Insurance Institute (CII), United Kingdom. He is also an Honorary Senior Member of the Chartered Institute of Bankers of Nigeria (CIBN).
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Banking Operations & Business Development</li>
+                        <li>Credit Analysis & Loan Structuring</li>
+                        <li>Private Equity Investments</li>
+                        <li>Enterprise Risk Management</li>
+                        <li>Strategic Management & Finance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Management Team Profiles -->
+        <div id="lauretha-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-user-tie text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Lauretha Irunokhai</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Group Managing Director</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Lauretha Irunokhai serves as Group Managing Director, overseeing strategic business operations
+                        and executive leadership initiatives. With extensive experience in financial services
+                        management, she drives organizational growth, operational excellence, and strategic
+                        partnerships. Her leadership ensures alignment between business objectives and client value
+                        creation across all service divisions.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Her visionary leadership style and commitment to excellence have been instrumental in
+                        establishing Prodigy Portfolio Advisors as a trusted name in wealth management. Lauretha's
+                        strategic approach to business development and her focus on client-centric solutions have
+                        contributed significantly to the company's growth and market positioning.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Executive Leadership</li>
+                        <li>Strategic Business Operations</li>
+                        <li>Organizational Development</li>
+                        <li>Partnership Management</li>
+                        <li>Financial Services Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Board Member Profiles -->
+        <div id="lanre-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-green-600 to-teal-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-balance-scale text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Lanre Ajayi</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Independent Director</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Lanre Ajayi brings extensive legal and regulatory expertise to the board. As an Independent
+                        Director, he ensures compliance with regulatory requirements and maintains the highest standards
+                        of corporate governance. His background in financial law and regulatory frameworks helps
+                        safeguard client interests while ensuring the company operates within all legal parameters and
+                        industry best practices.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        With years of experience in the legal profession, Lanre has advised numerous financial
+                        institutions on complex regulatory matters, corporate restructuring, and compliance issues. His
+                        deep understanding of the Nigerian legal and regulatory environment has been invaluable in
+                        navigating the evolving financial services landscape.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Financial Law & Regulation</li>
+                        <li>Corporate Governance</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Legal Advisory</li>
+                        <li>Risk Assessment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="sanusi-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-red-600 to-pink-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-chart-line text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Sanusi Ayama</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Independent Director</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Sanusi Ayama is a distinguished financial planning and risk management expert with deep
+                        expertise in corporate finance. As an Independent Director, he provides valuable insights into
+                        strategic financial planning, risk assessment, and capital allocation strategies. His experience
+                        in navigating complex financial markets and developing sustainable growth strategies has been
+                        crucial in positioning the company for long-term success.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        His extensive background in financial analysis and strategic planning has enabled him to guide
+                        organizations through various market cycles. Sanusi's approach to risk management combines
+                        traditional financial principles with innovative strategies to optimize returns while protecting
+                        capital.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Financial Planning & Analysis</li>
+                        <li>Risk Management</li>
+                        <li>Corporate Finance</li>
+                        <li>Strategic Planning</li>
+                        <li>Capital Allocation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="chinyere-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-user-check text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Chinyere Nwoagu</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Non-Executive Director</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Chinyere Nwoagu is an operations excellence expert with extensive experience in process
+                        optimization and service delivery enhancement. As a Non-Executive Director, she focuses on
+                        improving operational efficiency, client service standards, and business process innovation. Her
+                        expertise in streamlining operations while maintaining quality has been instrumental in
+                        enhancing client satisfaction and operational effectiveness.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Her background in operations management spans multiple industries, where she has consistently
+                        delivered improvements in productivity, cost efficiency, and service quality. Chinyere's
+                        systematic approach to process improvement has resulted in significant operational enhancements
+                        across various business functions.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Operations Excellence</li>
+                        <li>Process Optimization</li>
+                        <li>Service Delivery Enhancement</li>
+                        <li>Quality Management</li>
+                        <li>Business Process Innovation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="steven-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-cog text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Steven Ekundayo Modeyin</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Non-Executive Director</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Steven Ekundayo Modeyin brings extensive technology and digital transformation expertise to the
+                        board. As a Non-Executive Director, he leads initiatives in financial technology innovation,
+                        digital platform development, and modern investment solutions. His vision for leveraging
+                        technology to enhance client experience and operational efficiency has been crucial in
+                        positioning the company at the forefront of fintech innovation.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        With a deep understanding of emerging technologies and their applications in financial services,
+                        Steven has successfully guided digital transformation initiatives that have revolutionized
+                        client engagement and operational processes. His expertise spans across fintech development,
+                        cybersecurity, and digital innovation strategies.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Technology Innovation</li>
+                        <li>Digital Transformation</li>
+                        <li>Fintech Development</li>
+                        <li>Digital Platform Development</li>
+                        <li>Cybersecurity Strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Management Team Profiles -->
+        <div id="chidi-cto-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-laptop text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Chidi Egbufor</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Chief Info-technology Officer</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Chidi Egbufor leads the technology division as Chief Info-technology Officer, overseeing IT
+                        infrastructure, cybersecurity, and digital innovation. His expertise ensures robust technology
+                        platforms that support seamless client experiences, secure transactions, and efficient
+                        operational processes. He drives the digital transformation initiatives that keep the company
+                        competitive in the evolving fintech landscape.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        With extensive experience in enterprise technology management, Chidi has successfully
+                        implemented cutting-edge solutions that enhance both client experience and operational
+                        efficiency. His strategic approach to technology adoption has positioned the company as a leader
+                        in digital financial services.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>IT Infrastructure Management</li>
+                        <li>Cybersecurity</li>
+                        <li>Digital Innovation</li>
+                        <li>Technology Strategy</li>
+                        <li>Systems Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="felicia-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-clipboard-check text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Felicia Adegbola</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Group Head, Compliance</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Felicia Adegbola serves as Group Head of Compliance, ensuring all operations meet regulatory
+                        standards and industry best practices. Her expertise in financial regulations, risk assessment,
+                        and compliance frameworks protects both the company and clients. She develops and implements
+                        compliance policies that maintain the highest standards of integrity and transparency in all
+                        business activities.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Her comprehensive understanding of regulatory requirements and proactive approach to compliance
+                        management has been instrumental in maintaining the company's sterling reputation and regulatory
+                        standing. Felicia's leadership ensures that all business processes align with both local and
+                        international compliance standards.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Regulatory Compliance</li>
+                        <li>Risk Assessment</li>
+                        <li>Policy Development</li>
+                        <li>Financial Regulations</li>
+                        <li>Compliance Training</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="isabella-sales-profile" class="profile-template">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-pink-600 to-red-600 rounded-full flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-briefcase text-8xl text-white/90"></i>
+                        <div class="absolute top-4 right-4">
+                            <div class="w-4 h-4 bg-gold rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Isabella Ozobu</h2>
+                    <p class="text-gold font-semibold text-xl mb-4">Group Head, Sales / Marketing & Promotions</p>
+                    <div class="flex justify-center space-x-4">
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition cursor-pointer">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Isabella Ozobu leads the Sales, Marketing & Promotions division, driving client acquisition,
+                        brand development, and market expansion strategies. Her expertise in financial services
+                        marketing and client relationship development has been instrumental in growing the company's
+                        market presence. She develops innovative marketing campaigns and promotional strategies that
+                        effectively communicate the value of the company's financial solutions.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        With a proven track record in sales leadership and marketing strategy, Isabella has successfully
+                        expanded the company's client base while maintaining high standards of client service and
+                        satisfaction. Her innovative approach to marketing has positioned the company as a thought
+                        leader in the wealth management space.
+                    </p>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Key Competencies</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Sales Leadership</li>
+                        <li>Marketing Strategy</li>
+                        <li>Brand Development</li>
+                        <li>Client Acquisition</li>
+                        <li>Market Expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        // Profile modal functionality
+        function openProfile(profileId) {
+            const modal = document.getElementById('profileModal');
+            const profileContent = document.getElementById('profileContent');
+            const templateContent = document.getElementById(profileId + '-profile');
+
+            if (templateContent) {
+                profileContent.innerHTML = templateContent.innerHTML;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeProfile() {
+            const modal = document.getElementById('profileModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners
+        document.getElementById('closeModal').addEventListener('click', closeProfile);
+        document.getElementById('profileModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeProfile();
+            }
+        });
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeProfile();
+            }
+        });
+
+        // Make functions globally available
+        window.openProfile = openProfile;
+        window.closeProfile = closeProfile;
+    </script>
+</body>
+
+</html>
