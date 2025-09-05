@@ -1,13 +1,10 @@
-// Hero Slider Functionality
-class HeroSlider {
+// Text Slider Functionality - FSDH Style
+class TextSlider {
     constructor() {
         this.currentSlide = 0;
-        this.slides = document.querySelectorAll('.slide');
-        this.dots = document.querySelectorAll('.slider-dot');
-        this.prevBtn = document.querySelector('.slider-prev');
-        this.nextBtn = document.querySelector('.slider-next');
+        this.slides = document.querySelectorAll('.text-slide');
         this.autoPlayInterval = null;
-        this.autoPlayDelay = 5000; // 5 seconds
+        this.autoPlayDelay = 3000; // 3 seconds like FSDH
         
         this.init();
     }
@@ -15,40 +12,22 @@ class HeroSlider {
     init() {
         if (this.slides.length === 0) return;
         
-        // Event listeners
-        this.prevBtn?.addEventListener('click', () => this.previousSlide());
-        this.nextBtn?.addEventListener('click', () => this.nextSlide());
-        
-        this.dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => this.goToSlide(index));
-        });
-        
-        // Touch/swipe support
-        this.addTouchSupport();
+        // Simple auto-advance only
         
         // Auto-play
         this.startAutoPlay();
         
-        // Pause on hover
-        const sliderContainer = document.querySelector('.slider-container');
-        sliderContainer?.addEventListener('mouseenter', () => this.stopAutoPlay());
-        sliderContainer?.addEventListener('mouseleave', () => this.startAutoPlay());
+        // Continuous loop without pause
     }
     
     goToSlide(index) {
-        // Remove active class from all slides and dots
+        // Remove active class from all slides
         this.slides.forEach(slide => slide.classList.remove('active'));
-        this.dots.forEach(dot => dot.classList.remove('active'));
         
-        // Add active class to target slide and dot
+        // Add active class to target slide
         this.slides[index].classList.add('active');
-        this.dots[index].classList.add('active');
         
         this.currentSlide = index;
-        
-        // Restart auto-play
-        this.stopAutoPlay();
-        this.startAutoPlay();
     }
     
     nextSlide() {
@@ -74,61 +53,12 @@ class HeroSlider {
         }
     }
     
-    addTouchSupport() {
-        let startX = 0;
-        let endX = 0;
-        
-        const sliderContainer = document.querySelector('.slider-container');
-        if (!sliderContainer) return;
-        
-        sliderContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-        
-        sliderContainer.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            this.handleSwipe();
-        });
-        
-        // Mouse support for desktop
-        let mouseDown = false;
-        
-        sliderContainer.addEventListener('mousedown', (e) => {
-            mouseDown = true;
-            startX = e.clientX;
-        });
-        
-        sliderContainer.addEventListener('mouseup', (e) => {
-            if (mouseDown) {
-                endX = e.clientX;
-                this.handleSwipe();
-                mouseDown = false;
-            }
-        });
-        
-        sliderContainer.addEventListener('mouseleave', () => {
-            mouseDown = false;
-        });
-    }
-    
-    handleSwipe() {
-        const threshold = 50;
-        const diff = startX - endX;
-        
-        if (Math.abs(diff) > threshold) {
-            if (diff > 0) {
-                this.nextSlide();
-            } else {
-                this.previousSlide();
-            }
-        }
-    }
 }
 
 // Mobile menu toggle and other functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize slider
-    const slider = new HeroSlider();
+    // Initialize text slider
+    const textSlider = new TextSlider();
     
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -139,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (nav) {
             const menuDiv = document.createElement('div');
             menuDiv.id = 'mobile-menu';
-            menuDiv.className = 'md:hidden bg-navy-900 px-6 pb-4';
+            menuDiv.className = 'md:hidden bg-white px-6 pb-4 border-t border-gray-200';
             menuDiv.innerHTML = `
                 <div class="flex flex-col space-y-4">
-                    <a href="#home" class="text-white hover:text-gold transition">Home</a>
-                    <a href="#services" class="text-white hover:text-gold transition">Services</a>
-                    <a href="#about" class="text-white hover:text-gold transition">About Us</a>
-                    <a href="#contact" class="text-white hover:text-gold transition">Contact</a>
+                    <a href="#home" class="text-navy-900 hover:text-gold transition">Home</a>
+                    <a href="#subsidiaries" class="text-navy-900 hover:text-gold transition">Subsidiaries</a>
+                    <a href="#about" class="text-navy-900 hover:text-gold transition">About Us</a>
+                    <a href="#careers" class="text-navy-900 hover:text-gold transition">Careers</a>
                 </div>
             `;
             nav.appendChild(menuDiv);
@@ -268,12 +198,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, index * 100);
     });
 
-    console.log('🚀 Prodigy website loaded successfully!');
+    console.log('🚀 Prodigy Group website loaded successfully!');
     console.log('💡 Features:');
-    console.log('- Interactive hero slider with auto-play');
-    console.log('- Touch/swipe support for mobile devices');
+    console.log('- FSDH-style text slider with auto-advance');
+    console.log('- Subsidiaries showcase');
+    console.log('- Company values and mission');
     console.log('- Smooth scrolling navigation');
-    console.log('- Responsive mobile menu');
-    console.log('- Form submission handling');
-    console.log('- Scroll animations');
+    console.log('- Responsive design');
+    console.log('- Professional styling matching FSDH Group');
 });
