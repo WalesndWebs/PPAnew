@@ -92,6 +92,136 @@
     background-attachment: fixed;
 }
 
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slider-dot {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background-color: var(--gold) !important;
+    opacity: 1 !important;
+    transform: scale(1.2);
+}
+
+.slider-prev,
+.slider-next {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+
+/* Enhanced Animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Auto-play indicator */
+.slider-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--gold);
+    transition: width 5s linear;
+    width: 0;
+}
+
+.slider-progress.active {
+    width: 100%;
+}
+
+/* Mobile responsiveness for slider */
+@media (max-width: 768px) {
+    .slider-prev,
+    .slider-next {
+        width: 45px;
+        height: 45px;
+        font-size: 0.8rem;
+    }
+    
+    .slider-prev {
+        left: 1rem;
+    }
+    
+    .slider-next {
+        right: 1rem;
+    }
+    
+    .slide h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .slide p {
+        font-size: 1rem !important;
+    }
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
