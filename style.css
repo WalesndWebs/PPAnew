@@ -160,6 +160,23 @@
     }
 }
 
+/* Navigation - Fixed positioning with high z-index */
+nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    z-index: 9999 !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(30, 41, 59, 0.1);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Ensure body has top padding to account for fixed nav */
+body {
+    padding-top: 0;
+}
+
 /* FSDH-style enhancements */
 .group:hover .group-hover\:bg-gold {
     background-color: var(--gold);
@@ -169,12 +186,6 @@
 .bg-white:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Navigation transparency */
-nav {
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(30, 41, 59, 0.1);
 }
 
 /* Typography matching FSDH style */
