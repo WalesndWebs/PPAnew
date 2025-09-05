@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Group - Our Subsidiaries</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 min-h-screen">
+    <!-- Main Content -->
+    <section class="min-h-screen flex flex-col items-center justify-center text-white px-6 py-20">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+
+            <!-- Prodigy Finance -->
+            <div class="space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gold">Prodigy Finance</h2>
+                <p class="text-lg md:text-xl text-blue-100 mb-6">(Lending Solutions)</p>
+                <button onclick="openModal('finance')"
+                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Learn more
+                </button>
+            </div>
+
+            <!-- Prodigy Portfolio Advisers -->
+            <div class="space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gold">Prodigy Portfolio Advisers</h2>
+                <p class="text-lg md:text-xl text-blue-100 mb-6">(Asset Management Company)</p>
+                <button onclick="openModal('portfolio')"
+                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Learn more
+                </button>
+            </div>
+
+            <!-- Prodigy Brokercom -->
+            <div class="space-y-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gold">Prodigy Brokercom</h2>
+                <p class="text-lg md:text-xl text-blue-100 mb-6">(Agro and Mineral Commodities Trading)</p>
+                <button onclick="openModal('brokercom')"
+                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Learn more
+                </button>
+            </div>
+
+            <!-- Go Back Button -->
+            <div class="pt-8 flex justify-center space-x-4">
+                <button onclick="window.location.href='ppa.html'"
+                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Homepage
+                </button>
+                <button onclick="window.location.href='ppa.html'"
+                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Go Back
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-90vh overflow-y-auto relative">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <!-- Modal Content Container -->
+            <div id="modalContent" class="p-8">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(company) {
+            const modal = document.getElementById('modalOverlay');
+            const content = document.getElementById('modalContent');
+
+            let modalContent = '';
+
+            switch (company) {
+                case 'finance':
+                    modalContent = `
+                        <div class="text-center space-y-6">
+                            <h2 class="text-4xl font-bold text-navy-900 mb-6">Prodigy Finance</h2>
+                            <div class="text-left space-y-4 text-gray-700 leading-relaxed">
+                                <p class="text-lg">
+                                    Prodigy Finance is a dedicated credit facilitation company, providing essential financial lifelines to individuals and businesses across various sectors. We offer accessible and efficient loan services, bridging the gap between financial needs and opportunities within Nigeria's dynamic economy.
+                                </p>
+                                <p>
+                                    Our bespoke solutions include personal financing, business working capital, Securitized lending and project funding, all designed to support growth and empower aspirations. We prioritize speed, transparency, and client-centric support in every transaction.
+                                </p>
+                                <div class="bg-blue-50 p-6 rounded-lg mt-6">
+                                    <h3 class="text-xl font-bold text-navy-900 mb-4">Our Services Include:</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Personal Financing</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Business Working Capital</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Securitized Lending</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Project Funding</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Credit Facilitation Services</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button onclick="window.location.href='subsidiaries.html'" 
+                                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg mt-6">
+                                Go Back to Subsidiaries
+                            </button>
+                        </div>
+                    `;
+                    break;
+
+                case 'portfolio':
+                    modalContent = `
+                        <div class="text-center space-y-6">
+                            <h2 class="text-4xl font-bold text-navy-900 mb-6">Prodigy Portfolio Advisers</h2>
+                            <div class="text-left space-y-4 text-gray-700 leading-relaxed">
+                                <p class="text-lg">
+                                    Prodigy Portfolio Advisers stands as a beacon of excellence in asset management, where sophisticated investment strategies meet the serenity and peace of mind you deserve.
+                                </p>
+                                <p>
+                                    Our seasoned team of certified investment professionals creates diversified portfolios designed for optimal growth and risk management. We provide comprehensive analysis, strategic asset allocation, and continuous monitoring to ensure your investments are aligned with your long-term objectives and market conditions.
+                                </p>
+                                <p>
+                                    With over 65 years of combined experience in the financial markets, we specialize in wealth preservation, retirement planning, and investment advisory services that empower our clients to achieve their financial aspirations with confidence.
+                                </p>
+                                <div class="bg-gold bg-opacity-10 p-6 rounded-lg mt-6">
+                                    <h3 class="text-xl font-bold text-navy-900 mb-4">Our Expertise:</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Investment Management & Portfolio Advisory</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Wealth Preservation Strategies</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Retirement Planning Solutions</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> ESG Integration & Sustainable Investing</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Bespoke Financial Advisory</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button onclick="window.location.href='subsidiaries.html'" 
+                                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg mt-6">
+                                Go Back to Subsidiaries
+                            </button>
+                        </div>
+                    `;
+                    break;
+
+                case 'brokercom':
+                    modalContent = `
+                        <div class="text-center space-y-6">
+                            <h2 class="text-4xl font-bold text-navy-900 mb-6">Prodigy Brokercom</h2>
+                            <div class="text-left space-y-4 text-gray-700 leading-relaxed">
+                                <p class="text-lg">
+                                    Prodigy Brokercom is a leading commodities trading company specializing in agricultural products and mineral commodities, connecting global markets with precision and expertise.
+                                </p>
+                                <p>
+                                    We facilitate seamless trading of essential agricultural commodities including grains, cocoa, palm oil, and other essential minerals, ensuring fair pricing and reliable delivery. Our comprehensive understanding of global supply chains and market dynamics positions us as a trusted intermediary in the commodities sector.
+                                </p>
+                                <p>
+                                    Leveraging our deep market insights and robust logistics network, we empower farmers, miners, and industrial buyers with access to transparent trading platforms and strategic partnerships. Our expertise helps optimize supply chains and capitalize on opportunities in the commodities sector.
+                                </p>
+                                <div class="bg-green-50 p-6 rounded-lg mt-6">
+                                    <h3 class="text-xl font-bold text-navy-900 mb-4">Our Trading Specialties:</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Agricultural Commodities Trading</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Mineral & Energy Trading</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Supply Chain Optimization</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Market Analysis & Risk Management</li>
+                                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-2"></i> Global Trading Partnerships</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button onclick="window.location.href='subsidiaries.html'" 
+                                    class="bg-gold text-navy-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg mt-6">
+                                Go Back to Subsidiaries
+                            </button>
+                        </div>
+                    `;
+                    break;
+            }
+
+            content.innerHTML = modalContent;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modalOverlay');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modalOverlay').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
