@@ -1,376 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who We Are - Prodigy Group</title>
-    <script src="https://cdn.tailwindcss.com/2.2.19"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'navy': '#0f172a',
-                        'navy-900': '#0f172a',
-                        'gold': '#daa520',
-                        'gold-500': '#daa520',
-                        'fsdh-blue': '#1e3a8a'
-                    }
-                }
+    <title>Who We Are - Prodigy Portfolio Advisers</title>
+    <meta name="description"
+        content="Learn about Prodigy Portfolio Advisers - Premier asset management company offering sophisticated investment strategies and personalized financial planning.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b4f75;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #1a1a1a;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3b4f75;
+        }
+
+        .nav-dropdown {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .login-btn {
+            background: none;
+            border: none;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .login-btn:hover {
+            color: #3b4f75;
+        }
+
+        .primary-btn {
+            background-color: #3b4f75;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .primary-btn:hover {
+            background-color: #2d3a56;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 64px 0;
+            background-color: #ffffff;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+
+        .hero-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .hero-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Our People Section */
+        .our-people {
+            padding: 64px 0;
+            background-color: #3b4f75;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 48px;
+            opacity: 0.8;
+        }
+
+        .subsection-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .team-card {
+            background-color: white;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .team-card img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+        }
+
+        .team-card h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+
+        .team-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 64px 0;
+            background-color: #f8fafc;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background-color: #3b4f75;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .value-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .value-description {
+            color: #6b7280;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 64px 0;
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-description {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background-color: #3b4f75;
+            color: white;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2d3a56;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            padding: 48px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .social-links a {
+            color: #64748b;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            margin-top: 32px;
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
             }
         }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    </style>
 </head>
 
-<body class="bg-white">
-    <!-- Navigation -->
-    <nav class="bg-white border-b shadow-sm">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center justify-between h-14">
-                <!-- Logo Section -->
-                <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-6 w-auto mr-2">
-                    <div class="flex flex-col">
-                        <div class="text-gray-800 font-semibold text-sm">Prodigy Group</div>
-                        <div class="text-gray-500 text-xs">asset management</div>
-                    </div>
-                </div>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">fsdh</div>
 
-                <!-- Navigation Menu -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-700 hover:text-gold text-sm">Home</a>
-                    <a href="whoweare.html" class="text-gray-700 hover:text-gold text-sm font-medium">Who we are</a>
-                    <a href="ppa.html" class="text-gray-700 hover:text-gold text-sm">What we do</a>
-                    <a href="about-us.html" class="text-gray-700 hover:text-gold text-sm">About Us</a>
-                    <a href="#" class="text-gray-700 hover:text-gold text-sm">Resources</a>
-                    <a href="#" class="text-gray-700 hover:text-gold text-sm">Blog</a>
-                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li class="nav-dropdown">
+                        <span>Who we are <i class="fas fa-chevron-down"></i></span>
+                    </li>
+                    <li class="nav-dropdown">
+                        <span>What we do <i class="fas fa-chevron-down"></i></span>
+                    </li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
 
-                <!-- Action Buttons -->
-                <div class="hidden md:flex items-center space-x-3">
-                    <button class="bg-gold text-black px-4 py-1.5 rounded text-sm font-medium hover:bg-yellow-500 transition">
-                        <i class="fas fa-calendar-check mr-1"></i>
-                        Schedule Consultation
-                    </button>
-                    <button class="text-gray-700 px-3 py-1.5 rounded text-sm font-medium hover:bg-gray-100 transition">
-                        <i class="fas fa-user mr-1"></i>
-                        Log in
-                    </button>
+                <div class="nav-actions">
+                    <button class="login-btn">Login</button>
+                    <a href="#" class="primary-btn">Open Account</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
+    <!-- Main Content -->
     <main>
-        <!-- Hero Section with Split Layout -->
-        <section class="py-16 px-4 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <!-- Left Side - Text Content -->
-                    <div class="space-y-8">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <h1 class="hero-title">Premier asset management with personalized expertise</h1>
                         <div>
-                            <p class="text-gold text-sm font-bold uppercase tracking-wider mb-4">ABOUT US</p>
-                            <h1 class="text-4xl md:text-5xl font-bold text-navy-900 leading-tight mb-8">
-                                Making economic prosperity more accessible to everyone
-                            </h1>
-                        </div>
-                        
-                        <div class="space-y-6 text-gray-700 leading-relaxed">
-                            <p>
-                                <strong>Prodigy Group</strong> is a diversified financial services conglomerate and a leading asset management and financial advisory firm in Nigeria. Initially, we started as a single investment advisory service in 2010, and in 2015 morphed into Prodigy Group, a fully-fledged, diversified financial services company.
+                            <p class="hero-description">
+                                <strong>Prodigy Portfolio Advisers</strong> is a premier asset management company, offering sophisticated investment strategies and personalized financial planning. We specialize in growing and preserving wealth for individuals, institutions, and corporate clients through disciplined investment approaches.
                             </p>
-                            <p>
-                                We are a team of experienced fund managers with a breadth of strong-performing products across multiple asset classes, easily accessible to individuals and institutions.
+                            <p class="hero-description">
+                                Our expert team provides comprehensive portfolio construction, rigorous risk assessment, and continuous market analysis across various asset classes, ensuring your investments are optimized for long-term objectives and adapted to evolving market conditions.
                             </p>
-                            <p>
-                                We are registered with the Securities and Exchange Commission as a Portfolio Manager and a Corporate Investment Adviser and are versatile in financial transactions and investment strategies that meet the needs of investors in an emerging economy like Nigeria.
-                            </p>
-                            <p>
-                                Our strategies are dedicated to preserving investors' wealth while maximizing the value that they receive. We are positioned to build wealth for clients across all economic classes and are the trusted partner in growing your wealth.
+                            <p class="hero-description">
+                                At Prodigy Portfolio Advisers, we are a team of seasoned financial professionals dedicated to transforming your financial aspirations into reality. Our certified advisors combine deep market expertise with personalized service to empower clients in navigating complex financial landscapes. With over 65 years of combined experience, we specialize in strategic wealth management, investment advisory, and comprehensive financial planning tailored to your unique goals and risk tolerance.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Right Side - Team Photo Grid -->
-                    <div class="grid grid-cols-3 gap-3">
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team member" class="w-full h-full object-cover">
-                        </div>
+                    <div class="hero-images">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                            alt="Professional business woman">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                            alt="Business executives meeting">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                            alt="Professional business leader">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                            alt="Diverse team collaboration">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                            alt="Business strategy meeting">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                            alt="Corporate professional">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our People Section - Blue Background -->
-        <section class="py-20 bg-fsdh-blue text-white">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Our people</h2>
-                    <p class="text-xl opacity-90 max-w-2xl mx-auto">
-                        Diversity and youthfulness are the sources of our strength as a team and shape our views.
-                    </p>
+        <!-- Our People Section -->
+        <section class="our-people">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">Our people</h2>
+                    <p class="section-subtitle">Diversity and youthfulness are the sources of our strength as a team and shape our views.</p>
                 </div>
 
                 <!-- Board of Directors -->
-                <div class="mb-20">
-                    <h3 class="text-2xl font-bold mb-12 text-center">Board of Directors</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Chairman" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Dr. Adebayo Ogunlesi</h4>
-                            <p class="text-sm opacity-75">Chairman, Prodigy Group</p>
+                <div>
+                    <h3 class="subsection-title">Board of Directors</h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Femi Otedola portrait">
+                            <h4>Femi Otedola</h4>
+                            <p>Chairman</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Director" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mrs. Funmilayo Adebayo</h4>
-                            <p class="text-sm opacity-75">Non-Executive Director, Prodigy Group</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Nkem Okocha portrait">
+                            <h4>Nkem Okocha</h4>
+                            <p>Managing Director & CEO</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Director" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Chukwuma Nwosu</h4>
-                            <p class="text-sm opacity-75">Non-Executive Director, Prodigy Group</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Adesola Adeduntan portrait">
+                            <h4>Adesola Adeduntan</h4>
+                            <p>Executive Director</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Director" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mrs. Kemi Adeola</h4>
-                            <p class="text-sm opacity-75">Non-Executive Director, Prodigy Group</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Chuka Mordi portrait">
+                            <h4>Chuka Mordi</h4>
+                            <p>Non-Executive Director</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Director" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Emeka Okafor</h4>
-                            <p class="text-sm opacity-75">Non-Executive Director, Prodigy Group</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Ibukun Awosika portrait">
+                            <h4>Ibukun Awosika</h4>
+                            <p>Independent Director</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="MD" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Olumide Akinwunmi</h4>
-                            <p class="text-sm opacity-75">MD, Prodigy Group</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Tunde Hassan-Odukale portrait">
+                            <h4>Tunde Hassan-Odukale</h4>
+                            <p>Director</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Management Team -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-12 text-center">Management team</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="MD" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Olumide Akinwunmi</h4>
-                            <p class="text-sm opacity-75">MD, Prodigy Group</p>
+                    <h3 class="subsection-title">Management team</h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mr. Tunde Mabawonku portrait">
+                            <h4>Mr. Tunde Mabawonku</h4>
+                            <p>Chief Financial Officer</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="SVP" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mrs. Margaret Agbonlahor</h4>
-                            <p class="text-sm opacity-75">Senior VP, Business Development</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mrs. Funmi Ekundayo portrait">
+                            <h4>Mrs. Funmi Ekundayo</h4>
+                            <p>Chief Operating Officer</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="CFO" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mrs. Kemi Adeola</h4>
-                            <p class="text-sm opacity-75">Chief Financial Officer</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mr. Adekunle Sonola portrait">
+                            <h4>Mr. Adekunle Sonola</h4>
+                            <p>Chief Technology Officer</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="CIO" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Emeka Okafor</h4>
-                            <p class="text-sm opacity-75">Chief Investment Officer</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mrs. Adunni Aremu portrait">
+                            <h4>Mrs. Adunni Aremu</h4>
+                            <p>Head of Risk Management</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Operations" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Chinedu Nnadi</h4>
-                            <p class="text-sm opacity-75">Head, Operations</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mrs. Bukola Onyeka portrait">
+                            <h4>Mrs. Bukola Onyeka</h4>
+                            <p>Head of Customer Experience</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Internal Control" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Paul Babatunde</h4>
-                            <p class="text-sm opacity-75">Head, Internal Control</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mr. Segun Ogunsanya portrait">
+                            <h4>Mr. Segun Ogunsanya</h4>
+                            <p>Head of Business Development</p>
                         </div>
-                        <div class="text-center">
-                            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Compliance" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="font-bold text-lg mb-1">Mr. Adedayo Bello</h4>
-                            <p class="text-sm opacity-75">Head, Compliance</p>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+                                alt="Mr. Babatunde Akin-Moses portrait">
+                            <h4>Mr. Babatunde Akin-Moses</h4>
+                            <p>Chief Human Resources Officer</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Culture Section -->
-        <section class="py-20 px-4 bg-white">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <p class="text-gold text-sm font-bold uppercase tracking-wider mb-6">OUR CULTURE</p>
-                    <h2 class="text-4xl md:text-5xl font-bold text-navy-900 leading-tight max-w-4xl mx-auto">
-                        We are a mission-driven company, and these are the core ideas we return to when we make decisions.
-                    </h2>
+        <!-- Our Values Section -->
+        <section class="values">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">Our values</h2>
+                    <p class="section-subtitle">We are a mission-driven company, and these are the core values we return
+                        to when we make decisions.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">Innovation</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            We are innovators in every aspect of our operations and we continually seek smarter ways of doing business; for our customers and ourselves.
-                        </p>
+                        <h3 class="value-title">Customer First</h3>
+                        <p class="value-description">Customer satisfaction drives our approach. We understand that our
+                            customers' growth is essential for our success.</p>
                     </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-users text-blue-600 text-2xl"></i>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">Team Spirit</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            We believe in the strength of working together as a united force and we have the camaraderie to prove it. Our key to building a great organization is developing great individuals.
-                        </p>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-description">We challenge the status quo by seeking innovative solutions that
+                            transform the banking and financial services experience.</p>
                     </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">Respect</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            We believe in the dignity of every human being and conduct ourselves accordingly. Our manner of speaking is courteous, our demeanor is welcoming, and our approach is uncontroversial.
-                        </p>
+                        <h3 class="value-title">Integrity</h3>
+                        <p class="value-description">We operate with the highest level of integrity and are guided by
+                            ethical principles in all our dealings.</p>
                     </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">Integrity</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            Our word is our bond. We pride ourselves on saying what we mean and meaning what we say.
-                        </p>
+                        <h3 class="value-title">Excellence</h3>
+                        <p class="value-description">We strive for excellence in everything we do, maintaining high
+                            standards and delivering exceptional results.</p>
                     </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">Client Focus</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            We view our relationship with our clients as mutually beneficial. Your success is our success, so we strive to remain a reliable strategic partner to our clientele and stakeholders alike.
-                        </p>
+                        <h3 class="value-title">Team Spirit</h3>
+                        <p class="value-description">We foster collaboration and teamwork to achieve our common goals
+                            and create lasting value for all stakeholders.</p>
                     </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900 mb-4">Trust</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            The foundation of every great relationship is trust, and Prodigy Group maintains a stellar relationship with all our clients.
-                        </p>
+                        <h3 class="value-title">Social Impact</h3>
+                        <p class="value-description">We are committed to making a positive impact on society and
+                            contributing to sustainable development.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action Section -->
-        <section class="py-20 bg-navy-900 text-white">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">
-                    Ready to supercharge your <span class="text-gold">finance?</span>
-                </h2>
-                <p class="text-xl mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                    Set all the best financial products for your business growth for free. Open the last current account you will ever need for your business.
-                </p>
-                <button class="bg-gold hover:bg-yellow-600 text-navy-900 font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
-                    Create an account
-                </button>
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta-title">Ready to supercharge your finance?</h2>
+                <p class="cta-description">Join the thousands who already trust us to provide world-class financial
+                    services.</p>
+                <a href="#" class="cta-button">Open Account</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-navy-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex items-center justify-center mb-8">
-                <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 w-auto">
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Home</h4>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Products</h4>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Resources</h4>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Contact</h4>
-                    <div class="space-y-2 text-sm text-gray-300">
-                        <div>UAC House (4th floor)</div>
-                        <div>1/5 Odunlami Street, P.M.B 12913.</div>
-                        <div><a href="tel:+2341008900" class="hover:text-gold">+234 (0) 1 700 8900</a></div>
-                        <div><a href="mailto:info@prodigygroup.ng" class="hover:text-gold">info@prodigygroup.ng</a></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="logo" style="color: white; margin-bottom: 16px;">fsdh</div>
+                    <p style="font-size: 14px; margin-bottom: 16px;">
+                        Making economic prosperity more accessible to everyone through innovative financial solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
+                </div>
+
+                <!-- Products -->
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Personal Banking</a></li>
+                        <li><a href="#">Business Banking</a></li>
+                        <li><a href="#">Investment Services</a></li>
+                        <li><a href="#">Digital Banking</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="#">Loans</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News & Media</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Corporate Governance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Branch Locator</a></li>
+                        <li><a href="#">ATM Locator</a></li>
+                        <li><a href="#">Security Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="flex justify-center space-x-6 mt-8">
-                <a href="#" class="text-gray-300 hover:text-gold"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-gray-300 hover:text-gold"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="#" class="text-gray-300 hover:text-gold"><i class="fab fa-linkedin-in text-xl"></i></a>
-                <a href="#" class="text-gray-300 hover:text-gold"><i class="fab fa-twitter text-xl"></i></a>
+            <div class="footer-bottom">
+                <p style="font-size: 14px; color: #64748b;">
+                    © 2024 FSDH Group. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="#" style="font-size: 14px; color: #64748b;">Terms of Service</a>
+                    <a href="#" style="font-size: 14px; color: #64748b;">Privacy Policy</a>
+                    <a href="#" style="font-size: 14px; color: #64748b;">Cookies Policy</a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
+
 </html>
