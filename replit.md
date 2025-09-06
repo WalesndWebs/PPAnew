@@ -25,6 +25,7 @@ Prodigy Group is a diversified financial services conglomerate that operates thr
 - **Enhanced Front Page Slider**: Expanded slider to cover entire header section (full viewport height) while maintaining navigation visibility through proper z-index layering
 - **Implemented Interactive Features**: Added working image switching for offerings section with smooth fade transitions
 - **Created Subsidiary Logos Section**: Added professional subsidiary branding section beneath slider featuring Prodigy logo alongside each subsidiary name (Prodigy Finance, Prodigy Portfolio Advisers, Prodigy Brokercom) with hover effects and direct navigation links
+- **Enhanced Logo Navigation**: Made "PRODIGY GROUP" text/logo clickable across all pages, linking back to index.html for consistent home navigation experience
 - **Created Professional About Us Page**: Built complete about-us.html matching FSDHAML structure exactly with hero section, company overview, statistics, team profiles with professional photos, culture values, and call-to-action
 - **Updated Product Section**: Restructured PPA investment products into single row layout with "Learn More" functionality and direct email contact integration
 - **Enhanced Testimonial Design**: Updated testimonial section to match FSDHAML two-column layout with professional image
