@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Brokercom - Agro and Mineral Commodities Trading | Prodigy Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Page-specific styles */
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--navy-900) 0%, #1e3a8a 50%, var(--navy-900) 100%);
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-text {
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .commodity-highlight {
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.1), rgba(218, 165, 32, 0.05));
+            border: 1px solid rgba(218, 165, 32, 0.2);
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav style="background: white; border-bottom: 1px solid #e5e7eb; padding: 12px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
+            <!-- Logo -->
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group Logo" style="height: 32px; margin-right: 12px;">
+                <div>
+                    <h1 style="font-size: 18px; font-weight: bold; color: #1e293b; margin: 0; transition: color 0.3s;">PRODIGY GROUP</h1>
+                    <p style="font-size: 10px; color: #daa520; font-weight: 600; letter-spacing: 1px; margin: 0;">COMMODITIES TRADING</p>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <div style="display: flex; align-items: center; gap: 32px;">
+                <a href="index.html" style="color: #374151; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s;">Home</a>
+                
+                <!-- Our Subsidiaries Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; font-weight: 500; display: flex; align-items: center;">
+                        Our Subsidiaries
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 200px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="finance.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Finance</a>
+                        <a href="ppa.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Portfolio Advisers</a>
+                        <a href="coming-soon-brokercom.html" style="display: block; padding: 12px 20px; color: #daa520; text-decoration: none; font-size: 14px; transition: background 0.2s; font-weight: 600;">Prodigy Brokercom</a>
+                    </div>
+                </div>
+
+                <a href="contact-us.html" style="color: #374151; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s;">Contact Us</a>
+
+                <!-- Action Buttons -->
+                <div style="display: flex; gap: 12px;">
+                    <button style="background: #1e293b; color: white; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 14px; border: none; cursor: pointer; transition: background 0.3s;">
+                        <i class="fas fa-sign-in-alt" style="margin-right: 6px;"></i>
+                        Log in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <!-- Main Hero Content -->
+            <div class="mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 hero-text">
+                    Prodigy Brokercom
+                </h1>
+                <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-gold">
+                    Agro and Mineral Commodities Trading
+                </h2>
+                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-90">
+                    Facilitating seamless and efficient transactions for a wide range of agricultural products and essential minerals, connecting producers with global markets
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button class="bg-gold text-navy-900 px-12 py-4 rounded-lg font-bold hover:bg-yellow-500 transition text-lg">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        Start Trading
+                    </button>
+                    <button class="border-2 border-gold text-gold px-12 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
+                        <i class="fas fa-handshake mr-2"></i>
+                        Partner with Us
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trading Categories -->
+            <div class="relative max-w-4xl mx-auto">
+                <div class="bg-black bg-opacity-30 rounded-lg p-8 backdrop-filter backdrop-blur-sm">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div class="service-highlight">
+                            <i class="fas fa-seedling text-4xl text-gold mb-3"></i>
+                            <h3 class="text-lg font-semibold">Agricultural Products</h3>
+                            <p class="text-sm opacity-75">Grains, cereals & crops</p>
+                        </div>
+                        <div class="service-highlight">
+                            <i class="fas fa-gem text-4xl text-gold mb-3"></i>
+                            <h3 class="text-lg font-semibold">Essential Minerals</h3>
+                            <p class="text-sm opacity-75">Industrial & precious metals</p>
+                        </div>
+                        <div class="service-highlight">
+                            <i class="fas fa-globe-americas text-4xl text-gold mb-3"></i>
+                            <h3 class="text-lg font-semibold">Global Markets</h3>
+                            <p class="text-sm opacity-75">Worldwide connections</p>
+                        </div>
+                        <div class="service-highlight">
+                            <i class="fas fa-truck text-4xl text-gold mb-3"></i>
+                            <h3 class="text-lg font-semibold">Logistics Network</h3>
+                            <p class="text-sm opacity-75">Reliable delivery systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-6">Our Trading Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive commodities trading services connecting producers, buyers, and markets across agricultural and mineral sectors</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Agricultural Products Trading -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-seedling text-2xl text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-4">Agricultural Products</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Trading in grains, cereals, cocoa, coffee, palm oil, and other agricultural commodities with direct farmer partnerships and quality assurance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mineral Commodities -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-gem text-2xl text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-4">Mineral Commodities</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Trading essential minerals including gold, lithium, copper, iron ore, and industrial minerals with certified quality and ethical sourcing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Market Connectivity -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-globe-americas text-2xl text-navy-900"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-4">Global Market Access</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Connecting local producers with international buyers through established networks and trading platforms across major commodity exchanges.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Transaction Facilitation -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-handshake text-2xl text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-4">Transaction Facilitation</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Seamless transaction processing with secure payment systems, documentation, and compliance with international trading standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-8">Our Expertise</h2>
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Deep market insights, robust logistics network, and strategic partnerships enable us to ensure fair pricing and reliable delivery in the commodities sector.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-chart-bar text-navy-900 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 mb-2">Deep Market Insights</h4>
+                                <p class="text-gray-600">Advanced market analysis and real-time commodity pricing intelligence to optimize trading decisions and timing.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-navy-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-truck text-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 mb-2">Robust Logistics Network</h4>
+                                <p class="text-gray-600">Comprehensive supply chain management with warehousing, transportation, and quality control systems.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-users text-navy-900 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy-900 mb-2">Strategic Partnerships</h4>
+                                <p class="text-gray-600">Strong relationships with producers, buyers, and logistics providers ensuring reliable supply chains and fair pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Image -->
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                            <div class="w-full h-full bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-balance-scale text-6xl mb-4 opacity-80"></i>
+                                    <h3 class="text-2xl font-bold">Fair Trading Practices</h3>
+                                    <p class="text-lg opacity-80">Connecting Global Markets</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold rounded-full opacity-20"></div>
+                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-navy-900 rounded-full opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-6">Why Choose Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We empower farmers, miners, and industrial buyers with transparent trading platforms and the tools needed to make informed trading decisions and capitalize on market opportunities.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Farmers Empowerment -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tractor text-3xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Farmer Empowerment</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Direct access to global markets with fair pricing, timely payments, and agricultural extension services to maximize farm productivity and income.
+                    </p>
+                </div>
+
+                <!-- Transparent Trading -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-navy-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Transparent Platforms</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Real-time market data, transparent pricing mechanisms, and clear documentation ensuring trust and confidence in every transaction.
+                    </p>
+                </div>
+
+                <!-- Market Intelligence -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-3xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Market Intelligence</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Advanced analytics, market forecasting, and trading tools enabling informed decisions and optimal timing for commodity transactions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commodities Showcase -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-6">Our Commodity Portfolio</h2>
+                <p class="text-gray-600">Diverse range of agricultural and mineral commodities traded globally</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Agricultural Commodities -->
+                <div class="commodity-highlight rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-6 text-center">
+                        <i class="fas fa-seedling text-gold mr-3"></i>
+                        Agricultural Commodities
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-wheat text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Grains & Cereals</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-coffee text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Cocoa & Coffee</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-tree text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Palm Oil</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-pepper-hot text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Spices</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mineral Commodities -->
+                <div class="commodity-highlight rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-6 text-center">
+                        <i class="fas fa-gem text-gold mr-3"></i>
+                        Mineral Commodities
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-coins text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Precious Metals</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-battery-full text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Lithium</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-hammer text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Industrial Metals</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-mountain text-gold text-2xl mb-2"></i>
+                            <p class="font-semibold text-navy-900">Iron Ore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-32 bg-navy-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8">Ready to Start Trading?</h2>
+            <p class="text-xl mb-12 opacity-90">
+                Connect with our commodities trading specialists to explore opportunities in agricultural and mineral markets.
+            </p>
+            
+            <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-filter backdrop-blur-sm">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-left">
+                        <h3 class="text-xl font-bold mb-4">Connect with Our Trading Team</h3>
+                        <p class="opacity-80 mb-6">Discover opportunities in global commodity markets</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-gold"></i>
+                                <a href="mailto:support@prodigyportfolioadvisers.com" class="text-gold hover:text-yellow-300 transition">
+                                    support@prodigyportfolioadvisers.com
+                                </a>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-clock text-gold"></i>
+                                <span>Monday - Friday: 8:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col space-y-4">
+                        <button class="bg-gold text-navy-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-500 transition">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            Start Trading Today
+                        </button>
+                        <a href="mailto:support@prodigyportfolioadvisers.com" class="border-2 border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Get Trading Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 mr-3">
+                        <div>
+                            <div class="text-xl font-bold">PRODIGY GROUP</div>
+                            <div class="text-gold text-sm font-semibold">COMMODITIES TRADING</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Connecting producers with global markets through transparent and efficient agro and mineral commodities trading.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="finance.html" class="text-gray-300 hover:text-gold transition">Prodigy Finance</a></li>
+                        <li><a href="ppa.html" class="text-gray-300 hover:text-gold transition">Portfolio Advisers</a></li>
+                        <li><a href="contact-us.html" class="text-gray-300 hover:text-gold transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2">
+                        <a href="mailto:support@prodigyportfolioadvisers.com" class="text-gray-300 hover:text-gold transition block">
+                            <i class="fas fa-envelope mr-2"></i>
+                            support@prodigyportfolioadvisers.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Dropdown functionality
+        window.showDropdown = function(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '1';
+                dropdown.style.visibility = 'visible';
+            }
+        };
+
+        window.hideDropdown = function(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '0';
+                dropdown.style.visibility = 'hidden';
+            }
+        };
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in, .service-card').forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

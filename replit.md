@@ -28,7 +28,7 @@ The application uses a multi-page HTML architecture with client-side interactivi
 - **Advisory Process Flow**: A 5-step advisory process (Discovery → Analysis → Strategy → Implementation → Monitoring) is clearly outlined.
 
 ### Key Features
-- **Comprehensive Subsidiary Pages**: Dedicated pages for Prodigy Finance, Prodigy Portfolio Advisers (PPA), and Prodigy Brokercom (coming soon).
+- **Comprehensive Subsidiary Pages**: Dedicated pages for Prodigy Finance (finance.html), Prodigy Portfolio Advisers (ppa.html), and Prodigy Brokercom (brokercom.html) with complete one-page websites for each subsidiary featuring their specialized services.
 - **Detailed PPA Section**: `ppa.html` showcases investment management, commodity funding, collateral lending, bespoke advisory, and wealth preservation, along with products like Prodigy Aura, Prodigy Genesis, and Prodigy Liquidity Fund.
 - **Team Showcase**: `whoweare.html` features the Management Team, while `meet-the-architects.html` and `meet-the-navigators.html` provide detailed profiles and bio popups for key personnel.
 - **Client Engagement**: Includes a comprehensive `contact-us.html` with forms, maps, and social links, and "Downloadable Forms" under a "Resources" section.
