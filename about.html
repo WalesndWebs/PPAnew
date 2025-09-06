@@ -24,32 +24,58 @@
 </head>
 
 <body class="bg-white min-h-screen">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm">
+    <!-- Navigation - Matching PPA Style -->
+    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
                 <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 w-auto mr-3">
-                    <span class="text-xl font-bold text-navy-900">Prodigy Group</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="flex items-baseline space-x-8">
-                        <a href="index.html" class="text-gray-700 hover:text-gold px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="about.html" class="text-gold-500 font-semibold px-3 py-2 text-sm font-medium">About</a>
-                        <a href="ppa.html" class="text-gray-700 hover:text-gold px-3 py-2 text-sm font-medium">PPA</a>
-                        <a href="subsidiaries.html" class="text-gray-700 hover:text-gold px-3 py-2 text-sm font-medium">Subsidiaries</a>
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center">
+                            <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
+                                class="h-10 w-auto mr-3">
+                            <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
+                        </div>
+                        <div class="text-navy-900 text-xs font-medium ml-12 opacity-75">asset management</div>
                     </div>
                 </div>
-                <div class="hidden md:flex space-x-4">
-                    <a href="#" class="text-gold border border-gold hover:bg-gold hover:text-white px-4 py-2 text-sm font-medium rounded transition-colors">Log in</a>
-                    <a href="#" class="bg-gold text-white hover:bg-yellow-600 px-4 py-2 text-sm font-medium rounded transition-colors">Create an account</a>
+
+                <!-- Center Menu Items -->
+                <div class="hidden lg:flex items-center space-x-12">
+                    <a href="index.html" class="text-navy-900 hover:text-gold transition font-medium">Home</a>
+                    <a href="about.html" class="text-gold hover:text-gold transition font-medium">Who we are</a>
+                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition font-medium">What we do</a>
+                    <a href="about-us.html" class="text-navy-900 hover:text-gold transition font-medium">About Us</a>
+                    <a href="#resources" class="text-navy-900 hover:text-gold transition font-medium">Resources</a>
+                    <a href="#blog" class="text-navy-900 hover:text-gold transition font-medium">Blog</a>
+                </div>
+
+                <!-- Right Side Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button
+                        class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-sm">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </button>
+                    <button
+                        class="border-2 border-navy-900 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition text-sm">
+                        <i class="fas fa-user mr-2"></i>
+                        Log in
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Main Content Area (blank as requested) -->
-    <main class="flex-1">
+    <main class="flex-1 pt-20">
         <!-- This page is blank as requested -->
     </main>
 
