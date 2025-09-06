@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Offerings - Prodigy Portfolio Advisers</title>
+    <meta name="description"
+        content="Explore Prodigy Portfolio Advisers' comprehensive range of financial offerings including wealth management, investment advisory, and personalized financial planning services.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation color classes */
+        :root {
+            --navy-900: #0f172a;
+            --gold: #daa520;
+        }
+        
+        .text-navy-900 { color: var(--navy-900); }
+        .text-gold { color: var(--gold); }
+        .text-gray-700 { color: #374151; }
+        .text-gray-800 { color: #1f2937; }
+        .text-gray-500 { color: #6b7280; }
+        .text-black { color: #000000; }
+        .bg-gold { background-color: var(--gold); }
+        .bg-white { background-color: white; }
+        .border-navy-900 { border-color: var(--navy-900); }
+        .hover\:text-gold:hover { color: var(--gold); }
+        .hover\:bg-yellow-500:hover { background-color: #eab308; }
+        .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+        .hover\:bg-yellow-300:hover { background-color: #fde047; }
+        .hover\:bg-navy-900:hover { background-color: var(--navy-900); }
+        .hover\:text-white:hover { color: white; }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 12px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy-900) 0%, #1e3a8a 50%, var(--navy-900) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* Offerings Grid */
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 80px 0;
+        }
+
+        .offering-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--gold);
+        }
+
+        .offering-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .offering-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--gold), #b8860b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: white;
+            font-size: 32px;
+        }
+
+        .offering-card h3 {
+            color: var(--navy-900);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .offering-card p {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .offering-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .offering-features li {
+            color: #374151;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .offering-features li:before {
+            content: '\2022';
+            color: var(--gold);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 8px;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: black;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #b8860b;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-900);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer p, .footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .offerings-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 60px 0;
+            }
+            
+            .offering-card {
+                padding: 30px;
+            }
+        }
+    </style>
+
+    <script>
+        function showDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '1';
+                dropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '0';
+                dropdown.style.visibility = 'hidden';
+            }
+        }
+
+        function showNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '1';
+                nestedDropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '0';
+                nestedDropdown.style.visibility = 'hidden';
+            }
+        }
+
+        // Add hover effects for dropdown items
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownItems = document.querySelectorAll('.dropdown-menu a, .nested-dropdown a');
+            dropdownItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.background = '#f3f4f6';
+                    this.style.color = '#daa520';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.background = 'transparent';
+                    this.style.color = '#374151';
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav style="background: white; border-bottom: 1px solid #e5e7eb; padding: 12px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
+            <!-- Logo Section -->
+            <div style="display: flex; align-items: center;">
+                <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" style="height: 24px; width: auto; margin-right: 8px;">
+                <div style="display: flex; flex-direction: column;">
+                    <div style="color: #1f2937; font-weight: 600; font-size: 14px;">Prodigy Group</div>
+                    <div style="color: #6b7280; font-size: 12px;">asset management</div>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <a href="index.html" style="color: #374151; text-decoration: none; font-size: 14px;">Home</a>
+                <a href="whoweare.html" style="color: #374151; text-decoration: none; font-size: 14px;">Who we are</a>
+                
+                <!-- What we do Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #daa520; text-decoration: none; font-size: 14px; display: flex; align-items: center; font-weight: 500;">
+                        What we do
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 200px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="our-offerings.html" style="display: block; padding: 12px 20px; color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500; transition: background 0.2s;">Our Offerings</a>
+                        
+                        <!-- Our Products with nested dropdown -->
+                        <div style="position: relative;" onmouseover="showNestedDropdown(event)" onmouseout="hideNestedDropdown(event)">
+                            <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">
+                                Our Products
+                                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                            </a>
+                            
+                            <div class="nested-dropdown" style="position: absolute; top: 0; left: 100%; background: white; min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-left: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1001;">
+                                <a href="#" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Aura</a>
+                                <a href="#" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Genesis</a>
+                                <a href="#" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Liquidity Fund</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" style="color: #374151; text-decoration: none; font-size: 14px;">Resources</a>
+                <a href="#" style="color: #374151; text-decoration: none; font-size: 14px;">Blog</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <button style="background: #daa520; color: black; padding: 6px 16px; border-radius: 4px; font-size: 14px; font-weight: 500; border: none; cursor: pointer;">
+                    <i class="fas fa-calendar-check" style="margin-right: 4px;"></i>
+                    Schedule Consultation
+                </button>
+                <button style="color: #374151; padding: 6px 12px; border-radius: 4px; font-size: 14px; font-weight: 500; border: none; background: transparent; cursor: pointer;">
+                    <i class="fas fa-user" style="margin-right: 4px;"></i>
+                    Log in
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Our Comprehensive Financial Offerings</h1>
+            <p>Discover our full range of asset management and wealth advisory services designed to help you achieve your financial goals through strategic planning and expert guidance.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container">
+        <div class="offerings-grid">
+            
+            <!-- Wealth Management -->
+            <div class="offering-card">
+                <div class="offering-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Wealth Management</h3>
+                <p>Comprehensive wealth preservation and growth strategies tailored to high-net-worth individuals and families. Our holistic approach ensures your wealth works efficiently across generations.</p>
+                <ul class="offering-features">
+                    <li>Portfolio construction and optimization</li>
+                    <li>Tax-efficient investment strategies</li>
+                    <li>Estate planning coordination</li>
+                    <li>Risk management solutions</li>
+                    <li>Legacy planning services</li>
+                </ul>
+                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Get Started
+                </a>
+            </div>
+
+            <!-- Investment Advisory -->
+            <div class="offering-card">
+                <div class="offering-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Investment Advisory</h3>
+                <p>Professional investment guidance backed by deep market research and analysis. We provide strategic asset allocation recommendations aligned with your risk tolerance and objectives.</p>
+                <ul class="offering-features">
+                    <li>Strategic asset allocation</li>
+                    <li>Market analysis and insights</li>
+                    <li>Performance monitoring</li>
+                    <li>Rebalancing strategies</li>
+                    <li>Investment research reports</li>
+                </ul>
+                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Learn More
+                </a>
+            </div>
+
+            <!-- Financial Planning -->
+            <div class="offering-card">
+                <div class="offering-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Financial Planning</h3>
+                <p>Personalized financial roadmaps designed to help you achieve your life goals. From retirement planning to major purchases, we create actionable strategies for your future.</p>
+                <ul class="offering-features">
+                    <li>Retirement planning strategies</li>
+                    <li>Goal-based financial planning</li>
+                    <li>Cash flow optimization</li>
+                    <li>Insurance needs analysis</li>
+                    <li>Education funding planning</li>
+                </ul>
+                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Schedule Consultation
+                </a>
+            </div>
+
+            <!-- Risk Management -->
+            <div class="offering-card">
+                <div class="offering-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Risk Management</h3>
+                <p>Sophisticated risk assessment and mitigation strategies to protect your financial assets. We employ advanced analytics to identify and manage potential portfolio risks.</p>
+                <ul class="offering-features">
+                    <li>Portfolio risk analysis</li>
+                    <li>Diversification strategies</li>
+                    <li>Hedging techniques</li>
+                    <li>Stress testing scenarios</li>
+                    <li>Downside protection planning</li>
+                </ul>
+                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Protect Your Assets
+                </a>
+            </div>
+
+            <!-- Institutional Services -->
+            <div class="offering-card">
+                <div class="offering-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Institutional Services</h3>
+                <p>Specialized asset management solutions for institutions, pension funds, and corporate clients. We deliver institutional-grade investment management and fiduciary services.</p>
+                <ul class="offering-features">
+                    <li>Institutional portfolio management</li>
+                    <li>Pension fund advisory</li>
+                    <li>Corporate treasury solutions</li>
+                    <li>Fiduciary services</li>
+                    <li>Custom investment solutions</li>
+                </ul>
+                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Institutional Inquiry
+                </a>
+            </div>
+
+            <!-- Alternative Investments -->
+            <div class="offering-card">
+                <div class="offering-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Alternative Investments</h3>
+                <p>Access to sophisticated alternative investment opportunities including private equity, real estate, and hedge fund strategies for qualified investors seeking portfolio diversification.</p>
+                <ul class="offering-features">
+                    <li>Private equity opportunities</li>
+                    <li>Real estate investment trusts</li>
+                    <li>Hedge fund access</li>
+                    <li>Commodity investments</li>
+                    <li>Alternative asset allocation</li>
+                </ul>
+                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Explore Alternatives
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Prodigy Portfolio Advisers</h3>
+                    <p>Premier asset management with personalized expertise. We specialize in growing and preserving wealth through disciplined investment approaches and comprehensive financial planning.</p>
+                </div>
+                <div>
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> investment@prodigyportfolioadvisers.com</p>
+                    <p><i class="fas fa-phone"></i> +234 (0) 1 234 5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <p><a href="whoweare.html">Who We Are</a></p>
+                    <p><a href="our-offerings.html">Our Offerings</a></p>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="ppa.html">PPA Services</a></p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #334155; color: #64748b;">
+                <p>&copy; 2025 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
