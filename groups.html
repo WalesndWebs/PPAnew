@@ -12,31 +12,111 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="bg-navy-900 text-white fixed w-full top-0 z-50 shadow-lg">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <img src="attached_assets/logo3_1753018782452.png" alt="Prodigy Group Logo" class="h-10 mr-3">
-                    <span class="text-xl font-bold">Prodigy Group</span>
+                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
+                        class="h-10 w-auto mr-3">
+                    <div class="text-navy-900 text-2xl font-bold">PRODIGY GROUP</div>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-gold transition font-semibold">Home</a>
-                    <a href="#companies" class="hover:text-gold transition font-semibold">Our Companies</a>
-                    <a href="#about" class="hover:text-gold transition font-semibold">About</a>
-                    <a href="#contact" class="hover:text-gold transition font-semibold">Contact</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Who We Are Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Who We Are
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+
+                        <!-- First Level Dropdown -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="groups.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our
+                                    Group</a>
+
+                                <!-- Our People with nested dropdown -->
+                                <div class="relative group/nested">
+                                    <button
+                                        class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                        Our People
+                                        <i class="fas fa-chevron-right text-xs"></i>
+                                    </button>
+
+                                    <!-- Second Level Dropdown with Gold Background -->
+                                    <div
+                                        class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                        <div class="py-1">
+                                            <a href="#meet-architects"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
+                                                the Architects</a>
+                                            <a href="#meet-navigators"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
+                                                the Navigators</a>
+                                            <a href="#blog"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Subsidiaries Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Our Subsidiaries
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+
+                        <div
+                            class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="coming-soon-finance.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Finance</a>
+                                <a href="ppa.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Portfolio Advisers</a>
+                                <a href="coming-soon-brokercom.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Brokercom</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Careers Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Careers
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+
+                        <div
+                            class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="join-our-team.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join
+                                    our team</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
+                    <button class="text-navy-900 hover:text-gold transition">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
                 </div>
-                <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
-                    Get Started
-                </button>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white">
-                        <i class="fas fa-bars"></i>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
