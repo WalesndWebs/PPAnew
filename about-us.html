@@ -13,6 +13,10 @@
             --navy-900: #0f172a;
             --gold: #daa520;
         }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
     </style>
 </head>
 
@@ -40,7 +44,7 @@
                         </a>
                         <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-4">
-                                <a href="about-us.html" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Our Group</a>
+                                <a href="#our-group" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Our Group</a>
                                 <div class="relative group/sub">
                                     <a href="#" class="flex items-center justify-between px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">
                                         Our People <i class="fas fa-chevron-right text-xs"></i>
@@ -84,29 +88,29 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="text-gold text-sm font-semibold mb-4 tracking-wider uppercase">About Us</div>
-            <h1 class="text-4xl md:text-5xl font-bold text-navy-900 mb-16 leading-tight">
+    <section class="pt-32 pb-20">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="text-gold text-sm font-bold mb-6 tracking-wider uppercase">About Us</div>
+            <h1 class="text-5xl md:text-6xl font-bold text-navy-900 mb-16 leading-tight">
                 Making economic prosperity more accessible to everyone
             </h1>
         </div>
     </section>
 
     <!-- Company Overview Section -->
-    <section class="py-16 bg-white">
+    <section class="pb-20">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="space-y-6">
-                <p class="text-lg text-gray-700 leading-relaxed">
+            <div class="text-lg leading-relaxed space-y-6 text-gray-800">
+                <p>
                     <strong>Prodigy Group</strong> is a diversified financial services conglomerate and a leading asset management and financial advisory firm in Nigeria. Initially, we started as a single investment advisory service in 2010, and in 2015 morphed into Prodigy Group, a fully-fledged, diversified financial services company.
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p>
                     We are a team of experienced fund managers with a breadth of strong-performing products across multiple asset classes, easily accessible to individuals and institutions.
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p>
                     We are registered with the Securities and Exchange Commission as a Portfolio Manager and a Corporate Investment Adviser and are versatile in financial transactions and investment strategies that meet the needs of investors in an emerging economy like Nigeria.
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p>
                     Our strategies are dedicated to preserving investors' wealth while maximizing the value that they receive. We are positioned to build wealth for clients across all economic classes and are the trusted partner in growing your wealth.
                 </p>
             </div>
@@ -114,31 +118,31 @@
     </section>
 
     <!-- Statistics Images Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="aspect-square bg-navy-900 rounded-lg flex items-center justify-center">
+                <div class="aspect-square bg-gradient-to-br from-navy-900 to-blue-900 rounded-2xl p-6 flex items-center justify-center shadow-lg">
                     <div class="text-center text-white">
-                        <div class="text-3xl font-bold text-gold mb-1">13+</div>
-                        <div class="text-xs uppercase tracking-wider">Years</div>
+                        <div class="text-4xl font-bold text-gold mb-2">13+</div>
+                        <div class="text-sm uppercase tracking-wider opacity-90">Years of Excellence</div>
                     </div>
                 </div>
-                <div class="aspect-square bg-gold rounded-lg flex items-center justify-center">
+                <div class="aspect-square bg-gradient-to-br from-gold to-yellow-500 rounded-2xl p-6 flex items-center justify-center shadow-lg">
                     <div class="text-center text-navy-900">
-                        <div class="text-3xl font-bold mb-1">3</div>
-                        <div class="text-xs uppercase tracking-wider">Subsidiaries</div>
+                        <div class="text-4xl font-bold mb-2">3</div>
+                        <div class="text-sm uppercase tracking-wider font-medium">Subsidiaries</div>
                     </div>
                 </div>
-                <div class="aspect-square bg-navy-900 rounded-lg flex items-center justify-center">
+                <div class="aspect-square bg-gradient-to-br from-navy-900 to-blue-900 rounded-2xl p-6 flex items-center justify-center shadow-lg">
                     <div class="text-center text-white">
-                        <div class="text-3xl font-bold text-gold mb-1">₦50B+</div>
-                        <div class="text-xs uppercase tracking-wider">AUM</div>
+                        <div class="text-3xl font-bold text-gold mb-2">₦50B+</div>
+                        <div class="text-sm uppercase tracking-wider opacity-90">Assets Under Management</div>
                     </div>
                 </div>
-                <div class="aspect-square bg-gold rounded-lg flex items-center justify-center">
+                <div class="aspect-square bg-gradient-to-br from-gold to-yellow-500 rounded-2xl p-6 flex items-center justify-center shadow-lg">
                     <div class="text-center text-navy-900">
-                        <div class="text-3xl font-bold mb-1">5K+</div>
-                        <div class="text-xs uppercase tracking-wider">Clients</div>
+                        <div class="text-4xl font-bold mb-2">5K+</div>
+                        <div class="text-sm uppercase tracking-wider font-medium">Happy Clients</div>
                     </div>
                 </div>
             </div>
@@ -146,143 +150,143 @@
     </section>
 
     <!-- Our People Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6">Our people</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Our people</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     Diversity and youthfulness are the sources of our strength as a team and shape our views.
                 </p>
             </div>
 
             <!-- Board of Directors -->
-            <div class="mb-16">
-                <h3 class="text-xl font-semibold text-navy-900 mb-8">Board of Directors</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-navy-900 mb-12">Board of Directors</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Chairman" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Dr. Adebayo Ogunlesi</h4>
-                        <p class="text-sm text-gray-600 mb-2">Chairman, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Dr. Adebayo Ogunlesi</h4>
+                        <p class="text-xs text-gray-600">Chairman, Prodigy Group</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Non-Executive Director" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mrs. Funmilayo Adebayo</h4>
-                        <p class="text-sm text-gray-600 mb-2">Non-Executive Director, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mrs. Funmilayo Adebayo</h4>
+                        <p class="text-xs text-gray-600">Non-Executive Director, Prodigy Group</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Non-Executive Director" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mr. Chukwuma Nwosu</h4>
-                        <p class="text-sm text-gray-600 mb-2">Non-Executive Director, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Chukwuma Nwosu</h4>
+                        <p class="text-xs text-gray-600">Non-Executive Director, Prodigy Group</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Non-Executive Director" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mrs. Kemi Adeola</h4>
-                        <p class="text-sm text-gray-600 mb-2">Non-Executive Director, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mrs. Kemi Adeola</h4>
+                        <p class="text-xs text-gray-600">Non-Executive Director, Prodigy Group</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Non-Executive Director" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mr. Emeka Okafor</h4>
-                        <p class="text-sm text-gray-600 mb-2">Non-Executive Director, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Emeka Okafor</h4>
+                        <p class="text-xs text-gray-600">Non-Executive Director, Prodigy Group</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Managing Director" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mr. Olumide Akinwunmi</h4>
-                        <p class="text-sm text-gray-600 mb-2">MD, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Olumide Akinwunmi</h4>
+                        <p class="text-xs text-gray-600">MD, Prodigy Group</p>
                     </div>
                 </div>
             </div>
 
             <!-- Management Team -->
             <div>
-                <h3 class="text-xl font-semibold text-navy-900 mb-8">Management team</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h3 class="text-2xl font-bold text-navy-900 mb-12">Management team</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="MD" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mr. Olumide Akinwunmi</h4>
-                        <p class="text-sm text-gray-600 mb-2">MD, Prodigy Group</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Olumide Akinwunmi</h4>
+                        <p class="text-xs text-gray-600">MD, Prodigy Group</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="SVP Business Development" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mrs. Margaret Agbonlahor</h4>
-                        <p class="text-sm text-gray-600 mb-2">Senior VP, Business Development</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mrs. Margaret Agbonlahor</h4>
+                        <p class="text-xs text-gray-600">Senior VP, Business Development</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="CFO" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mrs. Kemi Adeola</h4>
-                        <p class="text-sm text-gray-600 mb-2">Chief Financial Officer</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mrs. Kemi Adeola</h4>
+                        <p class="text-xs text-gray-600">Chief Financial Officer</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="CIO" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mr. Emeka Okafor</h4>
-                        <p class="text-sm text-gray-600 mb-2">Chief Investment Officer</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Emeka Okafor</h4>
+                        <p class="text-xs text-gray-600">Chief Investment Officer</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Head Operations" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mr. Chinedu Nnadi</h4>
-                        <p class="text-sm text-gray-600 mb-2">Head, Operations</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Chinedu Nnadi</h4>
+                        <p class="text-xs text-gray-600">Head, Operations</p>
                     </div>
 
                     <div class="text-center group cursor-pointer">
-                        <div class="w-40 h-40 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                        <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Head Compliance" 
-                                 class="w-full h-full object-cover">
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <h4 class="text-lg font-bold text-navy-900 group-hover:text-gold transition">Mrs. Adedayo Bello</h4>
-                        <p class="text-sm text-gray-600 mb-2">Head, Compliance</p>
+                        <h4 class="text-base font-bold text-navy-900 group-hover:text-gold transition-colors mb-2">Mr. Paul Babatunde</h4>
+                        <p class="text-xs text-gray-600">Head, Internal Control</p>
                     </div>
                 </div>
             </div>
@@ -290,60 +294,60 @@
     </section>
 
     <!-- Our Culture Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
-                <div class="text-gold text-sm font-semibold mb-4 tracking-wider uppercase">Our Culture</div>
-                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6 max-w-4xl mx-auto leading-tight">
+                <div class="text-gold text-sm font-bold mb-6 tracking-wider uppercase">Our Culture</div>
+                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-8 max-w-4xl mx-auto leading-tight">
                     We are a mission-driven company, and these are the core ideas we return to when we make decisions.
                 </h2>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Innovation -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Innovation</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                <div class="group">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4 group-hover:text-gold transition-colors">Innovation</h3>
+                    <p class="text-gray-700 leading-relaxed">
                         We are innovators in every aspect of our operations and we continually seek smarter ways of doing business; for our customers and ourselves.
                     </p>
                 </div>
 
                 <!-- Team Spirit -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Team Spirit</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                <div class="group">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4 group-hover:text-gold transition-colors">Team Spirit</h3>
+                    <p class="text-gray-700 leading-relaxed">
                         We believe in the strength of working together as a united force and we have the camaraderie to prove it. Our key to building a great organization is developing great individuals.
                     </p>
                 </div>
 
                 <!-- Respect -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Respect</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                <div class="group">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4 group-hover:text-gold transition-colors">Respect</h3>
+                    <p class="text-gray-700 leading-relaxed">
                         We believe in the dignity of every human being and conduct ourselves accordingly. Our manner of speaking is courteous, our demeanor is welcoming, and our approach is uncontroversial.
                     </p>
                 </div>
 
                 <!-- Integrity -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Integrity</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                <div class="group">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4 group-hover:text-gold transition-colors">Integrity</h3>
+                    <p class="text-gray-700 leading-relaxed">
                         Our word is our bond. We pride ourselves on saying what we mean and meaning what we say.
                     </p>
                 </div>
 
                 <!-- Client Focus -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Client Focus</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                <div class="group">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4 group-hover:text-gold transition-colors">Client Focus</h3>
+                    <p class="text-gray-700 leading-relaxed">
                         We view our relationship with our clients as mutually beneficial. Your success is our success, so we strive to remain a reliable strategic partner to our clientele and stakeholders alike.
                     </p>
                 </div>
 
                 <!-- Trust -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Trust</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                <div class="group">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-4 group-hover:text-gold transition-colors">Trust</h3>
+                    <p class="text-gray-700 leading-relaxed">
                         The foundation of every great relationship is trust, and Prodigy Group maintains a stellar relationship with all our clients.
                     </p>
                 </div>
@@ -354,19 +358,19 @@
     <!-- Call to Action Section -->
     <section class="py-20 bg-navy-900 text-white relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
                 Ready to supercharge your <span class="text-gold">finance?</span>
             </h2>
-            <p class="text-lg mb-12 opacity-90 max-w-3xl mx-auto">
+            <p class="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
                 Set all the best financial products for your business growth for free. Open the last current account you will ever need for your business.
             </p>
-            <a href="#" class="inline-flex items-center bg-gold text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+            <a href="#" class="inline-flex items-center bg-gold text-navy-900 px-10 py-4 rounded-lg font-bold hover:bg-yellow-400 transition text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
                 Create an account
             </a>
         </div>
         
         <!-- Background Image -->
-        <div class="absolute right-0 bottom-0 opacity-10">
+        <div class="absolute right-0 bottom-0 opacity-5">
             <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                  alt="Background" 
                  class="w-96 h-96 object-cover">
@@ -376,13 +380,12 @@
     <!-- Footer -->
     <footer class="bg-navy-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-5 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
                         <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 w-auto mr-3">
                         <div class="text-xl font-bold">Prodigy Group</div>
                     </div>
-                    <p class="text-sm text-blue-200 mb-4">Building wealth and creating financial prosperity for all.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-blue-200 hover:text-gold"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-blue-200 hover:text-gold"><i class="fab fa-instagram"></i></a>
@@ -424,9 +427,10 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <div class="space-y-2 text-sm text-blue-200">
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>UAC House (4th floor)<br>1/5 Odunlami Street, Lagos</p>
-                        <p><i class="fas fa-phone mr-2"></i>+234 (0) 1 700 8900</p>
-                        <p><i class="fas fa-envelope mr-2"></i>info@prodigygroup.ng</p>
+                        <p>UAC House (4th floor)<br>
+                        1/5 Odunlami Street, P.M.B 12913.</p>
+                        <p><a href="tel:+2341008900" class="hover:text-gold">tel: +234 (0) 1 700 8900</a></p>
+                        <p><a href="mailto:info@prodigygroup.ng" class="hover:text-gold">info@prodigygroup.ng</a></p>
                     </div>
                 </div>
             </div>
