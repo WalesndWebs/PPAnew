@@ -21,8 +21,13 @@
         }
         
         nav {
-            position: relative !important;
-            z-index: 1 !important;
+            position: static !important;
+            z-index: auto !important;
+        }
+        
+        .main-content {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
         }
     </style>
 </head>
@@ -66,8 +71,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="py-20">
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="py-20">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <div class="text-gold text-sm font-bold mb-6 tracking-wider uppercase">About Us</div>
             <h1 class="text-5xl md:text-6xl font-bold text-navy-900 mb-16 leading-tight">
@@ -415,6 +421,7 @@
             </div>
         </div>
     </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
