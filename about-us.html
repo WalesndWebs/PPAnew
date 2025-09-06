@@ -22,65 +22,37 @@
 
 <body class="font-sans">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo Section -->
+                <!-- Logo -->
                 <div class="flex items-center">
-                    <div class="flex flex-col items-start">
-                        <div class="flex items-center">
-                            <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
-                            <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
-                        </div>
-                    </div>
+                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 w-auto mr-3">
+                    <div class="text-navy-900 text-xl font-bold">Prodigy Group</div>
                 </div>
                 
-                <!-- Center Menu Items -->
-                <div class="hidden lg:flex items-center space-x-12">
-                    <a href="index.html" class="text-navy-900 hover:text-gold transition font-medium">Home</a>
-                    <div class="relative group">
-                        <a href="#" class="text-navy-900 hover:text-gold transition font-medium flex items-center">
-                            Who We Are <i class="fas fa-chevron-down ml-2 text-xs"></i>
-                        </a>
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-4">
-                                <a href="#our-group" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Our Group</a>
-                                <div class="relative group/sub">
-                                    <a href="#" class="flex items-center justify-between px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">
-                                        Our People <i class="fas fa-chevron-right text-xs"></i>
-                                    </a>
-                                    <div class="absolute left-full top-0 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300">
-                                        <div class="py-2">
-                                            <a href="profiles.html" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Board of Directors</a>
-                                            <a href="navigators.html" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Management Team</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="subsidiaries.html" class="text-navy-900 hover:text-gold transition font-medium">What we do</a>
-                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition font-medium">PPA</a>
-                    <a href="about-us.html" class="text-navy-900 hover:text-gold transition font-medium">About Us</a>
-                    <a href="#blog" class="text-navy-900 hover:text-gold transition font-medium">Blog</a>
+                <!-- Menu Items -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-navy-900 hover:text-gold transition">Home</a>
+                    <a href="about-us.html" class="text-navy-900 hover:text-gold transition">About Us</a>
+                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition">PPA</a>
+                    <a href="subsidiaries.html" class="text-navy-900 hover:text-gold transition">Subsidiaries</a>
                 </div>
                 
-                <!-- Right Side Buttons -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-sm">
-                        <i class="fas fa-calendar-alt mr-2"></i>
+                <!-- Right Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-300 transition text-sm">
                         Schedule Consultation
                     </button>
-                    <button class="border-2 border-navy-900 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition text-sm">
-                        <i class="fas fa-user mr-2"></i>
+                    <button class="border border-navy-900 text-navy-900 px-4 py-2 rounded font-semibold hover:bg-navy-900 hover:text-white transition text-sm">
                         Log in
                     </button>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
-                        <i class="fas fa-bars text-xl"></i>
+                <div class="md:hidden">
+                    <button class="text-navy-900">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
@@ -88,7 +60,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-20 pb-20">
+    <section class="pt-16 pb-20">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <div class="text-gold text-sm font-bold mb-6 tracking-wider uppercase">About Us</div>
             <h1 class="text-5xl md:text-6xl font-bold text-navy-900 mb-16 leading-tight">
