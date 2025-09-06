@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Prodigy Group</title>
+    <script src="https://cdn.tailwindcss.com/2.2.19"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --navy-900: #0f172a;
+            --gold: #daa520;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--navy-900) 0%, #1e293b 100%);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .culture-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center">
+                            <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
+                            <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center Menu Items -->
+                <div class="hidden lg:flex items-center space-x-12">
+                    <a href="index.html" class="text-navy-900 hover:text-gold transition font-medium">Home</a>
+                    <div class="relative group">
+                        <a href="#" class="text-navy-900 hover:text-gold transition font-medium flex items-center">
+                            Who We Are <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-4">
+                                <a href="about-us.html" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Our Group</a>
+                                <div class="relative group/sub">
+                                    <a href="#" class="flex items-center justify-between px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">
+                                        Our People <i class="fas fa-chevron-right text-xs"></i>
+                                    </a>
+                                    <div class="absolute left-full top-0 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300">
+                                        <div class="py-2">
+                                            <a href="profiles.html" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Board of Directors</a>
+                                            <a href="navigators.html" class="block px-6 py-3 text-navy-900 hover:bg-gold hover:text-white transition">Management Team</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="subsidiaries.html" class="text-navy-900 hover:text-gold transition font-medium">What we do</a>
+                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition font-medium">PPA</a>
+                    <a href="#blog" class="text-navy-900 hover:text-gold transition font-medium">Blog</a>
+                </div>
+                
+                <!-- Right Side Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-sm">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </button>
+                    <button class="border-2 border-navy-900 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition text-sm">
+                        <i class="fas fa-user mr-2"></i>
+                        Log in
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-white pt-32">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-16">
+                <div class="text-gold text-lg font-semibold mb-4 tracking-wider uppercase">About Us</div>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 leading-tight max-w-4xl mx-auto">
+                    Making economic prosperity more accessible to everyone
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="fade-in">
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                    <strong>Prodigy Group</strong> is a diversified financial services conglomerate and a leading asset management and financial advisory firm in Nigeria. We started our journey in 2010 with a vision to democratize access to sophisticated financial services, and have since evolved into a comprehensive financial solutions provider through our three specialized subsidiaries.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                    We are a team of experienced fund managers and financial professionals with a breadth of strong-performing products across multiple asset classes, easily accessible to individuals and institutions. Our subsidiaries - <strong>Prodigy Finance, Prodigy Portfolio Advisers,</strong> and <strong>Prodigy Brokercom</strong> - work in synergy to provide comprehensive financial solutions.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                    We are registered with the Securities and Exchange Commission and are versatile in financial transactions and investment strategies that meet the needs of investors in an emerging economy like Nigeria. Our strategies are dedicated to preserving investors' wealth while maximizing the value that they receive.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    We are positioned to build wealth for clients across all economic classes and are the trusted partner in growing your wealth through innovative financial products, strategic lending solutions, and commodities trading expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center fade-in">
+                    <div class="bg-navy-900 rounded-2xl p-8 mb-4">
+                        <div class="text-4xl font-bold text-gold mb-2">13+</div>
+                        <div class="text-white text-sm">Years of Excellence</div>
+                    </div>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="bg-gold rounded-2xl p-8 mb-4">
+                        <div class="text-4xl font-bold text-navy-900 mb-2">3</div>
+                        <div class="text-navy-900 text-sm">Subsidiary Companies</div>
+                    </div>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="bg-navy-900 rounded-2xl p-8 mb-4">
+                        <div class="text-4xl font-bold text-gold mb-2">₦50B+</div>
+                        <div class="text-white text-sm">Assets Under Management</div>
+                    </div>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="bg-gold rounded-2xl p-8 mb-4">
+                        <div class="text-4xl font-bold text-navy-900 mb-2">5000+</div>
+                        <div class="text-navy-900 text-sm">Satisfied Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our People Section -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6">Our People</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Diversity and youthfulness are the sources of our strength as a team and shape our views.
+                </p>
+            </div>
+
+            <!-- Board of Directors -->
+            <div class="mb-20 fade-in">
+                <h3 class="text-2xl font-bold text-navy-900 mb-12 text-center">Board of Directors</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-gold"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900 mb-2">Dr. Adebayo Ogunlesi</h4>
+                        <p class="text-gold font-semibold mb-2">Chairman, Prodigy Group</p>
+                        <p class="text-sm text-gray-600">Former Investment Banker with 25+ years in financial services</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-gold"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900 mb-2">Mrs. Funmilayo Adebayo</h4>
+                        <p class="text-gold font-semibold mb-2">Non-Executive Director</p>
+                        <p class="text-sm text-gray-600">Former MD of leading commercial bank with expertise in corporate finance</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-gold"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900 mb-2">Mr. Chukwuma Nwosu</h4>
+                        <p class="text-gold font-semibold mb-2">Non-Executive Director</p>
+                        <p class="text-sm text-gray-600">Technology entrepreneur and venture capitalist with global experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Management Team -->
+            <div class="fade-in">
+                <h3 class="text-2xl font-bold text-navy-900 mb-12 text-center">Management Team</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-gold to-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-navy-900"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900 mb-2">Mr. Olumide Akinwunmi</h4>
+                        <p class="text-gold font-semibold mb-2">Group Managing Director</p>
+                        <p class="text-sm text-gray-600">Seasoned financial services executive with 20+ years experience</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-gold to-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-navy-900"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900 mb-2">Mrs. Kemi Adeola</h4>
+                        <p class="text-gold font-semibold mb-2">Chief Financial Officer</p>
+                        <p class="text-sm text-gray-600">Chartered Accountant with expertise in financial strategy and risk management</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-gold to-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-navy-900"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900 mb-2">Mr. Emeka Okafor</h4>
+                        <p class="text-gold font-semibold mb-2">Chief Investment Officer</p>
+                        <p class="text-sm text-gray-600">Investment management expert with strong track record in portfolio optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Culture Section -->
+    <section class="py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24 fade-in">
+                <div class="text-gold text-lg font-semibold mb-4 tracking-wider uppercase">Our Culture</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6">
+                    We are a mission-driven company, and these are the core ideas we return to when we make decisions.
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="culture-card bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-2xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We are innovators in every aspect of our operations and we continually seek smarter ways of doing business; for our customers and ourselves.
+                    </p>
+                </div>
+
+                <div class="culture-card bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-2xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Team Spirit</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We believe in the strength of working together as a united force and we have the camaraderie to prove it. Our key to building a great organization is developing great individuals.
+                    </p>
+                </div>
+
+                <div class="culture-card bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-2xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Respect</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We believe in the dignity of every human being and conduct ourselves accordingly. Our manner of speaking is courteous, our demeanor is welcoming, and our approach is uncontroversial.
+                    </p>
+                </div>
+
+                <div class="culture-card bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Integrity</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our word is our bond. We pride ourselves on saying what we mean and meaning what we say.
+                    </p>
+                </div>
+
+                <div class="culture-card bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-2xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Client Focus</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We view our relationship with our clients as mutually beneficial. Your success is our success, so we strive to remain a reliable strategic partner to our clientele and stakeholders alike.
+                    </p>
+                </div>
+
+                <div class="culture-card bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 fade-in">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-2xl text-navy-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-4">Trust</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        The foundation of every great relationship is trust, and Prodigy Group maintains a stellar relationship with all our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-32 bg-navy-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                    Ready to supercharge your <span class="text-gold">finance?</span>
+                </h2>
+                <p class="text-lg md:text-xl mb-12 opacity-90 max-w-3xl mx-auto">
+                    Set all the best financial products for your business growth. Partner with us to unlock your financial potential and build lasting wealth.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button class="bg-gold text-navy-900 px-12 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </button>
+                    <button class="border-2 border-gold text-gold px-12 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 w-auto mr-3">
+                        <div class="text-xl font-bold">Prodigy Group</div>
+                    </div>
+                    <p class="text-sm text-blue-200 mb-4">Building wealth and creating financial prosperity for all.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-gold"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-gold"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-gold"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-gold"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <div class="space-y-2 text-sm text-blue-200">
+                        <a href="about-us.html" class="block hover:text-gold">About Us</a>
+                        <a href="subsidiaries.html" class="block hover:text-gold">Our Subsidiaries</a>
+                        <a href="profiles.html" class="block hover:text-gold">Leadership</a>
+                        <a href="#" class="block hover:text-gold">Careers</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <div class="space-y-2 text-sm text-blue-200">
+                        <a href="ppa.html" class="block hover:text-gold">Portfolio Advisers</a>
+                        <a href="#" class="block hover:text-gold">Prodigy Finance</a>
+                        <a href="#" class="block hover:text-gold">Brokercom</a>
+                        <a href="#" class="block hover:text-gold">Investment Products</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-sm text-blue-200">
+                        <p><i class="fas fa-phone mr-2"></i>+234 (0) 1 700 8900</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@prodigygroup.ng</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Lagos, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-sm text-blue-200">
+                <p>&copy; 2024 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
