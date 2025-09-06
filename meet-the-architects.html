@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Architects - Prodigy Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --navy-900: #1e3a8a;
+            --gold: #fbbf24;
+        }
+
+        .text-navy-900 {
+            color: var(--navy-900);
+        }
+
+        .bg-navy-900 {
+            background-color: var(--navy-900);
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .bg-gold {
+            background-color: var(--gold);
+        }
+
+        .border-gold {
+            border-color: var(--gold);
+        }
+
+        .hover\:text-gold:hover {
+            color: var(--gold);
+        }
+
+        .hover\:bg-gold:hover {
+            background-color: var(--gold);
+        }
+
+        .hover\:border-gold:hover {
+            border-color: var(--gold);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Logo"
+                            class="h-12 w-12">
+                        <span class="text-2xl font-bold text-navy-900 hover:text-gold transition">PRODIGY GROUP</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Who We Are Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Who We Are <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div style="position: absolute; left: 0; margin-top: 8px; width: 200px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="groups.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Our Group</a>
+                                <div class="relative group/submenu">
+                                    <a href="#" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s; background: linear-gradient(90deg, var(--gold), #f59e0b); color: white;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Our People <i class="fas fa-chevron-right ml-1 text-sm float-right mt-0.5"></i></a>
+                                    <div style="position: absolute; left: 100%; top: 0; width: 200px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateX(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0">
+                                        <div class="py-1">
+                                            <a href="meet-the-architects.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Meet the Architects</a>
+                                            <a href="meet-the-navigators.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Meet the Navigators</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Subsidiaries Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Our Subsidiaries <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div style="position: absolute; left: 0; margin-top: 8px; width: 240px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="coming-soon-finance.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Finance</a>
+                                <a href="ppa.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Portfolio Advisers</a>
+                                <a href="coming-soon-brokercom.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Brokercom</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Careers Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Careers <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div style="position: absolute; left: 0; margin-top: 8px; width: 160px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="join-our-team.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Join our team</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
+                    <button class="text-navy-900 hover:text-gold transition">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-navy-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Meet the Architects</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                The visionary leaders who design and build the foundation of Prodigy Group's success through strategic innovation and operational excellence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lauretha - GMD -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Lauretha</h3>
+                        <p class="text-gold font-semibold mb-4">Group Managing Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Leading Prodigy Group with strategic vision and unwavering commitment to excellence...</p>
+                        <button onclick="openModal('lauretha')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chidi - Group IT -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Chidi</h3>
+                        <p class="text-gold font-semibold mb-4">Group IT Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Driving technological innovation and digital transformation across all subsidiaries...</p>
+                        <button onclick="openModal('chidi')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Juliet - Group HR -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Juliet</h3>
+                        <p class="text-gold font-semibold mb-4">Group HR Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Cultivating exceptional talent and fostering a culture of excellence throughout the organization...</p>
+                        <button onclick="openModal('juliet')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Adebowale - IT Officer -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Adebowale</h3>
+                        <p class="text-gold font-semibold mb-4">IT Officer</p>
+                        <p class="text-gray-600 text-sm mb-4">Ensuring seamless technology operations and infrastructure reliability across all platforms...</p>
+                        <button onclick="openModal('adebowale')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Felicia Agbola - Legal -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Felicia Agbola</h3>
+                        <p class="text-gold font-semibold mb-4">Legal Counsel</p>
+                        <p class="text-gray-600 text-sm mb-4">Providing comprehensive legal guidance and ensuring regulatory compliance across all business operations...</p>
+                        <button onclick="openModal('felicia')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Modals -->
+    <!-- Lauretha Modal -->
+    <div id="lauretha-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lauretha')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Lauretha</h2>
+                    <p class="text-gold font-semibold">Group Managing Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    As Group Managing Director, Lauretha brings extensive experience in financial services leadership and strategic planning to guide Prodigy Group's continued growth and success.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chidi Modal -->
+    <div id="chidi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('chidi')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Chidi</h2>
+                    <p class="text-gold font-semibold">Group IT Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Chidi leads the technology transformation initiatives across Prodigy Group, ensuring cutting-edge solutions and robust IT infrastructure support all business operations.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Juliet Modal -->
+    <div id="juliet-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('juliet')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Juliet</h2>
+                    <p class="text-gold font-semibold">Group HR Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Juliet oversees human capital development and talent management strategies that align with Prodigy Group's commitment to excellence and professional growth.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adebowale Modal -->
+    <div id="adebowale-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('adebowale')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Adebowale</h2>
+                    <p class="text-gold font-semibold">IT Officer</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Adebowale ensures the seamless operation of all technology systems and provides critical IT support that enables efficient business processes across the organization.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Felicia Modal -->
+    <div id="felicia-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('felicia')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Felicia Agbola</h2>
+                    <p class="text-gold font-semibold">Legal Counsel</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Felicia Agbola provides expert legal counsel and ensures all business operations comply with regulatory requirements while supporting strategic business initiatives.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Logo"
+                            class="h-8 w-8">
+                        <span class="text-xl font-bold">PRODIGY GROUP</span>
+                    </div>
+                    <p class="text-gray-300">
+                        Empowering financial prosperity through unwavering trust, impenetrable security, radical transparency, and relentless excellence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="groups.html" class="text-gray-300 hover:text-gold transition">About Us</a></li>
+                        <li><a href="ppa.html" class="text-gray-300 hover:text-gold transition">Services</a></li>
+                        <li><a href="contact-us.html" class="text-gray-300 hover:text-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-gold transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(person) {
+            document.getElementById(person + '-modal').classList.add('show');
+        }
+
+        function closeModal(person) {
+            document.getElementById(person + '-modal').classList.remove('show');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        }
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Add mobile menu functionality here if needed
+        });
+    </script>
+</body>
+
+</html>
