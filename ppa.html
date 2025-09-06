@@ -56,6 +56,27 @@
         #animated-text.fade-out {
             opacity: 0;
         }
+        
+        /* Offering Items Styling */
+        .offering-item.active {
+            border-color: var(--gold);
+            background: rgba(218, 165, 32, 0.05);
+        }
+        
+        .offering-image {
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .offering-image.active {
+            opacity: 1;
+        }
+        
+        .offering-image.hidden {
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -153,49 +174,84 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-6">Our Offerings</h2>
             </div>
 
-            <!-- Services Grid - FSDHAML Style -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="text-center">
-                    <h3 class="text-lg font-bold text-navy-900 mb-3">Investments</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        We provide tailored investment solutions backed by our expertise and comprehensive market analysis to help you grow and preserve wealth.
-                    </p>
+            <!-- Interactive Two-Column Offerings -->
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Left Column - Offerings List -->
+                <div class="space-y-6">
+                    <!-- Company Introduction -->
+                    <div class="mb-8">
+                        <p class="text-gray-700 text-base leading-relaxed mb-6">
+                            Prodigy Portfolio Advisers stands as a beacon of excellence in asset management, where sophisticated investment strategies meet the serenity and peace of mind you deserve.
+                        </p>
+                        <p class="text-gray-700 text-base leading-relaxed mb-6">
+                            Our seasoned team of certified investment professionals creates diversified portfolios designed for optimal growth and risk management. We provide comprehensive analysis, strategic asset allocation, and continuous monitoring to ensure your investments are aligned with your long-term objectives and market conditions.
+                        </p>
+                        <p class="text-gray-700 text-base leading-relaxed mb-8">
+                            With over 65 years of combined experience in the financial markets, we specialize in wealth preservation, retirement planning, and investment advisory services that empower our clients to achieve their financial aspirations with confidence.
+                        </p>
+                    </div>
+                    
+                    <!-- Our Expertise Header -->
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-4">Our Expertise:</h3>
+                    </div>
+                    
+                    <!-- Clickable Offerings -->
+                    <div class="space-y-4">
+                        <div class="offering-item cursor-pointer p-4 rounded-lg border-2 border-transparent hover:border-gold transition-all duration-300 active" data-offering="investment">
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">Investment Management & Portfolio Advisory</h4>
+                            <p class="text-gray-600 text-sm">
+                                Comprehensive investment solutions with strategic asset allocation and continuous portfolio monitoring for optimal growth.
+                            </p>
+                        </div>
+                        
+                        <div class="offering-item cursor-pointer p-4 rounded-lg border-2 border-transparent hover:border-gold transition-all duration-300" data-offering="wealth">
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">Wealth Preservation Strategies</h4>
+                            <p class="text-gray-600 text-sm">
+                                Sophisticated strategies to protect and preserve your wealth across market cycles and economic conditions.
+                            </p>
+                        </div>
+                        
+                        <div class="offering-item cursor-pointer p-4 rounded-lg border-2 border-transparent hover:border-gold transition-all duration-300" data-offering="retirement">
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">Retirement Planning Solutions</h4>
+                            <p class="text-gray-600 text-sm">
+                                Customized retirement planning with income optimization and long-term financial security focus.
+                            </p>
+                        </div>
+                        
+                        <div class="offering-item cursor-pointer p-4 rounded-lg border-2 border-transparent hover:border-gold transition-all duration-300" data-offering="esg">
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">ESG Integration & Sustainable Investing</h4>
+                            <p class="text-gray-600 text-sm">
+                                Responsible investing approach integrating environmental, social, and governance factors into investment decisions.
+                            </p>
+                        </div>
+                        
+                        <div class="offering-item cursor-pointer p-4 rounded-lg border-2 border-transparent hover:border-gold transition-all duration-300" data-offering="advisory">
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">Bespoke Financial Advisory</h4>
+                            <p class="text-gray-600 text-sm">
+                                Personalized financial guidance tailored to your unique circumstances and investment objectives.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="text-center">
-                    <h3 class="text-lg font-bold text-navy-900 mb-3">Fund management</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Our skilled team manages a range of funds, carefully selecting investments to achieve optimal returns for our clients.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <h3 class="text-lg font-bold text-navy-900 mb-3">Portfolio management</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        We offer personalized portfolio management services, leveraging our knowledge and experience to create diversified portfolios that align with your financial goals.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <h3 class="text-lg font-bold text-navy-900 mb-3">Advisory services</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Our dedicated advisors provide strategic guidance, helping you navigate the complexities of the financial landscape and make informed investment decisions.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Large Feature Section -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-4">Investments</h2>
-                    <p class="text-gray-600 text-base leading-relaxed">
-                        We provide tailored investment solutions to help you grow and preserve your wealth, backed by our expertise and comprehensive market analysis.
-                    </p>
-                </div>
-                
+                <!-- Right Column - Dynamic Images -->
                 <div class="relative">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <div style="background: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center;" class="w-full h-full"></div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Investment Management Image (Default) -->
+                        <div id="image-investment" class="offering-image w-full h-full active" style="background: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;"></div>
+                        
+                        <!-- Wealth Preservation Image -->
+                        <div id="image-wealth" class="offering-image w-full h-full hidden" style="background: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;"></div>
+                        
+                        <!-- Retirement Planning Image -->
+                        <div id="image-retirement" class="offering-image w-full h-full hidden" style="background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;"></div>
+                        
+                        <!-- ESG Investing Image -->
+                        <div id="image-esg" class="offering-image w-full h-full hidden" style="background: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;"></div>
+                        
+                        <!-- Bespoke Advisory Image -->
+                        <div id="image-advisory" class="offering-image w-full h-full hidden" style="background: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;"></div>
                     </div>
                 </div>
             </div>
@@ -436,6 +492,37 @@
             
             // Change text every 2.5 seconds
             setInterval(changeText, 2500);
+            
+            // Interactive Offerings Functionality
+            const offeringItems = document.querySelectorAll('.offering-item');
+            const offeringImages = document.querySelectorAll('.offering-image');
+            
+            offeringItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    offeringItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Get the offering type
+                    const offeringType = this.getAttribute('data-offering');
+                    
+                    // Hide all images
+                    offeringImages.forEach(img => {
+                        img.classList.remove('active');
+                        img.classList.add('hidden');
+                    });
+                    
+                    // Show the corresponding image
+                    const targetImage = document.getElementById(`image-${offeringType}`);
+                    if (targetImage) {
+                        setTimeout(() => {
+                            targetImage.classList.remove('hidden');
+                            targetImage.classList.add('active');
+                        }, 250);
+                    }
+                });
+            });
             
             // FAQ Toggle Functionality
             const faqToggles = document.querySelectorAll('.faq-toggle');
