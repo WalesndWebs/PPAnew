@@ -56,40 +56,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
-                    <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center">
+                            <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
+                            <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
+                        </div>
+                        <div class="text-navy-900 text-xs font-medium ml-12 opacity-75">asset management</div>
+                    </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-navy-900 hover:text-gold transition">Home</a>
-                    
-                    <!-- Who We Are Dropdown -->
-                    <div class="relative group">
-                        <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Who We Are
-                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
-                        </button>
-                        
-                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-1">
-                                <a href="#our-group" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our Group</a>
-                                <div class="relative group/nested">
-                                    <a href="#our-people" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
-                                        Our People
-                                        <i class="fas fa-chevron-right text-xs"></i>
-                                    </a>
-                                    <div class="absolute left-full top-0 mt-0 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
-                                        <div class="py-1">
-                                            <a href="#board-directors" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Board of Directors</a>
-                                            <a href="#management-team" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Management Team</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="index.html#subsidiaries" class="text-navy-900 hover:text-gold transition">Subsidiaries</a>
-                    <a href="index.html#careers" class="text-navy-900 hover:text-gold transition">Careers</a>
+                    <a href="#who-we-are" class="text-navy-900 hover:text-gold transition">Who we are</a>
+                    <a href="#what-we-do" class="text-navy-900 hover:text-gold transition">What we do</a>
+                    <a href="#resources" class="text-navy-900 hover:text-gold transition">Resources</a>
+                    <a href="#blog" class="text-navy-900 hover:text-gold transition">Blog</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
@@ -104,15 +84,14 @@
     <section class="hero-gradient min-h-screen flex items-center justify-center text-white pt-16">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <div class="mb-8">
-                <h1 class="text-5xl md:text-6xl font-light mb-6 hero-text">
-                    If you'll let us, we can be your trusted 
-                    <span class="text-gold font-medium">wealth management</span> 
-                    <span class="text-gold font-medium">success</span> 
-                    <span class="text-gold font-medium">financial advisory</span> 
-                    partner
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 hero-text">
+                    Prodigy Portfolio Advisers Services
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90">
-                    We've been in the game for over a decade with a track record of success. Let us journey with you.
+                <p class="text-lg md:text-xl mb-6 opacity-90 leading-relaxed max-w-4xl mx-auto">
+                    Prodigy Portfolio Advisers is a premier <span class="text-gold font-semibold">asset management company</span>, offering sophisticated investment strategies and personalized financial planning. We specialize in growing and preserving wealth for individuals, institutions, and corporate clients through disciplined investment approaches.
+                </p>
+                <p class="text-md md:text-lg mb-8 opacity-85 max-w-4xl mx-auto">
+                    Our expert team provides comprehensive portfolio construction, rigorous risk assessment, and continuous market analysis across various asset classes, ensuring your investments are optimized for long-term objectives and adapted to evolving market conditions.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -234,51 +213,63 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-navy-900 mb-4">Our Investment Products</h2>
-                <p class="text-xl text-gray-600">Carefully designed solutions for every investment goal</p>
+                <p class="text-xl text-gray-600">Innovative financial solutions with exceptional returns</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Prodigy Aura -->
                 <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-48" style="background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"></div>
+                    <div class="h-48" style="background: linear-gradient(rgba(34, 197, 94, 0.8), rgba(34, 197, 94, 0.8)), url('https://images.unsplash.com/photo-1574170608925-40c92ac4e92c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"></div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Balanced Fund</h3>
-                        <p class="text-gray-600 mb-4">
-                            An actively managed fund that balances growth and stability through diversified equity and fixed income investments for long-term capital appreciation.
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Aura</h3>
+                        <div class="bg-gold text-navy-900 px-3 py-1 rounded-full text-sm font-bold inline-block mb-3">20% ROI</div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Prodigy Aura is a <strong>Commodity-linked Note</strong> that caters to the ethical investor by focusing on sustainable, cyclical, and growth-aligned agro commodities trading executed via the licensed exchanges in Nigeria.
                         </p>
-                        <button class="text-gold hover:text-yellow-600 font-semibold">
-                            Learn more <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            A rare opportunity for investors to participate in a rapidly growing sector that is both ethically aligned and financially rewarding, contributing to a more sustainable and equitable future.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Product Card 2 -->
+                <!-- Prodigy Genesis -->
                 <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-48" style="background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"></div>
+                    <div class="h-48" style="background: linear-gradient(rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"></div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Dollar Fund</h3>
-                        <p class="text-gray-600 mb-4">
-                            A USD-denominated fund investing in high-grade dollar securities, providing currency diversification and stable returns for international exposure.
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Genesis</h3>
+                        <div class="bg-gold text-navy-900 px-3 py-1 rounded-full text-sm font-bold inline-block mb-3">30% ROI</div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Prodigy Genesis is a <strong>property development focused fund</strong> that takes positions in transformative, forward-looking mid to high-end class real estate projects with a short to medium term exit horizon strategy.
                         </p>
-                        <button class="text-gold hover:text-yellow-600 font-semibold">
-                            Learn more <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
+                        <div class="bg-navy-900 text-white px-3 py-2 rounded-lg text-sm">
+                            <i class="fas fa-lock mr-2"></i>Lock-in period: 12 months
+                        </div>
                     </div>
                 </div>
 
-                <!-- Product Card 3 -->
+                <!-- Prodigy Liquidity Fund -->
                 <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-48" style="background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"></div>
+                    <div class="h-48" style="background: linear-gradient(rgba(168, 85, 247, 0.8), rgba(168, 85, 247, 0.8)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;"></div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Income Fund</h3>
-                        <p class="text-gray-600 mb-4">
-                            Fixed income focused fund designed for investors seeking regular income flows through investment in high-grade bonds and money market instruments.
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Liquidity Fund</h3>
+                        <div class="bg-gold text-navy-900 px-3 py-1 rounded-full text-sm font-bold inline-block mb-3">18% Return</div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            <strong>Objective:</strong> To preserve capital and provide high liquidity with minimal risk, while generating income primarily through short-term, low-volatility instruments.
                         </p>
-                        <button class="text-gold hover:text-yellow-600 font-semibold">
-                            Learn more <i class="fas fa-arrow-right ml-1"></i>
-                        </button>
+                        <p class="text-gray-600 mb-3 text-sm">
+                            <strong>Ideal For:</strong> Emergency funds, near-term financial goals (1-3 years), or extremely risk-averse investors.
+                        </p>
+                        <div class="bg-green-100 text-green-800 px-3 py-2 rounded-lg text-sm">
+                            <i class="fas fa-check mr-2"></i>No restrictions to entry or exit
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-600 mb-4">
+                    For inquiries, email: <a href="mailto:investment@prodigyportfolioadvisers.com" class="text-gold hover:text-navy-900 font-semibold transition-colors">investment@prodigyportfolioadvisers.com</a>
+                </p>
             </div>
         </div>
     </section>
@@ -294,31 +285,41 @@
             <div class="space-y-6">
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <button class="w-full text-left flex justify-between items-center faq-toggle">
-                        <h3 class="text-lg font-semibold text-navy-900">What is portfolio management?</h3>
+                        <h3 class="text-lg font-semibold text-navy-900">What is Prodigy Aura and how does it work?</h3>
                         <i class="fas fa-chevron-down text-gold"></i>
                     </button>
                     <div class="faq-content hidden mt-4">
-                        <p class="text-gray-600">Portfolio management involves the professional management of your investment assets to achieve specific financial goals. Our experts analyze market conditions, assess risk tolerance, and create diversified investment strategies tailored to your objectives.</p>
+                        <p class="text-gray-600">Prodigy Aura is a Commodity-linked Note focused on sustainable agro commodities trading. It offers a minimum 20% ROI by investing in ethically aligned and cyclical agro commodities through licensed exchanges in Nigeria, combining financial returns with sustainable impact.</p>
                     </div>
                 </div>
 
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <button class="w-full text-left flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-semibold text-navy-900">What is the lock-in period for Prodigy Genesis?</h3>
+                        <i class="fas fa-chevron-down text-gold"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4">
+                        <p class="text-gray-600">Prodigy Genesis has a 12-month lock-in period. This property development focused fund targets transformative mid to high-end real estate projects with a 30% ROI, utilizing a short to medium-term exit strategy for optimal returns.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <button class="w-full text-left flex justify-between items-center faq-toggle">
+                        <h3 class="text-lg font-semibold text-navy-900">Can I withdraw from Prodigy Liquidity Fund anytime?</h3>
+                        <i class="fas fa-chevron-down text-gold"></i>
+                    </button>
+                    <div class="faq-content hidden mt-4">
+                        <p class="text-gray-600">Yes, Prodigy Liquidity Fund has no restrictions to entry or exit. It's designed for high liquidity with minimal risk, offering 18% returns through short-term, low-volatility instruments. Perfect for emergency funds or near-term financial goals.</p>
+                    </div>
+                </div>
+                
                 <div class="bg-white rounded-xl p-6 shadow-lg">
                     <button class="w-full text-left flex justify-between items-center faq-toggle">
                         <h3 class="text-lg font-semibold text-navy-900">How do I get started with Prodigy Portfolio Advisers?</h3>
                         <i class="fas fa-chevron-down text-gold"></i>
                     </button>
                     <div class="faq-content hidden mt-4">
-                        <p class="text-gray-600">Getting started is simple. Schedule a consultation with our advisors to discuss your financial goals, risk tolerance, and investment timeline. We'll create a personalized strategy and help you begin building your wealth.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                    <button class="w-full text-left flex justify-between items-center faq-toggle">
-                        <h3 class="text-lg font-semibold text-navy-900">What makes Prodigy different from other asset managers?</h3>
-                        <i class="fas fa-chevron-down text-gold"></i>
-                    </button>
-                    <div class="faq-content hidden mt-4">
-                        <p class="text-gray-600">Our personalized approach, proven track record, and comprehensive market analysis set us apart. We focus on building long-term relationships and creating customized investment strategies that align with each client's unique financial situation and goals.</p>
+                        <p class="text-gray-600">Contact us at investment@prodigyportfolioadvisers.com to discuss which product best suits your investment goals. Our team will guide you through the application process and help you choose between Prodigy Aura, Genesis, or Liquidity Fund based on your risk tolerance and timeline.</p>
                     </div>
                 </div>
             </div>
@@ -394,7 +395,7 @@
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <div class="space-y-2 text-sm text-blue-200">
                         <p><i class="fas fa-phone mr-2"></i>+234 (0) 1 700 8900</p>
-                        <p><i class="fas fa-envelope mr-2"></i>ppa@prodigygroup.com</p>
+                        <p><i class="fas fa-envelope mr-2"></i>investment@prodigyportfolioadvisers.com</p>
                         <p><i class="fas fa-map-marker-alt mr-2"></i>Lagos, Nigeria</p>
                     </div>
                 </div>
