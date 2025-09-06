@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="fas fa-chevron-down text-xs transition-transform"></i>
                         </button>
                         <div data-dropdown-menu="who-we-are" class="hidden mt-2 ml-4 space-y-2">
-                            <a href="#our-group" class="block text-navy-900 hover:text-gold transition text-sm">Our Group</a>
+                            <a href="about-us.html" class="block text-navy-900 hover:text-gold transition text-sm">Our Group</a>
                             <div class="border-l-2 border-gray-200 pl-4">
                                 <button data-dropdown="our-people" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition text-sm">
                                     Our People
