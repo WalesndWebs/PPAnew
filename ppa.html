@@ -64,22 +64,28 @@
         }
         
         .offering-image {
-            transition: all 0.5s ease-in-out;
+            transition: all 0.3s ease-in-out;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            display: none;
         }
         
         .offering-image.active {
             opacity: 1;
-            visibility: visible;
+            display: block !important;
         }
         
         .offering-image.hidden {
             opacity: 0;
-            visibility: hidden;
+            display: none !important;
+        }
+        
+        .offering-image:first-child {
+            display: block;
+            opacity: 1;
         }
     </style>
 </head>
@@ -480,35 +486,48 @@
             setInterval(changeText, 2500);
             
             // Interactive Offerings Functionality
-            const offeringItems = document.querySelectorAll('.offering-item');
-            const offeringImages = document.querySelectorAll('.offering-image');
-            
-            offeringItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Remove active class from all items
-                    offeringItems.forEach(i => i.classList.remove('active'));
-                    // Add active class to clicked item
-                    this.classList.add('active');
-                    
-                    // Get the offering type
-                    const offeringType = this.getAttribute('data-offering');
-                    
-                    // Hide all images
-                    offeringImages.forEach(img => {
-                        img.classList.remove('active');
-                        img.classList.add('hidden');
-                    });
-                    
-                    // Show the corresponding image
-                    const targetImage = document.getElementById(`image-${offeringType}`);
-                    if (targetImage) {
-                        setTimeout(() => {
+            function initializeOfferings() {
+                const offeringItems = document.querySelectorAll('.offering-item');
+                const offeringImages = document.querySelectorAll('.offering-image');
+                
+                console.log('Found offering items:', offeringItems.length);
+                console.log('Found offering images:', offeringImages.length);
+                
+                offeringItems.forEach((item, index) => {
+                    item.addEventListener('click', function() {
+                        console.log('Clicked on offering:', this.getAttribute('data-offering'));
+                        
+                        // Remove active class from all items
+                        offeringItems.forEach(i => i.classList.remove('active'));
+                        // Add active class to clicked item
+                        this.classList.add('active');
+                        
+                        // Get the offering type
+                        const offeringType = this.getAttribute('data-offering');
+                        
+                        // Hide all images
+                        offeringImages.forEach(img => {
+                            img.style.display = 'none';
+                            img.classList.remove('active');
+                            img.classList.add('hidden');
+                        });
+                        
+                        // Show the corresponding image
+                        const targetImage = document.getElementById(`image-${offeringType}`);
+                        if (targetImage) {
+                            console.log('Showing image for:', offeringType);
+                            targetImage.style.display = 'block';
                             targetImage.classList.remove('hidden');
                             targetImage.classList.add('active');
-                        }, 250);
-                    }
+                        } else {
+                            console.log('Could not find image for:', offeringType);
+                        }
+                    });
                 });
-            });
+            }
+            
+            // Initialize offerings after a short delay
+            setTimeout(initializeOfferings, 100);
             
             // FAQ Toggle Functionality
             const faqToggles = document.querySelectorAll('.faq-toggle');
