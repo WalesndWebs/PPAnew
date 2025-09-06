@@ -31,6 +31,10 @@ Prodigy Group is a diversified financial services conglomerate that operates thr
 - **Updated Mission Statement**: Replaced mission with new powerful statement about empowering financial prosperity through trust, security, transparency, and excellence
 - **Fixed Career Navigation**: Connected "Join Our Team" button in careers section to join-our-team.html page
 - **Created Professional About Us Page**: Built complete about-us.html matching FSDHAML structure exactly with hero section, company overview, statistics, team profiles with professional photos, culture values, and call-to-action
+- **Created Meet the Architects Page**: Built complete meet-the-architects.html with 5 key team members (Lauretha - GMD, Chidi - Group IT, Juliet - Group HR, Adebowale - IT Officer, Felicia Agbola - Legal) featuring individual bio popup modals with placeholder content ready for client bio data
+- **Created Meet the Navigators Page**: Built complete meet-the-navigators.html with 5 board members (Mohammed Yinusa - Chairman, Bode Ojeniyi - Executive Director, Lanre Ajayi - Independent Director, Chinyere Nwogu - Non-executive Director, Sanusi Ayama - Independent Director) featuring individual bio popup modals with placeholder content ready for client bio data
+- **Connected Navigation Links**: Updated all navigation dropdown menus across the entire website (index.html, contact-us.html, ppa.html, groups.html, coming-soon pages, etc.) to properly link to meet-the-architects.html and meet-the-navigators.html instead of hash links
+- **Created Professional About Us Page**: Built complete about-us.html matching FSDHAML structure exactly with hero section, company overview, statistics, team profiles with professional photos, culture values, and call-to-action
 - **Updated Product Section**: Restructured PPA investment products into single row layout with "Learn More" functionality and direct email contact integration
 - **Enhanced Testimonial Design**: Updated testimonial section to match FSDHAML two-column layout with professional image
 - **Fixed Navigation Links**: Connected About Us page to "Who We Are" → "Our Group" dropdown navigation across all pages
