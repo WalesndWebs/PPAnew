@@ -7,6 +7,11 @@ Prodigy Group is a diversified financial services conglomerate that operates thr
 ## Recent Changes
 
 ### September 6, 2025
+- **Fixed Navigation Issues**: Completely resolved navigation bar problems by implementing inline styles, ensuring proper display across all pages without CSS conflicts
+- **Removed "About Us" from Navigation**: Cleaned up navigation menu by removing the problematic "About Us" link from index.html, ppa.html, and whoweare.html
+- **Added Mission & Vision Statements**: Created professional two-card section in whoweare.html showcasing company mission and vision with gold accent borders and icons
+- **Implemented Advisory Process Section**: Added comprehensive 5-step process flow (Discovery → Analysis → Strategy → Implementation → Monitoring) with professional gold circular badges and connecting arrows
+- **Enhanced Hero Section Design**: Replaced irrelevant team photos with relevant financial service visual cards featuring Investment Growth, Portfolio Management, Risk Management, and Financial Planning elements
 - **Created Professional About Us Page**: Built complete about-us.html matching FSDHAML structure exactly with hero section, company overview, statistics, team profiles with professional photos, culture values, and call-to-action
 - **Updated Product Section**: Restructured PPA investment products into single row layout with "Learn More" functionality and direct email contact integration
 - **Enhanced Testimonial Design**: Updated testimonial section to match FSDHAML two-column layout with professional image
