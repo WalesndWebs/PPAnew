@@ -1,235 +1,378 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Group - PRODIGY GROUP</title>
+    <title>Prodigy Group - Financial Excellence Across Multiple Sectors</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="font-sans">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+<body>
+    <!-- Header -->
+    <header class="bg-navy-900 text-white fixed w-full top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
-                        class="h-10 w-auto mr-3">
-                    <div class="text-navy-900 text-2xl font-bold">PRODIGY GROUP</div>
+                    <img src="attached_assets/logo3_1753018782452.png" alt="Prodigy Group Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold">Prodigy Group</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <!-- Who We Are Dropdown -->
-                    <div class="relative group">
-                        <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Who We Are
-                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
-                        </button>
-
-                        <!-- First Level Dropdown -->
-                        <div
-                            class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-1">
-                                <a href="groups.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our
-                                    Group</a>
-
-                                <!-- Our People with nested dropdown -->
-                                <div class="relative group/nested">
-                                    <button
-                                        class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
-                                        Our People
-                                        <i class="fas fa-chevron-right text-xs"></i>
-                                    </button>
-
-                                    <!-- Second Level Dropdown with Gold Background -->
-                                    <div
-                                        class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
-                                        <div class="py-1">
-                                            <a href="#meet-architects"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
-                                                the Architects</a>
-                                            <a href="#meet-navigators"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
-                                                the Navigators</a>
-                                            <a href="#blog"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Our Subsidiaries Dropdown -->
-                    <div class="relative group">
-                        <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Our Subsidiaries
-                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
-                        </button>
-
-                        <div
-                            class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-1">
-                                <a href="coming-soon-finance.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Finance</a>
-                                <a href="ppa.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Portfolio Advisers</a>
-                                <a href="coming-soon-brokercom.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Brokercom</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Careers Dropdown -->
-                    <div class="relative group">
-                        <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Careers
-                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
-                        </button>
-
-                        <div
-                            class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-1">
-                                <a href="join-our-team.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join our team</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
-                    <button class="text-navy-900 hover:text-gold transition">
-                        <i class="fas fa-search text-lg"></i>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-gold transition font-semibold">Home</a>
+                    <a href="#companies" class="hover:text-gold transition font-semibold">Our Companies</a>
+                    <a href="#about" class="hover:text-gold transition font-semibold">About</a>
+                    <a href="#contact" class="hover:text-gold transition font-semibold">Contact</a>
+                </div>
+                <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+                    Get Started
+                </button>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
-                        <i class="fas fa-bars text-xl"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center text-white">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Prodigy Group</h1>
+                <p class="text-2xl mb-8 max-w-3xl mx-auto">Excellence Across Financial Services</p>
+                <p class="text-lg mb-12 max-w-4xl mx-auto">A diversified financial services conglomerate delivering innovative solutions across lending, asset management, and commodities trading</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <button onclick="document.getElementById('companies').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-gold text-navy-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+                        Explore Our Companies
                     </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-navy-900 transition">
+                        Contact Us
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-3xl font-bold text-gold">3</div>
+                        <div class="text-sm">Business Divisions</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-3xl font-bold text-gold">₦15B+</div>
+                        <div class="text-sm">Combined Assets</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-3xl font-bold text-gold">1000+</div>
+                        <div class="text-sm">Satisfied Clients</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Main Content -->
-    <main class="pt-20">
-        <!-- Our Group Header -->
-        <section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-5xl md:text-6xl font-light text-navy-900 mb-12 text-center leading-tight">
-                    Our Group
-                </h1>
-                
-                <div class="text-center mb-16">
-                    <p class="text-2xl md:text-3xl font-light text-gray-700 leading-relaxed">
-                        We are a trusted co-pilot on your journey to success.
-                    </p>
+    <!-- Our Companies Section -->
+    <section id="companies" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy-900 mb-4">Our Companies</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Three specialized companies working together to provide comprehensive financial solutions</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Prodigy Finance -->
+                <div class="company-card group">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <div class="company-header bg-gradient-to-br from-blue-600 to-blue-800 h-64 flex items-center justify-center relative">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div class="text-center text-white relative z-10">
+                                    <i class="fas fa-hand-holding-usd text-6xl mb-4"></i>
+                                    <h3 class="text-2xl font-bold">Prodigy Finance</h3>
+                                    <p class="text-blue-100 text-sm">Lending Solutions</p>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <div class="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-navy-900 mb-3">Comprehensive Lending Solutions</h4>
+                            <p class="text-gray-600 mb-6">Providing flexible financing options for individuals and businesses with competitive rates and personalized service.</p>
+                            
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Personal & Business Loans</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Asset-Based Financing</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Working Capital Solutions</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Trade Finance</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Company Description -->
-                <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-                    <p class="text-lg leading-relaxed">
-                        <strong>Prodigy Group Limited</strong> is a non-operating holding company focused on providing progressive financial services in Nigeria. Our subsidiaries include; Prodigy Finance, Prodigy Portfolio Advisers, and Prodigy Brokercom.
-                    </p>
-                    
-                    <p class="text-lg leading-relaxed">
-                        Maintaining our reputation as providers of dependable and innovative financial services in the region is important to us. To this end, we are continually deepening our business lines and expanding what we offer through our subsidiaries.
-                    </p>
-                    
-                    <p class="text-lg leading-relaxed">
-                        The Group operates a shared service framework in which some business support functions are shared across the group in line with regulatory requirements. These business support functions include internal audit, internal control, compliance, information technology, risk management, and administrative services. The costs incurred are shared in an agreed ratio that reflects the rate of consumption by each entity. At the core of the shared service model is cost optimisation and process efficiency.
-                    </p>
+                <!-- Prodigy Portfolio Advisers -->
+                <div class="company-card group">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <div class="company-header bg-gradient-to-br from-navy-900 to-blue-800 h-64 flex items-center justify-center relative">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div class="text-center text-white relative z-10">
+                                    <i class="fas fa-chart-line text-6xl mb-4"></i>
+                                    <h3 class="text-2xl font-bold">Prodigy Portfolio Advisers</h3>
+                                    <p class="text-blue-100 text-sm">Asset Management Company</p>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <div class="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-navy-900 mb-3">Strategic Wealth Management</h4>
+                            <p class="text-gray-600 mb-6">Expert asset management and investment advisory services designed to grow and preserve your wealth.</p>
+                            
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Investment Management</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Portfolio Advisory</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Wealth Preservation</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Retirement Planning</span>
+                                </div>
+                            </div>
+
+                            <button onclick="window.location.href='ppa.html'" 
+                                    class="w-full bg-navy-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+                                Visit Website
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prodigy BrokerCom -->
+                <div class="company-card group">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="relative">
+                            <div class="company-header bg-gradient-to-br from-green-600 to-green-800 h-64 flex items-center justify-center relative">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div class="text-center text-white relative z-10">
+                                    <i class="fas fa-seedling text-6xl mb-4"></i>
+                                    <h3 class="text-2xl font-bold">Prodigy BrokerCom</h3>
+                                    <p class="text-green-100 text-sm">Commodities Company</p>
+                                </div>
+                                <div class="absolute top-4 right-4">
+                                    <div class="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold text-navy-900 mb-3">Commodities Trading Excellence</h4>
+                            <p class="text-gray-600 mb-6">Leading commodities brokerage providing access to global markets with expert trading and risk management.</p>
+                            
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Agricultural Commodities</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Energy Trading</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Precious Metals</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-gold mr-2"></i>
+                                    <span class="text-sm text-gray-700">Risk Management</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Statistics Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-                    <div>
-                        <h2 class="text-6xl md:text-7xl font-light text-navy-900 mb-2">500+</h2>
-                        <h3 class="text-xl font-medium text-gray-600">Professionals</h3>
+    <!-- About the Group -->
+    <section id="about" class="py-20 bg-navy-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">About Prodigy Group</h2>
+                <p class="text-xl max-w-3xl mx-auto">A financial services conglomerate committed to excellence across all sectors</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gold mb-4">Our Mission</h3>
+                    <p class="text-lg leading-relaxed">To deliver comprehensive financial solutions across lending, asset management, and commodities trading, empowering individuals and businesses to achieve their financial goals through innovative, reliable, and transparent services.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gold mb-4">Our Vision</h3>
+                    <p class="text-lg leading-relaxed">To be the leading financial services group in Nigeria and beyond, known for excellence, integrity, and innovation across all our business divisions, creating sustainable value for all stakeholders.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h3 class="text-3xl font-bold text-gold mb-8">Why Choose Prodigy Group?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <i class="fas fa-award text-4xl text-gold mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Proven Excellence</h4>
+                        <p class="text-gray-300">Decades of combined experience across all financial sectors</p>
                     </div>
-                    <div>
-                        <h2 class="text-6xl md:text-7xl font-light text-navy-900 mb-2">27+</h2>
-                        <h3 class="text-xl font-medium text-gray-600">Cities</h3>
+                    <div class="text-center">
+                        <i class="fas fa-users text-4xl text-gold mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Client-Focused</h4>
+                        <p class="text-gray-300">Personalized solutions tailored to your unique needs</p>
                     </div>
-                    <div>
-                        <h2 class="text-6xl md:text-7xl font-light text-navy-900 mb-2">27+</h2>
-                        <h3 class="text-xl font-medium text-gray-600">Years</h3>
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-4xl text-gold mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Trust & Security</h4>
+                        <p class="text-gray-300">Highest standards of security and regulatory compliance</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Values Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-                <p class="text-xl md:text-2xl font-light text-center text-gray-700 leading-relaxed">
-                    We anticipate markets, future earnings and our clients' needs.
-                </p>
-                
-                <p class="text-xl md:text-2xl font-light text-center text-gray-700 leading-relaxed">
-                    Our can-do mindset helps us positively navigate the many paths to success.
-                </p>
-                
-                <p class="text-xl md:text-2xl font-light text-center text-gray-700 leading-relaxed">
-                    We are set apart by our understanding of collaboration and our passion for mutually rewarding relationships.
-                </p>
-                
-                <p class="text-xl md:text-2xl font-light text-center text-gray-700 leading-relaxed">
-                    We maintain the highest levels of integrity with individuals and corporates across the board.
-                </p>
-                
-                <p class="text-xl md:text-2xl font-light text-center text-gray-700 leading-relaxed">
-                    We simplify the world of finance with straight-talking and smart thinking.
-                </p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-navy-900 mb-4">Get in Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to explore our financial solutions? Contact us today to learn more about how Prodigy Group can serve you.</p>
             </div>
-        </section>
 
-        <!-- Logo Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group Logo" class="h-24 mx-auto opacity-80">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form action="https://formsubmit.co/prodigyportfolioadvisers@gmail.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_subject" value="New Inquiry - Prodigy Group">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="thank-you.html">
+
+                        <div>
+                            <input type="text" name="name" placeholder="Full Name" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Email Address" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                        </div>
+                        <div>
+                            <select name="company_interest" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                                <option value="">Select Company of Interest</option>
+                                <option value="Prodigy Finance">Prodigy Finance (Lending)</option>
+                                <option value="Prodigy Portfolio Advisers">Prodigy Portfolio Advisers (Asset Management)</option>
+                                <option value="Prodigy BrokerCom">Prodigy BrokerCom (Commodities)</option>
+                                <option value="Multiple Companies">Multiple Companies</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea name="message" placeholder="Your Message" rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gold text-navy-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gold mr-4 text-xl"></i>
+                            <span class="text-gray-700">+234 (0)916-762-9178</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-gold mr-4 text-xl mt-1"></i>
+                            <div>
+                                <p class="text-gray-700">info@prodigygroup.com</p>
+                                <p class="text-gray-700">contact@prodigyportfolioadvisers.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mr-4 text-xl mt-1"></i>
+                            <div>
+                                <p class="text-gray-700">17th Floor,</p>
+                                <p class="text-gray-700">Elephant House, Marina Lagos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-gold mr-4 text-xl"></i>
+                            <span class="text-gray-700">Mon - Fri: 9:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-navy-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 mr-3">
-                        <span class="text-xl font-bold">PRODIGY GROUP</span>
+                        <img src="attached_assets/logo3_1753018782452.png" alt="Prodigy Group Logo" class="h-8 mr-3">
+                        <span class="text-xl font-bold">Prodigy Group</span>
                     </div>
-                    <p class="text-gray-400">Diversified financial services across lending, asset management, and commodities trading.</p>
+                    <p class="text-gray-400">Excellence across financial services - Lending, Asset Management, and Commodities Trading</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4 text-gold">Our Subsidiaries</h4>
+                    <h4 class="text-lg font-bold mb-4">Our Companies</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="coming-soon-finance.html" class="hover:text-gold transition">Prodigy Finance</a></li>
+                        <li>Prodigy Finance</li>
                         <li><a href="ppa.html" class="hover:text-gold transition">Prodigy Portfolio Advisers</a></li>
-                        <li><a href="coming-soon-brokercom.html" class="hover:text-gold transition">Prodigy Brokercom</a></li>
+                        <li>Prodigy BrokerCom</li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4 text-gold">Quick Links</h4>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
-                        <li><a href="groups.html" class="hover:text-gold transition">Our Group</a></li>
-                        <li><a href="whoweare.html" class="hover:text-gold transition">Who We Are</a></li>
-                        <li><a href="contact-us.html" class="hover:text-gold transition">Contact Us</a></li>
+                        <li><a href="#home" class="hover:text-gold transition">Home</a></li>
+                        <li><a href="#companies" class="hover:text-gold transition">Our Companies</a></li>
+                        <li><a href="#about" class="hover:text-gold transition">About</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-bold mb-4 text-gold">Connect With Us</h4>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
                         <i class="fab fa-linkedin text-2xl text-gray-400 hover:text-gold transition cursor-pointer"></i>
                         <i class="fab fa-twitter text-2xl text-gray-400 hover:text-gold transition cursor-pointer"></i>
@@ -245,68 +388,34 @@
         </div>
     </footer>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 hidden">
-        <div class="flex flex-col h-full">
-            <div class="flex justify-between items-center p-6 border-b">
-                <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 mr-3">
-                    <span class="text-navy-900 text-xl font-bold">PRODIGY GROUP</span>
-                </div>
-                <button id="mobile-close-btn" class="text-navy-900">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-            </div>
-            <div class="flex-1 overflow-y-auto p-6">
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-navy-900 font-bold mb-2">Who We Are</h3>
-                        <div class="pl-4 space-y-2">
-                            <a href="groups.html" class="block text-gray-600 hover:text-gold transition">Our Group</a>
-                            <a href="#meet-architects" class="block text-gray-600 hover:text-gold transition">Meet the Architects</a>
-                            <a href="#meet-navigators" class="block text-gray-600 hover:text-gold transition">Meet the Navigators</a>
-                            <a href="#blog" class="block text-gray-600 hover:text-gold transition">Blog</a>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-navy-900 font-bold mb-2">Our Subsidiaries</h3>
-                        <div class="pl-4 space-y-2">
-                            <a href="coming-soon-finance.html" class="block text-gray-600 hover:text-gold transition">Prodigy Finance</a>
-                            <a href="ppa.html" class="block text-gray-600 hover:text-gold transition">Prodigy Portfolio Advisers</a>
-                            <a href="coming-soon-brokercom.html" class="block text-gray-600 hover:text-gold transition">Prodigy Brokercom</a>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-navy-900 font-bold mb-2">Careers</h3>
-                        <div class="pl-4 space-y-2">
-                            <a href="join-our-team.html" class="block text-gray-600 hover:text-gold transition">Join our team</a>
-                        </div>
-                    </div>
-                    <a href="contact-us.html" class="block text-navy-900 font-bold hover:text-gold transition">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileCloseBtn = document.getElementById('mobile-close-btn');
-
-        mobileMenuBtn?.addEventListener('click', function() {
-            mobileMenu?.classList.remove('hidden');
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Add mobile menu functionality here if needed
         });
 
-        mobileCloseBtn?.addEventListener('click', function() {
-            mobileMenu?.classList.add('hidden');
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
 
-        // Close mobile menu when clicking outside
-        mobileMenu?.addEventListener('click', function(e) {
-            if (e.target === mobileMenu) {
-                mobileMenu.classList.add('hidden');
-            }
+        // Add animation on scroll
+        window.addEventListener('scroll', function() {
+            const cards = document.querySelectorAll('.company-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    card.classList.add('animate');
+                }
+            });
         });
     </script>
 </body>
