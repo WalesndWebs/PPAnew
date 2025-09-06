@@ -72,33 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
             menuDiv.className = 'md:hidden bg-white px-6 pb-4 border-t border-gray-200';
             menuDiv.innerHTML = `
                 <div class="flex flex-col space-y-4">
-                    <a href="#home" class="text-navy-900 hover:text-gold transition">Home</a>
-                    
-                    <!-- Mobile Who We Are Section -->
-                    <div class="border-b border-gray-200 pb-2">
-                        <button data-dropdown="who-we-are" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition font-medium">
-                            Who We Are
-                            <i class="fas fa-chevron-down text-xs transition-transform"></i>
-                        </button>
-                        <div data-dropdown-menu="who-we-are" class="hidden mt-2 ml-4 space-y-2">
-                            <a href="#our-group" class="block text-navy-900 hover:text-gold transition text-sm">Our Group</a>
-                            <div class="border-l-2 border-gray-200 pl-4">
-                                <button data-dropdown="our-people" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition text-sm">
-                                    Our People
-                                    <i class="fas fa-chevron-down text-xs transition-transform"></i>
-                                </button>
-                                <div data-dropdown-menu="our-people" class="hidden mt-2 ml-4 space-y-1">
-                                    <a href="#board-directors" class="block text-navy-900 hover:text-gold transition text-xs">Board of Directors</a>
-                                    <a href="#management-team" class="block text-navy-900 hover:text-gold transition text-xs">Management Team</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#subsidiaries" class="text-navy-900 hover:text-gold transition">Subsidiaries</a>
-                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition">PPA</a>
-                    <a href="about-us.html" class="text-navy-900 hover:text-gold transition">About Us</a>
+                    <a href="whoweare.html" class="text-navy-900 hover:text-gold transition">Who We Are</a>
+                    <a href="subsidiaries.html" class="text-navy-900 hover:text-gold transition">Our Subsidiaries</a>
                     <a href="#careers" class="text-navy-900 hover:text-gold transition">Careers</a>
+                    <a href="#contact" class="text-navy-900 hover:text-gold transition">Contact Us</a>
                 </div>
             `;
             nav.appendChild(menuDiv);
