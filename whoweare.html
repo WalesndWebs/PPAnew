@@ -407,39 +407,60 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div style="display: flex; align-items: center;">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" style="height: 20px; width: auto; margin-right: 6px;">
-                    <div class="logo">Prodigy</div>
+    <!-- Navigation - FSDHAML Style -->
+    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <div class="flex flex-col items-start">
+                        <div class="flex items-center">
+                            <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
+                                class="h-10 w-auto mr-3">
+                            <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
+                        </div>
+                        <div class="text-navy-900 text-xs font-medium ml-12 opacity-75">asset management</div>
+                    </div>
                 </div>
 
-                <ul class="nav-menu">
-                    <li><a href="#">Home</a></li>
-                    <li class="nav-dropdown">
-                        <span>Who we are <i class="fas fa-chevron-down"></i></span>
-                    </li>
-                    <li class="nav-dropdown">
-                        <span>What we do <i class="fas fa-chevron-down"></i></span>
-                    </li>
-                    <li><a href="#">Investors</a></li>
-                    <li><a href="#">News</a></li>
-                </ul>
-
-                <div class="nav-actions">
-                    <button class="login-btn">Login</button>
-                    <a href="#" class="primary-btn">Open Account</a>
+                <!-- Center Menu Items -->
+                <div class="hidden lg:flex items-center space-x-12">
+                    <a href="index.html" class="text-navy-900 hover:text-gold transition font-medium">Home</a>
+                    <a href="whoweare.html" class="text-gold hover:text-gold transition font-medium">Who we are</a>
+                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition font-medium">What we do</a>
+                    <a href="about-us.html" class="text-navy-900 hover:text-gold transition font-medium">About Us</a>
+                    <a href="#resources" class="text-navy-900 hover:text-gold transition font-medium">Resources</a>
+                    <a href="#blog" class="text-navy-900 hover:text-gold transition font-medium">Blog</a>
                 </div>
-            </nav>
+
+                <!-- Right Side Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button
+                        class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-sm">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </button>
+                    <button
+                        class="border-2 border-navy-900 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition text-sm">
+                        <i class="fas fa-user mr-2"></i>
+                        Log in
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" style="padding-top: 80px;">
             <div class="container">
                 <div class="hero-grid">
                     <div>
