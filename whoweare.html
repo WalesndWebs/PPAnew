@@ -425,6 +425,55 @@
             }
         }
     </style>
+
+    <script>
+        function showDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '1';
+                dropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '0';
+                dropdown.style.visibility = 'hidden';
+            }
+        }
+
+        function showNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '1';
+                nestedDropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '0';
+                nestedDropdown.style.visibility = 'hidden';
+            }
+        }
+
+        // Add hover effects for dropdown items
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownItems = document.querySelectorAll('.dropdown-menu a, .nested-dropdown a');
+            dropdownItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.background = '#f3f4f6';
+                    this.style.color = '#daa520';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.background = 'transparent';
+                    this.style.color = '#374151';
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -444,7 +493,33 @@
             <div style="display: flex; align-items: center; gap: 24px;">
                 <a href="index.html" style="color: #374151; text-decoration: none; font-size: 14px;">Home</a>
                 <a href="whoweare.html" style="color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500;">Who we are</a>
-                <a href="ppa.html" style="color: #374151; text-decoration: none; font-size: 14px;">What we do</a>
+                
+                <!-- What we do Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; display: flex; align-items: center;">
+                        What we do
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 200px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="our-offerings.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Our Offerings</a>
+                        
+                        <!-- Our Products with nested dropdown -->
+                        <div style="position: relative;" onmouseover="showNestedDropdown(event)" onmouseout="hideNestedDropdown(event)">
+                            <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">
+                                Our Products
+                                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                            </a>
+                            
+                            <div class="nested-dropdown" style="position: absolute; top: 0; left: 100%; background: white; min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-left: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1001;">
+                                <a href="#" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Aura</a>
+                                <a href="#" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Genesis</a>
+                                <a href="#" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Liquidity Fund</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <a href="#" style="color: #374151; text-decoration: none; font-size: 14px;">Resources</a>
                 <a href="#" style="color: #374151; text-decoration: none; font-size: 14px;">Blog</a>
             </div>
