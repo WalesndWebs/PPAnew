@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Navigators - Prodigy Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --navy-900: #1e3a8a;
+            --gold: #fbbf24;
+        }
+
+        .text-navy-900 {
+            color: var(--navy-900);
+        }
+
+        .bg-navy-900 {
+            background-color: var(--navy-900);
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .bg-gold {
+            background-color: var(--gold);
+        }
+
+        .border-gold {
+            border-color: var(--gold);
+        }
+
+        .hover\:text-gold:hover {
+            color: var(--gold);
+        }
+
+        .hover\:bg-gold:hover {
+            background-color: var(--gold);
+        }
+
+        .hover\:border-gold:hover {
+            border-color: var(--gold);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Logo"
+                            class="h-12 w-12">
+                        <span class="text-2xl font-bold text-navy-900 hover:text-gold transition">PRODIGY GROUP</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Who We Are Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Who We Are <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div style="position: absolute; left: 0; margin-top: 8px; width: 200px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="groups.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Our Group</a>
+                                <div class="relative group/submenu">
+                                    <a href="#" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s; background: linear-gradient(90deg, var(--gold), #f59e0b); color: white;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Our People <i class="fas fa-chevron-right ml-1 text-sm float-right mt-0.5"></i></a>
+                                    <div style="position: absolute; left: 100%; top: 0; width: 200px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateX(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0">
+                                        <div class="py-1">
+                                            <a href="meet-the-architects.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Meet the Architects</a>
+                                            <a href="meet-the-navigators.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Meet the Navigators</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Subsidiaries Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Our Subsidiaries <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div style="position: absolute; left: 0; margin-top: 8px; width: 240px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="coming-soon-finance.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Finance</a>
+                                <a href="ppa.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Portfolio Advisers</a>
+                                <a href="coming-soon-brokercom.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Brokercom</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Careers Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Careers <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div style="position: absolute; left: 0; margin-top: 8px; width: 160px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="join-our-team.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Join our team</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
+                    <button class="text-navy-900 hover:text-gold transition">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-navy-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Meet the Navigators</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                The experienced board members and directors who provide strategic guidance and governance excellence to steer Prodigy Group toward sustained success.
+            </p>
+        </div>
+    </section>
+
+    <!-- Board Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mohammed Yinusa - Chairman -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-crown text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Mohammed Yinusa</h3>
+                        <p class="text-gold font-semibold mb-4">Chairman</p>
+                        <p class="text-gray-600 text-sm mb-4">Providing visionary leadership and strategic direction to guide Prodigy Group's long-term growth...</p>
+                        <button onclick="openModal('mohammed')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bode Ojeniyi - Executive Director -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Bode Ojeniyi</h3>
+                        <p class="text-gold font-semibold mb-4">Executive Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Leading executive operations and strategic implementation across all business units...</p>
+                        <button onclick="openModal('bode')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lanre Ajayi - Independent Director -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-balance-scale text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Lanre Ajayi</h3>
+                        <p class="text-gold font-semibold mb-4">Independent Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Providing independent oversight and governance expertise to ensure transparency and accountability...</p>
+                        <button onclick="openModal('lanre')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chinyere Nwogu - Non-executive Director -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user-check text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Chinyere Nwogu</h3>
+                        <p class="text-gold font-semibold mb-4">Non-executive Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Contributing valuable industry insights and strategic counsel to board decisions...</p>
+                        <button onclick="openModal('chinyere')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sanusi Ayama - Independent Director -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-gavel text-6xl text-gold"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Sanusi Ayama</h3>
+                        <p class="text-gold font-semibold mb-4">Independent Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Ensuring independent judgment and strategic oversight in all board deliberations...</p>
+                        <button onclick="openModal('sanusi')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Modals -->
+    <!-- Mohammed Modal -->
+    <div id="mohammed-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('mohammed')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-crown text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Mohammed Yinusa</h2>
+                    <p class="text-gold font-semibold">Chairman</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    As Chairman, Mohammed Yinusa brings extensive experience in corporate governance and strategic leadership to guide Prodigy Group's vision and long-term objectives.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bode Modal -->
+    <div id="bode-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bode')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user-tie text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Bode Ojeniyi</h2>
+                    <p class="text-gold font-semibold">Executive Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Bode Ojeniyi serves as Executive Director, overseeing strategic execution and operational excellence across all Prodigy Group subsidiaries.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lanre Modal -->
+    <div id="lanre-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lanre')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-balance-scale text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Lanre Ajayi</h2>
+                    <p class="text-gold font-semibold">Independent Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Lanre Ajayi provides independent oversight and brings objective perspective to board decisions, ensuring the highest standards of corporate governance.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chinyere Modal -->
+    <div id="chinyere-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('chinyere')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-user-check text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Chinyere Nwogu</h2>
+                    <p class="text-gold font-semibold">Non-executive Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Chinyere Nwogu contributes valuable industry expertise and strategic insights as a Non-executive Director, supporting informed decision-making.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sanusi Modal -->
+    <div id="sanusi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sanusi')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <i class="fas fa-gavel text-3xl text-gold"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Sanusi Ayama</h2>
+                    <p class="text-gold font-semibold">Independent Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    [Bio content will be added when provided by client]
+                </p>
+                <p class="mb-4">
+                    Sanusi Ayama ensures independent judgment and objective oversight in all board matters, maintaining the highest standards of governance.
+                </p>
+                <p>
+                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Logo"
+                            class="h-8 w-8">
+                        <span class="text-xl font-bold">PRODIGY GROUP</span>
+                    </div>
+                    <p class="text-gray-300">
+                        Empowering financial prosperity through unwavering trust, impenetrable security, radical transparency, and relentless excellence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="groups.html" class="text-gray-300 hover:text-gold transition">About Us</a></li>
+                        <li><a href="ppa.html" class="text-gray-300 hover:text-gold transition">Services</a></li>
+                        <li><a href="contact-us.html" class="text-gray-300 hover:text-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-gold transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(person) {
+            document.getElementById(person + '-modal').classList.add('show');
+        }
+
+        function closeModal(person) {
+            document.getElementById(person + '-modal').classList.remove('show');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        }
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Add mobile menu functionality here if needed
+        });
+    </script>
+</body>
+
+</html>
