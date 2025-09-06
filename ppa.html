@@ -60,10 +60,11 @@
 </head>
 
 <body class="font-sans">
-    <!-- Navigation - Same as main site -->
+    <!-- Navigation - FSDHAML Style -->
     <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
                 <div class="flex items-center">
                     <div class="flex flex-col items-start">
                         <div class="flex items-center">
@@ -73,14 +74,30 @@
                         <div class="text-navy-900 text-xs font-medium ml-12 opacity-75">asset management</div>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-navy-900 hover:text-gold transition">Home</a>
-                    <a href="#who-we-are" class="text-navy-900 hover:text-gold transition">Who we are</a>
-                    <a href="#what-we-do" class="text-navy-900 hover:text-gold transition">What we do</a>
-                    <a href="#resources" class="text-navy-900 hover:text-gold transition">Resources</a>
-                    <a href="#blog" class="text-navy-900 hover:text-gold transition">Blog</a>
+                
+                <!-- Center Menu Items -->
+                <div class="hidden lg:flex items-center space-x-12">
+                    <a href="index.html" class="text-navy-900 hover:text-gold transition font-medium">Home</a>
+                    <a href="#who-we-are" class="text-navy-900 hover:text-gold transition font-medium">Who we are</a>
+                    <a href="#what-we-do" class="text-navy-900 hover:text-gold transition font-medium">What we do</a>
+                    <a href="#resources" class="text-navy-900 hover:text-gold transition font-medium">Resources</a>
+                    <a href="#blog" class="text-navy-900 hover:text-gold transition font-medium">Blog</a>
                 </div>
-                <div class="md:hidden flex items-center">
+                
+                <!-- Right Side Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-sm">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </button>
+                    <button class="border-2 border-navy-900 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition text-sm">
+                        <i class="fas fa-user mr-2"></i>
+                        Log in
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
@@ -90,24 +107,24 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center text-white pt-16">
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-white pt-32">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <div class="mb-12">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-light mb-6 hero-text leading-tight">
+            <div class="mb-16">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-light mb-8 hero-text leading-tight max-w-5xl mx-auto">
                     If you'll let us, we can be your trusted 
                     <span id="animated-text" class="text-gold font-medium">wealth management</span> 
                     partner
                 </h1>
-                <p class="text-xl md:text-2xl mb-12 opacity-90 max-w-4xl mx-auto leading-relaxed">
+                <p class="text-xl md:text-2xl mb-16 opacity-90 max-w-4xl mx-auto leading-relaxed">
                     We've been in the game for over a decade with a track record of success. Let us journey with you.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <button class="bg-gold text-navy-900 px-10 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+                    <button class="bg-gold text-navy-900 px-12 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
                         <i class="fas fa-user-circle mr-2"></i>
                         Log in
                     </button>
-                    <button class="border-2 border-gold text-gold px-10 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
+                    <button class="border-2 border-gold text-gold px-12 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
                         <i class="fas fa-user-plus mr-2"></i>
                         Create an account
                     </button>
@@ -130,10 +147,10 @@
     </section>
 
     <!-- Our Offerings Section -->
-    <section class="offerings-slider py-24">
+    <section class="offerings-slider py-32">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Our Offerings</h2>
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8">Our Offerings</h2>
             </div>
 
             <!-- Services Grid - FSDHAML Style -->
@@ -186,11 +203,11 @@
     </section>
 
     <!-- Investment Products Section -->
-    <section class="bg-white py-24">
+    <section class="bg-white py-32">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Our products</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Most enterprises do not know the impact of cloud spending on revenues, customer acquisition costs, or other metrics relevant to their businesses.</p>
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8">Our products</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">Most enterprises do not know the impact of cloud spending on revenues, customer acquisition costs, or other metrics relevant to their businesses.</p>
             </div>
 
             <!-- Product Categories -->
@@ -263,25 +280,25 @@
     </section>
     
     <!-- Testimonial Section -->
-    <section class="bg-gray-50 py-24">
+    <section class="bg-gray-50 py-32">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="bg-white rounded-2xl p-12 shadow-lg">
-                <p class="text-xl text-gray-700 mb-8 leading-relaxed italic">
-                    "Working with Prodigy Portfolio Advisers has been a game-changer for me. Their expertise, personalized approach, and results-driven strategies have consistently delivered impressive returns. Highly recommended for anyone seeking exceptional financial management services."
+            <div class="bg-white rounded-2xl p-16 shadow-lg">
+                <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed italic">
+                    "Working with this FSDH has been a game-changer for me. Their expertise, personalized approach, and results-driven strategies have consistently delivered impressive returns. Highly recommended for anyone seeking exceptional financial management services."
                 </p>
                 <div class="text-navy-900 font-bold text-lg">
-                    Adebayo Johnson, CEO
+                    Faith Kure, Risk Manager
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="offerings-slider py-24">
+    <section class="offerings-slider py-32">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Frequently asked questions</h2>
-                <p class="text-lg text-gray-600">If you can not find what you are looking for, email our support team; we will get back to you.</p>
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8">Frequently asked questions</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">If you can not find what you are looking for, email our support team; we will get back to you.</p>
             </div>
 
             <div class="space-y-6">
@@ -329,13 +346,13 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="hero-gradient py-24 text-white">
+    <section class="hero-gradient py-32 text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="mb-12">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-8 leading-tight">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-12 leading-tight">
                     Ready to supercharge your <span class="text-gold font-medium">finance?</span>
                 </h2>
-                <p class="text-xl md:text-2xl opacity-90 mb-12 leading-relaxed">
+                <p class="text-xl md:text-2xl opacity-90 mb-16 leading-relaxed">
                     Set all the best financial products for your business growth for free. Open the last current account you will ever need for your business.
                 </p>
                 
