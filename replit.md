@@ -7,6 +7,7 @@ Prodigy Group is a diversified financial services conglomerate that operates thr
 ## Recent Changes
 
 ### September 6, 2025
+- **Created Testimonial Slider**: Replaced single testimonial on ppa.html with interactive slider featuring Daniel Eghiebade's testimonial about Nigerian stock market investments, using provided client photo and complete slider functionality for future testimonials
 - **Updated PPA Offerings**: Changed ppa.html offerings to Investment Management, Commodity Funding, Collateral Lending, Bespoke Advisory, and Wealth Preservation with new client-provided images replacing Unsplash photos
 - **Streamlined whoweare.html Team Section**: Removed Board of Directors section and kept only Management Team members (7 professionals) to focus specifically on PPA operational team
 - **Updated Core Values**: Changed company values to the four pillars: Trust, Transparency, Excellence, and Security with professional descriptions and appropriate icons

@@ -376,36 +376,66 @@
         </div>
     </section>
 
-    <!-- Testimonial Section -->
+    <!-- Testimonial Slider Section -->
     <section class="bg-white py-32">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Testimonial Content -->
-                <div class="order-2 lg:order-1">
-                    <div class="max-w-xl">
-                        <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed italic">
-                            "Working with Prodigy Portfolio Advisers has been a game-changer for me. Their expertise,
-                            personalized approach, and results-driven strategies have consistently delivered impressive
-                            returns. Highly recommended for anyone seeking exceptional financial management services."
-                        </p>
-                        <div class="text-navy-900 font-bold text-lg">
-                            Faith Kure, Risk Manager
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy-900 mb-6">What Our Clients Say</h2>
+                <p class="text-gray-600">Real experiences from real clients who trust us with their financial future</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Testimonial Slider Container -->
+                <div class="testimonial-slider overflow-hidden">
+                    <div class="testimonial-track flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonial 1 - Daniel Eghiebade -->
+                        <div class="testimonial-slide w-full flex-shrink-0">
+                            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                                <!-- Testimonial Content -->
+                                <div class="order-2 lg:order-1">
+                                    <div class="max-w-xl">
+                                        <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed italic">
+                                            "My mum introduced me to Prodigy Portfolio Advisers to start my targeted savings and investments in the Nigerian stock market. I can safely say that their portfolio advisory services are transparent, simplified, and motivating. I can already envisage my future wealth. Thank you, Prodigy Portfolios"
+                                        </p>
+                                        <div class="text-navy-900 font-bold text-lg">
+                                            Daniel Eghiebade
+                                        </div>
+                                        <div class="text-gray-600 text-sm mt-2">
+                                            Student
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Professional Image -->
+                                <div class="order-1 lg:order-2">
+                                    <div class="relative">
+                                        <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+                                            <img src="attached_assets/WhatsApp Image 2025-09-06 at 14.14.22 (1)_1757168270002.jpeg"
+                                                alt="Daniel Eghiebade" class="w-full h-full object-cover">
+                                        </div>
+                                        <!-- Decorative elements -->
+                                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold rounded-full opacity-20"></div>
+                                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-navy-900 rounded-full opacity-20"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Professional Image -->
-                <div class="order-1 lg:order-2">
-                    <div class="relative">
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Professional woman" class="w-full h-full object-cover">
-                        </div>
-                        <!-- Decorative elements -->
-                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-gold rounded-full opacity-20"></div>
-                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-navy-900 rounded-full opacity-20"></div>
-                    </div>
+                <!-- Slider Navigation -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gold transition-all duration-300" data-slide="0"></button>
+                    <!-- Add more dots when adding more testimonials -->
                 </div>
+
+                <!-- Slider Arrow Navigation -->
+                <button class="testimonial-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 opacity-50 cursor-not-allowed" disabled>
+                    <i class="fas fa-chevron-left text-navy-900"></i>
+                </button>
+                <button class="testimonial-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 opacity-50 cursor-not-allowed" disabled>
+                    <i class="fas fa-chevron-right text-navy-900"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -692,6 +722,79 @@
                 el.classList.add('fade-in');
                 observer.observe(el);
             });
+
+            // Testimonial Slider Functionality
+            let currentTestimonialSlide = 0;
+            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+            const testimonialTrack = document.querySelector('.testimonial-track');
+            const testimonialDots = document.querySelectorAll('.testimonial-dot');
+            const testimonialPrev = document.querySelector('.testimonial-prev');
+            const testimonialNext = document.querySelector('.testimonial-next');
+
+            function updateTestimonialSlider() {
+                // Move slider
+                const translateX = currentTestimonialSlide * -100;
+                testimonialTrack.style.transform = `translateX(${translateX}%)`;
+
+                // Update dots
+                testimonialDots.forEach((dot, index) => {
+                    if (index === currentTestimonialSlide) {
+                        dot.classList.add('bg-gold');
+                        dot.classList.remove('bg-gray-300');
+                    } else {
+                        dot.classList.add('bg-gray-300');
+                        dot.classList.remove('bg-gold');
+                    }
+                });
+
+                // Update navigation buttons
+                if (testimonialSlides.length > 1) {
+                    testimonialPrev.disabled = currentTestimonialSlide === 0;
+                    testimonialNext.disabled = currentTestimonialSlide === testimonialSlides.length - 1;
+                    
+                    if (currentTestimonialSlide === 0) {
+                        testimonialPrev.classList.add('opacity-50', 'cursor-not-allowed');
+                    } else {
+                        testimonialPrev.classList.remove('opacity-50', 'cursor-not-allowed');
+                    }
+                    
+                    if (currentTestimonialSlide === testimonialSlides.length - 1) {
+                        testimonialNext.classList.add('opacity-50', 'cursor-not-allowed');
+                    } else {
+                        testimonialNext.classList.remove('opacity-50', 'cursor-not-allowed');
+                    }
+                }
+            }
+
+            // Dot navigation
+            testimonialDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentTestimonialSlide = index;
+                    updateTestimonialSlider();
+                });
+            });
+
+            // Arrow navigation
+            if (testimonialPrev) {
+                testimonialPrev.addEventListener('click', () => {
+                    if (currentTestimonialSlide > 0) {
+                        currentTestimonialSlide--;
+                        updateTestimonialSlider();
+                    }
+                });
+            }
+
+            if (testimonialNext) {
+                testimonialNext.addEventListener('click', () => {
+                    if (currentTestimonialSlide < testimonialSlides.length - 1) {
+                        currentTestimonialSlide++;
+                        updateTestimonialSlider();
+                    }
+                });
+            }
+
+            // Initialize slider
+            updateTestimonialSlider();
         });
     </script>
 </body>
