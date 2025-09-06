@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="fas fa-chevron-down text-xs transition-transform"></i>
                         </button>
                         <div data-dropdown-menu="subsidiaries" class="hidden mt-2 ml-4 space-y-2">
-                            <a href="coming-soon-finance.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Finance</a>
+                            <a href="finance.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Finance</a>
                             <a href="ppa.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Portfolio Advisers</a>
-                            <a href="coming-soon-brokercom.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Brokercom</a>
+                            <a href="brokercom.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Brokercom</a>
                         </div>
                     </div>
 
