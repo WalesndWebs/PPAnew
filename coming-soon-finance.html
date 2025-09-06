@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Finance - Coming Soon | Prodigy Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --navy-900: #1e293b;
+            --gold: #daa520;
+        }
+        
+        .text-navy-900 { color: var(--navy-900); }
+        .text-gold { color: var(--gold); }
+        .bg-navy-900 { background-color: var(--navy-900); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, var(--navy-900) 0%, #2563eb 100%);
+        }
+
+        // Dropdown functionality
+        function showDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '1';
+                dropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '0';
+                dropdown.style.visibility = 'hidden';
+            }
+        }
+
+        function showNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '1';
+                nestedDropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '0';
+                nestedDropdown.style.visibility = 'hidden';
+            }
+        }
+
+        // Add hover effects for dropdown items
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownItems = document.querySelectorAll('.dropdown-menu a, .nested-dropdown a');
+            dropdownItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    // Check if it's in the gold nested dropdown
+                    const isInGoldDropdown = this.closest('.nested-dropdown');
+                    if (isInGoldDropdown) {
+                        this.style.background = 'rgba(218, 165, 32, 0.1)';
+                    } else {
+                        this.style.background = '#f3f4f6';
+                    }
+                    this.style.color = '#daa520';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.background = 'transparent';
+                    this.style.color = '#374151';
+                });
+            });
+        });
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Fixed Header Navigation -->
+    <nav style="position: fixed; top: 0; width: 100%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; padding: 16px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
+            <!-- Logo -->
+            <div style="display: flex; align-items: center;">
+                <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group Logo" style="height: 40px;">
+                <div style="margin-left: 12px;">
+                    <h1 style="font-size: 20px; font-weight: bold; color: #1e293b; margin: 0;">PRODIGY GROUP</h1>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Financial Services</p>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <!-- Who We Are Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; display: flex; align-items: center;">
+                        Who We Are
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="whoweare.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Our Group</a>
+                        
+                        <!-- Our People with nested dropdown -->
+                        <div style="position: relative;" onmouseover="showNestedDropdown(event)" onmouseout="hideNestedDropdown(event)">
+                            <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">
+                                Our People
+                                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                            </a>
+                            
+                            <div class="nested-dropdown" style="position: absolute; top: 0; left: 100%; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid rgba(218, 165, 32, 0.2); min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-left: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1001;">
+                                <a href="#meet-architects" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Meet the Architects</a>
+                                <a href="#meet-navigators" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Meet the Navigators</a>
+                                <a href="#blog" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Subsidiaries Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500; display: flex; align-items: center;">
+                        Our Subsidiaries
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 200px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="coming-soon-finance.html" style="display: block; padding: 12px 20px; color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500; transition: background 0.2s;">Prodigy Finance</a>
+                        <a href="ppa.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Portfolio Advisers</a>
+                        <a href="coming-soon-brokercom.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Prodigy Brokercom</a>
+                    </div>
+                </div>
+
+                <!-- Careers Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; display: flex; align-items: center;">
+                        Careers
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 160px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="join-our-team.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s; font-weight: 500;">Join our team</a>
+                    </div>
+                </div>
+                
+                <a href="contact-us.html" style="color: #374151; text-decoration: none; font-size: 14px;">Contact Us</a>
+                <button style="color: #374151; background: transparent; border: none; font-size: 16px; cursor: pointer;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="hero-bg" style="min-height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+        <div class="container mx-auto px-6 text-center text-white">
+            <!-- Logo -->
+            <div class="mb-8">
+                <i class="fas fa-building text-6xl text-gold mb-4"></i>
+            </div>
+            
+            <!-- Main Heading -->
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Prodigy <span class="text-gold">Finance</span>
+            </h1>
+            
+            <!-- Subtitle -->
+            <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                Innovative Lending Solutions
+            </p>
+            
+            <!-- Coming Soon Message -->
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto mb-8">
+                <h2 class="text-2xl font-bold mb-4">Coming Soon</h2>
+                <p class="text-lg mb-6 leading-relaxed">
+                    We're building something amazing! Our comprehensive lending solutions platform will offer innovative financial products designed to meet your unique needs.
+                </p>
+                
+                <!-- Features Preview -->
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="text-center">
+                        <i class="fas fa-credit-card text-2xl text-gold mb-2"></i>
+                        <p class="font-medium">Personal Loans</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-home text-2xl text-gold mb-2"></i>
+                        <p class="font-medium">Real Estate Finance</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-chart-line text-2xl text-gold mb-2"></i>
+                        <p class="font-medium">Business Lending</p>
+                    </div>
+                </div>
+                
+                <!-- Email Notification -->
+                <div class="border-t border-white/20 pt-6">
+                    <p class="mb-4">Be the first to know when we launch:</p>
+                    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            class="flex-1 px-4 py-3 rounded-lg text-navy-900 focus:outline-none focus:ring-2 focus:ring-gold"
+                        >
+                        <button class="bg-gold hover:bg-yellow-600 text-navy-900 font-bold py-3 px-6 rounded-lg transition-colors">
+                            Notify Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Back to Main Site -->
+            <a href="index.html" class="inline-flex items-center text-gold hover:text-yellow-300 transition-colors font-medium">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Prodigy Group
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
