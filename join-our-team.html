@@ -22,60 +22,6 @@
         .hero-bg {
             background: linear-gradient(135deg, var(--navy-900) 0%, #7c2d12 100%);
         }
-
-        // Dropdown functionality
-        function showDropdown(event) {
-            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
-            if (dropdown) {
-                dropdown.style.opacity = '1';
-                dropdown.style.visibility = 'visible';
-            }
-        }
-
-        function hideDropdown(event) {
-            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
-            if (dropdown) {
-                dropdown.style.opacity = '0';
-                dropdown.style.visibility = 'hidden';
-            }
-        }
-
-        function showNestedDropdown(event) {
-            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
-            if (nestedDropdown) {
-                nestedDropdown.style.opacity = '1';
-                nestedDropdown.style.visibility = 'visible';
-            }
-        }
-
-        function hideNestedDropdown(event) {
-            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
-            if (nestedDropdown) {
-                nestedDropdown.style.opacity = '0';
-                nestedDropdown.style.visibility = 'hidden';
-            }
-        }
-
-        // Add hover effects for dropdown items
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdownItems = document.querySelectorAll('.dropdown-menu a, .nested-dropdown a');
-            dropdownItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    // Check if it's in the gold nested dropdown
-                    const isInGoldDropdown = this.closest('.nested-dropdown');
-                    if (isInGoldDropdown) {
-                        this.style.background = 'rgba(218, 165, 32, 0.1)';
-                    } else {
-                        this.style.background = '#f3f4f6';
-                    }
-                    this.style.color = '#daa520';
-                });
-                item.addEventListener('mouseleave', function() {
-                    this.style.background = 'transparent';
-                    this.style.color = '#374151';
-                });
-            });
-        });
     </style>
 </head>
 
@@ -227,6 +173,61 @@
         </div>
     </div>
 
+    <script>
+        // Dropdown functionality
+        function showDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '1';
+                dropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideDropdown(event) {
+            const dropdown = event.currentTarget.querySelector('.dropdown-menu');
+            if (dropdown) {
+                dropdown.style.opacity = '0';
+                dropdown.style.visibility = 'hidden';
+            }
+        }
+
+        function showNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '1';
+                nestedDropdown.style.visibility = 'visible';
+            }
+        }
+
+        function hideNestedDropdown(event) {
+            const nestedDropdown = event.currentTarget.querySelector('.nested-dropdown');
+            if (nestedDropdown) {
+                nestedDropdown.style.opacity = '0';
+                nestedDropdown.style.visibility = 'hidden';
+            }
+        }
+
+        // Add hover effects for dropdown items
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownItems = document.querySelectorAll('.dropdown-menu a, .nested-dropdown a');
+            dropdownItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    // Check if it's in the gold nested dropdown
+                    const isInGoldDropdown = this.closest('.nested-dropdown');
+                    if (isInGoldDropdown) {
+                        this.style.background = 'rgba(218, 165, 32, 0.1)';
+                    } else {
+                        this.style.background = '#f3f4f6';
+                    }
+                    this.style.color = '#daa520';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.background = 'transparent';
+                    this.style.color = '#374151';
+                });
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

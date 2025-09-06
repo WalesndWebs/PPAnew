@@ -94,12 +94,53 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                     
-                    <a href="subsidiaries.html" class="text-navy-900 hover:text-gold transition">Our Subsidiaries</a>
-                    <a href="#careers" class="text-navy-900 hover:text-gold transition">Careers</a>
-                    <a href="#contact" class="text-navy-900 hover:text-gold transition">Contact Us</a>
+                    <!-- Mobile Our Subsidiaries Section -->
+                    <div class="border-b border-gray-200 pb-2">
+                        <button data-dropdown="subsidiaries" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition font-medium">
+                            Our Subsidiaries
+                            <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div data-dropdown-menu="subsidiaries" class="hidden mt-2 ml-4 space-y-2">
+                            <a href="coming-soon-finance.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Finance</a>
+                            <a href="ppa.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Portfolio Advisers</a>
+                            <a href="coming-soon-brokercom.html" class="block text-navy-900 hover:text-gold transition text-sm">Prodigy Brokercom</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Careers Section -->
+                    <div class="border-b border-gray-200 pb-2">
+                        <button data-dropdown="careers" class="flex items-center justify-between w-full text-left text-navy-900 hover:text-gold transition font-medium">
+                            Careers
+                            <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div data-dropdown-menu="careers" class="hidden mt-2 ml-4 space-y-2">
+                            <a href="join-our-team.html" class="block text-navy-900 hover:text-gold transition text-sm font-medium">Join our team</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
                 </div>
             `;
             nav.appendChild(menuDiv);
+            
+            // Add mobile dropdown functionality
+            const dropdownButtons = menuDiv.querySelectorAll('[data-dropdown]');
+            dropdownButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetDropdown = button.getAttribute('data-dropdown');
+                    const menu = menuDiv.querySelector(`[data-dropdown-menu="${targetDropdown}"]`);
+                    const icon = button.querySelector('i');
+                    
+                    if (menu.classList.contains('hidden')) {
+                        menu.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    } else {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('rotate-180');
+                    }
+                });
+            });
         }
     }
 
