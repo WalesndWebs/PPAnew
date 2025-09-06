@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Prodigy Portfolio Advisers</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Custom styles for products page */
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--navy-900) 0%, #1e3a8a 50%, var(--navy-900) 100%);
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(30, 41, 59, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .aura-bg {
+            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+        }
+
+        .genesis-bg {
+            background: linear-gradient(135deg, #ddd6fe 0%, #8b5cf6 100%);
+        }
+
+        .liquidity-bg {
+            background: linear-gradient(135deg, #dcfce7 0%, #22c55e 100%);
+        }
+
+        .roi-badge {
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="ppa.html" class="flex flex-col items-start">
+                        <div class="flex items-center">
+                            <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
+                                class="h-10 w-auto mr-3">
+                            <div class="text-navy-900 text-2xl font-bold hover:text-gold transition">Prodigy Group</div>
+                        </div>
+                        <div class="text-navy-900 text-sm font-bold ml-12 tracking-wide">ASSET MANAGEMENT</div>
+                    </a>
+                </div>
+
+                <!-- Center Menu Items -->
+                <div class="hidden lg:flex items-center space-x-12">
+                    <a href="ppa.html" class="text-navy-900 hover:text-gold transition font-medium">Home</a>
+                    
+                    <a href="whoweare.html" class="text-navy-900 hover:text-gold transition font-medium">Who we are</a>
+                    
+                    <!-- What we do Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gold hover:text-navy-900 transition font-medium flex items-center">
+                            What we do
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="our-offerings.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our Offerings</a>
+                                <a href="products.html" class="block px-4 py-2 text-sm text-gold hover:bg-gray-50 hover:text-navy-900 transition font-medium">Our Products</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="text-navy-900 hover:text-gold transition font-medium">Resources</a>
+                    <a href="#" class="text-navy-900 hover:text-gold transition font-medium">Blog</a>
+                </div>
+
+                <!-- Right Side Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button class="bg-gold text-navy-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition text-sm">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule Consultation
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-16 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Our Investment <span class="text-gold">Products</span>
+            </h1>
+            <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                Discover our carefully curated portfolio of investment opportunities designed to maximize returns and minimize risk.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Prodigy Aura -->
+                <div class="product-card rounded-2xl p-8 text-center aura-bg">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-3xl text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-2">Prodigy Aura</h3>
+                        <div class="roi-badge text-white px-4 py-2 rounded-full text-lg font-bold inline-block mb-4">
+                            20% ROI
+                        </div>
+                    </div>
+                    
+                    <p class="text-navy-900 mb-6 leading-relaxed">
+                        A Commodity-linked Note focusing on sustainable, cyclical, and growth-aligned agro commodities trading via licensed exchanges in Nigeria.
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-navy-900 text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                            Learn More
+                        </button>
+                        <button class="w-full border-2 border-navy-900 text-navy-900 py-3 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Prodigy Genesis -->
+                <div class="product-card rounded-2xl p-8 text-center genesis-bg">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-content mb-4">
+                            <i class="fas fa-building text-3xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-2">Prodigy Genesis</h3>
+                        <div class="roi-badge text-white px-4 py-2 rounded-full text-lg font-bold inline-block mb-4">
+                            30% ROI
+                        </div>
+                    </div>
+                    
+                    <p class="text-navy-900 mb-6 leading-relaxed">
+                        A property development focused fund taking positions in transformative, mid to high-end real estate projects with short to medium term exit strategy.
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-navy-900 text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                            Learn More
+                        </button>
+                        <button class="w-full border-2 border-navy-900 text-navy-900 py-3 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Prodigy Liquidity Fund -->
+                <div class="product-card rounded-2xl p-8 text-center liquidity-bg">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-coins text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-2">Prodigy Liquidity Fund</h3>
+                        <div class="roi-badge text-white px-4 py-2 rounded-full text-lg font-bold inline-block mb-4">
+                            Flexible Returns
+                        </div>
+                    </div>
+                    
+                    <p class="text-navy-900 mb-6 leading-relaxed">
+                        A diversified liquidity fund designed for optimal capital preservation while maintaining accessibility and competitive returns for our valued clients.
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-navy-900 text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                            Learn More
+                        </button>
+                        <button class="w-full border-2 border-navy-900 text-navy-900 py-3 rounded-lg font-semibold hover:bg-navy-900 hover:text-white transition">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-navy-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Investing?</h2>
+            <p class="text-xl mb-8 opacity-90">
+                Schedule a consultation with our investment experts to find the perfect product for your financial goals.
+            </p>
+            <button class="bg-gold text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                Schedule Consultation
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-8 mr-3">
+                <div class="text-xl font-bold">Prodigy Portfolio Advisers</div>
+            </div>
+            <p class="text-gray-400 mb-4">Expert Asset Management • Trusted Financial Partnership</p>
+            <p class="text-sm text-gray-500">© 2025 Prodigy Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Mobile menu functionality can be added here
+            console.log('Mobile menu clicked');
+        });
+    </script>
+
+</body>
+</html>
