@@ -2,76 +2,7 @@
 
 ## Overview
 
-Prodigy Group is a diversified financial services conglomerate that operates through three main subsidiaries: Prodigy Finance (lending solutions), Prodigy Portfolio Advisers (asset management), and Prodigy Brokercom (commodities trading). The website serves as a corporate portal showcasing the group's services, team members, and facilitating client consultations through a multi-page web presence.
-
-## Recent Changes
-
-### September 6, 2025
-- **Created Testimonial Slider**: Replaced single testimonial on ppa.html with interactive slider featuring Daniel Eghiebade's testimonial about Nigerian stock market investments, using provided client photo and complete slider functionality for future testimonials
-- **Updated PPA Offerings**: Changed ppa.html offerings to Investment Management, Commodity Funding, Collateral Lending, Bespoke Advisory, and Wealth Preservation with new client-provided images replacing Unsplash photos
-- **Streamlined whoweare.html Team Section**: Removed Board of Directors section and kept only Management Team members (7 professionals) to focus specifically on PPA operational team
-- **Updated Core Values**: Changed company values to the four pillars: Trust, Transparency, Excellence, and Security with professional descriptions and appropriate icons
-- **Unified Navigation Across All Pages**: Updated products.html navigation to match the exact same menu structure and styling as whoweare.html and ppa.html, ensuring consistent navigation experience across all PPA pages with "Our Products" appropriately highlighted in gold
-- **Streamlined whoweare.html Navigation**: Removed "Our Subsidiaries" dropdown from whoweare.html page navigation since this page is specifically about Prodigy Portfolio Advisers only, keeping only PPA-relevant navigation items (Who We Are, Careers, Contact Us)
-- **Fixed Navigation Issues**: Completely resolved navigation bar problems by implementing inline styles, ensuring proper display across all pages without CSS conflicts
-- **Removed "About Us" from Navigation**: Cleaned up navigation menu by removing the problematic "About Us" link from index.html, ppa.html, and whoweare.html
-- **Added Mission & Vision Statements**: Created professional two-card section in whoweare.html showcasing company mission and vision with gold accent borders and icons
-- **Implemented Advisory Process Section**: Added comprehensive 5-step process flow (Discovery → Analysis → Strategy → Implementation → Monitoring) with professional gold circular badges and connecting arrows
-- **Enhanced Hero Section Design**: Replaced irrelevant team photos with relevant financial service visual cards featuring Investment Growth, Portfolio Management, Risk Management, and Financial Planning elements
-- **Created "What We Do" Dropdown Navigation**: Added comprehensive dropdown menus with "Our Offerings" and "Our Products" (Prodigy Aura, Prodigy Genesis, Prodigy Liquidity Fund) across all pages
-- **Built Our Offerings Page**: Created professional offerings page with 5 key services (Investment Management, Commodity Funding, Collateralized Lending, Bespoke Advisory, Wealth Preservation) matching FSDH layout
-- **Implemented Product Navigation Links**: Connected all product dropdown items to specific sections on ppa.html with anchor links for direct navigation
-- **Added Resources Dropdown**: Created Resources menu with "Downloadable Forms" submenu and corresponding coming-soon page with professional messaging and email notification system
-- **Simplified Navigation Structure**: Updated all navigation menus across the entire website to simplified structure with exactly 4 main items plus search: "Who We Are", "Our Subsidiaries", "Careers", "Contact Us", and search icon - consistent across all pages including mobile navigation
-- **Enhanced Multi-Level Navigation**: Added sophisticated dropdown hierarchy to "Who We Are" with Our Group and Our People submenus, where Our People contains Meet the Architects, Meet the Navigators, and Blog with distinctive gold gradient background styling to differentiate nested menu levels
-- **Added Comprehensive Subsidiary Navigation**: Created "Our Subsidiaries" dropdown with Prodigy Finance (coming soon), Prodigy Portfolio Advisers (→ ppa.html), and Prodigy Brokercom (coming soon) across all pages
-- **Implemented Careers Navigation**: Added "Careers" dropdown with "Join our team" button linking to dedicated careers coming-soon page with email notification system
-- **Created Coming Soon Pages**: Built professional coming-soon pages for Prodigy Finance (lending solutions), Prodigy Brokercom (commodities trading), and Join our team (careers) with unique branding and email capture
-- **Built Complete Contact Page**: Created comprehensive contact-us.html with contact information cards, contact form, business hours, social media links, and integrated Google Maps showing Lagos office location
-- **Enhanced Front Page Slider**: Expanded slider to cover entire header section (full viewport height) while maintaining navigation visibility through proper z-index layering
-- **Implemented Interactive Features**: Added working image switching for offerings section with smooth fade transitions
-
-### PPA Page Updates - September 6, 2025
-- **Enhanced Logo Design**: Updated PPA logo with "ASSET MANAGEMENT" in elegant capital letters under the Prodigy Group name, with hover effects and proper linking to ppa.html
-- **Restructured Navigation Menu**: Implemented new clean navigation structure with Home, Who we are, What we do, Resources, and Blog menu items
-- **Created "What We Do" Submenu**: Added dropdown navigation containing "Our Offerings" and "Our Products" with smooth hover animations
-- **Built Products Showcase Page**: Created comprehensive products.html featuring three investment products:
-  - **Prodigy Aura** (20% ROI): Commodity-linked Note for agro commodities trading
-  - **Prodigy Genesis** (30% ROI): Property development focused fund for real estate projects  
-  - **Prodigy Liquidity Fund**: Diversified fund for capital preservation with flexible returns
-- **Professional Product Design**: Each product features distinctive color schemes (golden, purple, green), elegant cards with hover effects, and clear call-to-action buttons
-- **Created Subsidiary Logos Section**: Added professional subsidiary branding section beneath slider featuring Prodigy logo alongside each subsidiary name (Prodigy Finance, Prodigy Portfolio Advisers, Prodigy Brokercom) with hover effects and direct navigation links
-- **Enhanced Logo Navigation**: Made "PRODIGY GROUP" text/logo clickable across all pages, linking back to index.html for consistent home navigation experience
-- **Fixed Subsidiary Navigation**: Connected all subsidiary links on index.html to proper pages (Prodigy Finance → coming-soon-finance.html, Prodigy Portfolio Advisers → ppa.html, Prodigy Brokercom → coming-soon-brokercom.html)
-- **Removed "What We Stand For" Section**: Cleaned up homepage by removing redundant "What We Stand For. Providing In-depth expertise in the industry." section
-- **Updated Mission Statement**: Replaced mission with new powerful statement about empowering financial prosperity through trust, security, transparency, and excellence
-- **Fixed Career Navigation**: Connected "Join Our Team" button in careers section to join-our-team.html page
-- **Created Professional About Us Page**: Built complete about-us.html matching FSDHAML structure exactly with hero section, company overview, statistics, team profiles with professional photos, culture values, and call-to-action
-- **Created Meet the Architects Page**: Built complete meet-the-architects.html with 5 key team members (Lauretha - GMD, Chidi - Group IT, Juliet - Group HR, Adebowale - IT Officer, Felicia Agbola - Legal) featuring individual bio popup modals with placeholder content ready for client bio data
-- **Created Meet the Navigators Page**: Built complete meet-the-navigators.html with 5 board members (Mohammed Yinusa - Chairman, Bode Ojeniyi - Executive Director, Lanre Ajayi - Independent Director, Chinyere Nwogu - Non-executive Director, Sanusi Ayama - Independent Director) featuring individual bio popup modals with placeholder content ready for client bio data
-- **Connected Navigation Links**: Updated all navigation dropdown menus across the entire website (index.html, contact-us.html, ppa.html, groups.html, coming-soon pages, etc.) to properly link to meet-the-architects.html and meet-the-navigators.html instead of hash links
-- **Created Professional About Us Page**: Built complete about-us.html matching FSDHAML structure exactly with hero section, company overview, statistics, team profiles with professional photos, culture values, and call-to-action
-- **Updated Product Section**: Restructured PPA investment products into single row layout with "Learn More" functionality and direct email contact integration
-- **Enhanced Testimonial Design**: Updated testimonial section to match FSDHAML two-column layout with professional image
-- **Fixed Navigation Links**: Connected About Us page to "Who We Are" → "Our Group" dropdown navigation across all pages
-- **Implemented Interactive Features**: Added working image switching for offerings section with smooth fade transitions
-
-### PPA Page Updates - September 6, 2025
-- **Enhanced Logo Design**: Updated PPA logo with "ASSET MANAGEMENT" in elegant capital letters under the Prodigy Group name, with hover effects and proper linking to ppa.html
-- **Restructured Navigation Menu**: Implemented new clean navigation structure with Home, Who we are, What we do, Resources, and Blog menu items
-- **Created "What We Do" Submenu**: Added dropdown navigation containing "Our Offerings" and "Our Products" with smooth hover animations
-- **Built Products Showcase Page**: Created comprehensive products.html featuring three investment products:
-  - **Prodigy Aura** (20% ROI): Commodity-linked Note for agro commodities trading
-  - **Prodigy Genesis** (30% ROI): Property development focused fund for real estate projects  
-  - **Prodigy Liquidity Fund**: Diversified fund for capital preservation with flexible returns
-- **Professional Product Design**: Each product features distinctive color schemes (golden, purple, green), elegant cards with hover effects, and clear call-to-action buttons
-
-### September 5, 2025
-- **Updated Navigation Structure**: Implemented exact FSDH Group navigation with "Who We Are" dropdown containing "Our Group" and "Our People" (with Board of Directors and Management Team sub-items)
-- **Created New PPA Page**: Completely rebuilt ppa.html to match FSDH Asset Management's design structure including hero section, offerings carousel, investment products, FAQ section, and consultation CTA
-- **Enhanced Dropdown Menus**: Added multi-level dropdown functionality with hover effects on desktop and click functionality on mobile
-- **Integrated Prodigy Logo**: Added the official blue "P" with gold arrows logo throughout the site including navigation and footer sections
-- **Fixed Sticky Header**: Resolved navigation bar visibility issues when scrolling
+Prodigy Group is a diversified financial services conglomerate with three main subsidiaries: Prodigy Finance (lending), Prodigy Portfolio Advisers (asset management), and Prodigy Brokercom (commodities trading). The website functions as a corporate portal, showcasing the group's services, team, and facilitating client consultations through a multi-page web presence. The project aims to empower financial prosperity through trust, security, transparency, and excellence.
 
 ## User Preferences
 
@@ -80,48 +11,46 @@ Preferred communication style: Simple, everyday language.
 ## System Architecture
 
 ### Frontend Architecture
-The application follows a traditional multi-page HTML architecture with client-side interactivity:
-
-- **Static HTML Pages**: Multiple interconnected HTML files serving different sections (index.html, ppa.html, subsidiaries.html, etc.)
-- **CSS Framework**: Tailwind CSS v2.2.19 for responsive design and styling
-- **Custom Styling**: Additional CSS variables and classes in style.css for brand-specific colors (navy-blue, gold)
-- **Interactive Components**: JavaScript-powered hero slider, modal systems, and mobile navigation
-- **Icon Integration**: Font Awesome 6.0.0 for consistent iconography
+The application uses a multi-page HTML architecture with client-side interactivity, built with:
+- **Static HTML Pages**: Interconnected HTML files for different sections (e.g., `index.html`, `ppa.html`, `finance.html`, `whoweare.html`, `products.html`, `contact-us.html`, `coming-soon` pages).
+- **CSS Framework**: Tailwind CSS v2.2.19 for responsive design.
+- **Custom Styling**: `style.css` for brand-specific colors (navy-blue, gold) and professional design elements.
+- **Interactive Components**: JavaScript-powered features like testimonial sliders, image switching, modal systems, and mobile navigation.
+- **Icon Integration**: Font Awesome 6.0.0 for consistent iconography.
 
 ### Design Patterns
-- **Component-Based Modals**: Reusable profile modal system for team member information
-- **Responsive Navigation**: Fixed header with mobile hamburger menu
-- **Hero Slider**: Auto-rotating banner system with manual controls and touch support
-- **Brand Consistency**: Consistent color scheme (navy-900, gold) across all pages
+- **Brand Consistency**: A consistent color scheme (navy-900, gold) and branding are maintained across all pages, including unified navigation styles. Logos are updated to include subsidiary names and hover effects.
+- **Responsive Navigation**: Features a fixed header with a mobile hamburger menu and multi-level dropdowns with hover effects for desktop and click functionality for mobile. Navigation links are consistently updated across all pages.
+- **Interactive Elements**: Includes a hero slider for the front page, an interactive testimonial slider, and dynamic content displays for team members and offerings.
+- **Component-Based Modals**: Reusable profile modal system for displaying team member biographies.
+- **Structured Content**: Pages like `ppa.html` and `products.html` are designed with clear sections for offerings, investment products, FAQs, and consultation calls to action, often mirroring professional financial layouts like FSDHAML.
+- **Core Values Integration**: Company values (Trust, Transparency, Excellence, Security) are integrated with professional descriptions and icons.
+- **Advisory Process Flow**: A 5-step advisory process (Discovery → Analysis → Strategy → Implementation → Monitoring) is clearly outlined.
 
-### Page Structure
-- **Landing Page** (index.html): Hero slider with company introduction
-- **Portfolio Advisers** (ppa.html): FSDH Asset Management-style page with wealth management services, investment products, and consultation booking
-- **Subsidiaries Overview** (subsidiaries.html): Group companies presentation
-- **Team Profiles** (navigators.html, profiles.html): Leadership and team showcase
-- **Thank You Page** (thank-you.html): Post-consultation confirmation
+### Key Features
+- **Comprehensive Subsidiary Pages**: Dedicated pages for Prodigy Finance, Prodigy Portfolio Advisers (PPA), and Prodigy Brokercom (coming soon).
+- **Detailed PPA Section**: `ppa.html` showcases investment management, commodity funding, collateral lending, bespoke advisory, and wealth preservation, along with products like Prodigy Aura, Prodigy Genesis, and Prodigy Liquidity Fund.
+- **Team Showcase**: `whoweare.html` features the Management Team, while `meet-the-architects.html` and `meet-the-navigators.html` provide detailed profiles and bio popups for key personnel.
+- **Client Engagement**: Includes a comprehensive `contact-us.html` with forms, maps, and social links, and "Downloadable Forms" under a "Resources" section.
+- **Career Section**: A dedicated "Careers" dropdown with a "Join our team" button linking to a coming-soon page with email notification.
 
 ### JavaScript Functionality
-- **HeroSlider Class**: Manages slide transitions, auto-play, and user interactions
-- **Modal Management**: Dynamic profile content loading and display
-- **Mobile Menu**: Responsive navigation handling
-- **Form Handling**: Client consultation request processing
+- **HeroSlider Class**: Manages slide transitions, auto-play, and user interactions.
+- **Modal Management**: Handles dynamic profile content loading and display.
+- **Mobile Menu**: Manages responsive navigation.
+- **Form Handling**: Processes client consultation requests and email notifications.
 
 ## External Dependencies
 
 ### CDN Resources
-- **Tailwind CSS**: v2.2.19 for utility-first styling framework
-- **Font Awesome**: v6.0.0 for comprehensive icon library
-- **External Images**: Unsplash integration for background imagery
+- **Tailwind CSS**: v2.2.19 for utility-first styling.
+- **Font Awesome**: v6.0.0 for iconography.
 
 ### Asset Management
-- **Logo Assets**: Local logo files stored in attached_assets directory
-- **Profile Data**: Text files containing team member biographical information
-- **Custom Fonts**: Web-safe font stack with sans-serif fallback
+- **Logo Assets**: Local logo files stored in `attached_assets` directory.
+- **Profile Data**: Placeholder content for team member biographical information.
+- **Custom Fonts**: Web-safe font stack with sans-serif fallback.
 
 ### Third-Party Integrations
-- **Background Images**: Unsplash API for professional financial imagery
-- **Responsive Design**: CSS Grid and Flexbox for layout management
-- **Touch/Swipe Support**: Native JavaScript touch event handling for mobile slider interaction
-
-The architecture prioritizes performance through CDN delivery, maintains brand consistency through custom CSS variables, and ensures accessibility through semantic HTML structure and responsive design patterns.
+- **Background Images**: Unsplash for professional financial imagery (though specific API integration details are not provided, images are used).
+- **Google Maps**: Integrated into `contact-us.html` for office location.
