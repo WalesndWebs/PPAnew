@@ -7,6 +7,7 @@ Prodigy Group is a diversified financial services conglomerate that operates thr
 ## Recent Changes
 
 ### September 6, 2025
+- **Unified Navigation Across All Pages**: Updated products.html navigation to match the exact same menu structure and styling as whoweare.html and ppa.html, ensuring consistent navigation experience across all PPA pages with "Our Products" appropriately highlighted in gold
 - **Streamlined whoweare.html Navigation**: Removed "Our Subsidiaries" dropdown from whoweare.html page navigation since this page is specifically about Prodigy Portfolio Advisers only, keeping only PPA-relevant navigation items (Who We Are, Careers, Contact Us)
 - **Fixed Navigation Issues**: Completely resolved navigation bar problems by implementing inline styles, ensuring proper display across all pages without CSS conflicts
 - **Removed "About Us" from Navigation**: Cleaned up navigation menu by removing the problematic "About Us" link from index.html, ppa.html, and whoweare.html
