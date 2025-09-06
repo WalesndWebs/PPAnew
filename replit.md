@@ -30,6 +30,8 @@ Prodigy Group is a diversified financial services conglomerate that operates thr
 - **Enhanced Testimonial Design**: Updated testimonial section to match FSDHAML two-column layout with professional image
 - **Fixed Navigation Links**: Connected About Us page to "Who We Are" → "Our Group" dropdown navigation across all pages
 - **Implemented Interactive Features**: Added working image switching for offerings section with smooth fade transitions
+- **Created Professional Groups Page**: Built new groups.html page exactly matching FSDH Group's "Our Group" page structure with clean, minimal design featuring company description, statistics (100+ Professionals, 15+ Cities, 5+ Years), value propositions, and professional branding
+- **Updated Navigation Consistency**: Updated all navigation menus across all pages (index.html, ppa.html, contact-us.html, whoweare.html) to point "Our Group" links to the new groups.html page
 
 ### September 5, 2025
 - **Updated Navigation Structure**: Implemented exact FSDH Group navigation with "Who We Are" dropdown containing "Our Group" and "Our People" (with Board of Directors and Management Team sub-items)
