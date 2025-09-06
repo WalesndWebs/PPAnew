@@ -47,6 +47,15 @@
         .hero-text {
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+        
+        #animated-text {
+            display: inline-block;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        #animated-text.fade-out {
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -83,25 +92,24 @@
     <!-- Hero Section -->
     <section class="hero-gradient min-h-screen flex items-center justify-center text-white pt-16">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <div class="mb-8">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 hero-text">
-                    Prodigy Portfolio Advisers Services
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-light mb-6 hero-text leading-tight">
+                    If you'll let us, we can be your trusted 
+                    <span id="animated-text" class="text-gold font-medium">wealth management</span> 
+                    partner
                 </h1>
-                <p class="text-lg md:text-xl mb-6 opacity-90 leading-relaxed max-w-4xl mx-auto">
-                    Prodigy Portfolio Advisers is a premier <span class="text-gold font-semibold">asset management company</span>, offering sophisticated investment strategies and personalized financial planning. We specialize in growing and preserving wealth for individuals, institutions, and corporate clients through disciplined investment approaches.
-                </p>
-                <p class="text-md md:text-lg mb-8 opacity-85 max-w-4xl mx-auto">
-                    Our expert team provides comprehensive portfolio construction, rigorous risk assessment, and continuous market analysis across various asset classes, ensuring your investments are optimized for long-term objectives and adapted to evolving market conditions.
+                <p class="text-xl md:text-2xl mb-12 opacity-90 max-w-4xl mx-auto leading-relaxed">
+                    We've been in the game for over a decade with a track record of success. Let us journey with you.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button class="bg-gold text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button class="bg-gold text-navy-900 px-10 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
                         <i class="fas fa-user-circle mr-2"></i>
-                        Client Login
+                        Log in
                     </button>
-                    <button class="border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
+                    <button class="border-2 border-gold text-gold px-10 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
                         <i class="fas fa-user-plus mr-2"></i>
-                        Get Started Today
+                        Create an account
                     </button>
                 </div>
             </div>
@@ -122,11 +130,10 @@
     </section>
 
     <!-- Our Offerings Section -->
-    <section class="offerings-slider py-20">
+    <section class="offerings-slider py-24">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-navy-900 mb-4">Our Offerings</h2>
-                <p class="text-xl text-gray-600">Comprehensive financial solutions tailored to your goals</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Our Offerings</h2>
             </div>
 
             <!-- Cycling Services Display -->
@@ -209,11 +216,11 @@
     </section>
 
     <!-- Investment Products Section -->
-    <section class="bg-white py-20">
+    <section class="bg-white py-24">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-navy-900 mb-4">Our Investment Products</h2>
-                <p class="text-xl text-gray-600">Innovative financial solutions with exceptional returns</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Our products</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Most enterprises do not know the impact of cloud spending on revenues, customer acquisition costs, or other metrics relevant to their businesses.</p>
             </div>
 
             <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
@@ -275,11 +282,11 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="offerings-slider py-20">
+    <section class="offerings-slider py-24">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-navy-900 mb-4">Frequently Asked Questions</h2>
-                <p class="text-xl text-gray-600">If you can't find what you're looking for, contact our support team</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Frequently asked questions</h2>
+                <p class="text-lg text-gray-600">If you can not find what you are looking for, email our support team; we will get back to you.</p>
             </div>
 
             <div class="space-y-6">
@@ -327,22 +334,20 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="hero-gradient py-20 text-white">
+    <section class="hero-gradient py-24 text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="mb-8">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to supercharge your finance?</h2>
-                <p class="text-xl opacity-90 mb-8">
-                    Set up the best investment strategy for your wealth growth. Begin your journey to financial success with Prodigy Portfolio Advisers.
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-8 leading-tight">
+                    Ready to supercharge your <span class="text-gold font-medium">finance?</span>
+                </h2>
+                <p class="text-xl md:text-2xl opacity-90 mb-12 leading-relaxed">
+                    Set all the best financial products for your business growth for free. Open the last current account you will ever need for your business.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button class="bg-gold text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        Schedule Consultation
-                    </button>
-                    <button class="border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-navy-900 transition text-lg">
-                        <i class="fas fa-phone mr-2"></i>
-                        Contact Us Today
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button class="bg-gold text-navy-900 px-10 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition text-lg">
+                        <i class="fas fa-user-plus mr-2"></i>
+                        Create an account
                     </button>
                 </div>
             </div>
@@ -409,8 +414,26 @@
 
     <script src="script.js"></script>
     <script>
-        // FAQ Toggle Functionality
+        // Animated Text Slider
         document.addEventListener('DOMContentLoaded', function() {
+            const animatedText = document.getElementById('animated-text');
+            const texts = ['wealth management', 'success', 'financial advisory'];
+            let currentIndex = 0;
+            
+            function changeText() {
+                animatedText.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % texts.length;
+                    animatedText.textContent = texts[currentIndex];
+                    animatedText.classList.remove('fade-out');
+                }, 250);
+            }
+            
+            // Change text every 2.5 seconds
+            setInterval(changeText, 2500);
+            
+            // FAQ Toggle Functionality
             const faqToggles = document.querySelectorAll('.faq-toggle');
             
             faqToggles.forEach(toggle => {
