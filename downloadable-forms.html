@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Offerings - Prodigy Portfolio Advisers</title>
+    <title>Downloadable Forms - Prodigy Portfolio Advisers</title>
     <meta name="description"
-        content="Explore Prodigy Portfolio Advisers' comprehensive range of financial offerings including wealth management, investment advisory, and personalized financial planning services.">
+        content="Access downloadable forms and documents from Prodigy Portfolio Advisers for investment applications and client services.">
 
     <!-- Google Fonts -->
     <link
@@ -58,19 +58,6 @@
         .hover\:bg-navy-900:hover { background-color: var(--navy-900); }
         .hover\:text-white:hover { color: white; }
 
-        /* Header Styles */
-        .header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 12px 0;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--navy-900) 0%, #1e3a8a 50%, var(--navy-900) 100%);
@@ -95,90 +82,65 @@
             opacity: 0.9;
         }
 
-        /* Offerings Grid */
-        .offerings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            padding: 80px 0;
+        /* Coming Soon Section */
+        .coming-soon {
+            padding: 120px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
 
-        .offering-card {
+        .coming-soon-card {
             background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid var(--gold);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid var(--gold);
         }
 
-        .offering-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .offering-icon {
-            width: 80px;
-            height: 80px;
+        .coming-soon-icon {
+            width: 120px;
+            height: 120px;
             background: linear-gradient(135deg, var(--gold), #b8860b);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
+            margin: 0 auto 30px;
             color: white;
-            font-size: 32px;
+            font-size: 48px;
         }
 
-        .offering-card h3 {
+        .coming-soon h2 {
             color: var(--navy-900);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .offering-card p {
-            color: #6b7280;
-            line-height: 1.7;
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
-        .offering-features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
+        .coming-soon p {
+            color: #6b7280;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
 
-        .offering-features li {
-            color: #374151;
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .offering-features li:before {
-            content: '\2022';
-            color: var(--gold);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-right: 8px;
-        }
-
-        .cta-button {
+        .notify-button {
             background: var(--gold);
             color: black;
-            padding: 12px 24px;
-            border-radius: 6px;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.1rem;
             display: inline-block;
             transition: background 0.3s ease;
             border: none;
             cursor: pointer;
         }
 
-        .cta-button:hover {
+        .notify-button:hover {
             background: #b8860b;
         }
 
@@ -217,14 +179,16 @@
                 font-size: 2.5rem;
             }
             
-            .offerings-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 60px 0;
+            .coming-soon {
+                padding: 80px 0;
             }
             
-            .offering-card {
-                padding: 30px;
+            .coming-soon-card {
+                padding: 40px 30px;
+            }
+            
+            .coming-soon h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -299,13 +263,13 @@
                 
                 <!-- What we do Dropdown -->
                 <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
-                    <a href="#" style="color: #daa520; text-decoration: none; font-size: 14px; display: flex; align-items: center; font-weight: 500;">
+                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; display: flex; align-items: center;">
                         What we do
                         <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
                     </a>
                     
                     <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 200px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
-                        <a href="our-offerings.html" style="display: block; padding: 12px 20px; color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500; transition: background 0.2s;">Our Offerings</a>
+                        <a href="our-offerings.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Our Offerings</a>
                         
                         <!-- Our Products with nested dropdown -->
                         <div style="position: relative;" onmouseover="showNestedDropdown(event)" onmouseout="hideNestedDropdown(event)">
@@ -325,15 +289,16 @@
                 
                 <!-- Resources Dropdown -->
                 <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
-                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; display: flex; align-items: center;">
+                    <a href="#" style="color: #daa520; text-decoration: none; font-size: 14px; display: flex; align-items: center; font-weight: 500;">
                         Resources
                         <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
                     </a>
                     
                     <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
-                        <a href="downloadable-forms.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Downloadable Forms</a>
+                        <a href="downloadable-forms.html" style="display: block; padding: 12px 20px; color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500; transition: background 0.2s;">Downloadable Forms</a>
                     </div>
                 </div>
+                
                 <a href="#" style="color: #374151; text-decoration: none; font-size: 14px;">Blog</a>
             </div>
 
@@ -354,124 +319,25 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Our Offerings</h1>
-            <p>Prodigy Portfolio Advisers provides comprehensive financial solutions designed to meet the diverse needs of our clients. Our expertise spans across multiple areas of asset management and advisory services.</p>
+            <h1>Downloadable Forms</h1>
+            <p>Access essential forms and documents for your investment journey with Prodigy Portfolio Advisers.</p>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="container">
-        <div class="offerings-grid">
-            
-            <!-- Investment Management -->
-            <div class="offering-card">
-                <div class="offering-icon">
-                    <i class="fas fa-chart-line"></i>
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
+        <div class="container">
+            <div class="coming-soon-card">
+                <div class="coming-soon-icon">
+                    <i class="fas fa-file-download"></i>
                 </div>
-                <h3>Investment Management</h3>
-                <p>Our investment management services provide comprehensive portfolio construction and management solutions designed to optimize returns while managing risk across various asset classes and market conditions.</p>
-                <ul class="offering-features">
-                    <li>Active portfolio management</li>
-                    <li>Strategic asset allocation</li>
-                    <li>Risk-adjusted performance optimization</li>
-                    <li>Multi-asset class investment strategies</li>
-                    <li>Performance monitoring and reporting</li>
-                </ul>
-                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
-                    <i class="fas fa-envelope"></i> Learn More
+                <h2>Forms Coming Soon</h2>
+                <p>Our comprehensive suite of downloadable forms is currently being prepared. Once these forms are ready, we will make them available for download. These will include investment applications, client onboarding documents, and other essential forms to streamline your experience with Prodigy Portfolio Advisers.</p>
+                <a href="mailto:investment@prodigyportfolioadvisers.com?subject=Notify me when forms are ready" class="notify-button">
+                    <i class="fas fa-bell" style="margin-right: 8px;"></i>
+                    Notify Me When Ready
                 </a>
             </div>
-
-            <!-- Commodity Funding -->
-            <div class="offering-card">
-                <div class="offering-icon">
-                    <i class="fas fa-seedling"></i>
-                </div>
-                <h3>Commodity Funding</h3>
-                <p>Specialized financing solutions for commodity trading and agricultural ventures. We provide structured funding mechanisms that support commodity trading operations and supply chain financing needs.</p>
-                <ul class="offering-features">
-                    <li>Trade finance facilities</li>
-                    <li>Agricultural commodity funding</li>
-                    <li>Supply chain financing</li>
-                    <li>Inventory financing solutions</li>
-                    <li>Pre-export financing</li>
-                </ul>
-                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
-                    <i class="fas fa-envelope"></i> Get Started
-                </a>
-            </div>
-
-            <!-- Collateralized Lending -->
-            <div class="offering-card">
-                <div class="offering-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h3>Collateralized Lending</h3>
-                <p>Secure lending solutions backed by various forms of collateral including securities, real estate, and other valuable assets. Our lending facilities provide flexible access to capital while preserving asset ownership.</p>
-                <ul class="offering-features">
-                    <li>Securities-based lending</li>
-                    <li>Real estate collateralized loans</li>
-                    <li>Asset-backed credit facilities</li>
-                    <li>Flexible repayment structures</li>
-                    <li>Competitive interest rates</li>
-                </ul>
-                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
-                    <i class="fas fa-envelope"></i> Apply Now
-                </a>
-            </div>
-
-            <!-- Bespoke Advisory -->
-            <div class="offering-card">
-                <div class="offering-icon">
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <h3>Bespoke Advisory</h3>
-                <p>Customized advisory services tailored to meet the unique financial objectives and circumstances of our clients. Our bespoke approach ensures personalized solutions that align with individual goals and preferences.</p>
-                <ul class="offering-features">
-                    <li>Personalized financial strategies</li>
-                    <li>Custom investment solutions</li>
-                    <li>Strategic financial planning</li>
-                    <li>Goal-based advisory services</li>
-                    <li>Ongoing relationship management</li>
-                </ul>
-                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
-                    <i class="fas fa-envelope"></i> Schedule Consultation
-                </a>
-            </div>
-
-            <!-- Wealth Preservation -->
-            <div class="offering-card">
-                <div class="offering-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Wealth Preservation</h3>
-                <p>Comprehensive wealth preservation strategies designed to protect and maintain assets across generations. Our approach focuses on capital preservation, tax optimization, and sustainable growth methodologies.</p>
-                <ul class="offering-features">
-                    <li>Capital preservation strategies</li>
-                    <li>Tax-efficient structures</li>
-                    <li>Estate planning coordination</li>
-                    <li>Multi-generational wealth planning</li>
-                    <li>Risk mitigation techniques</li>
-                </ul>
-                <a href="mailto:investment@prodigyportfolioadvisers.com" class="cta-button">
-                    <i class="fas fa-envelope"></i> Preserve Your Wealth
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 80px 0; margin-top: 80px;">
-        <div class="container" style="text-align: center;">
-            <h2 style="color: var(--navy-900); font-size: 2.5rem; font-weight: 700; margin-bottom: 20px;">Ready to Get Started?</h2>
-            <p style="color: #6b7280; font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Contact our team of experienced professionals to discuss how our offerings can be tailored to meet your specific financial objectives and requirements.
-            </p>
-            <a href="mailto:investment@prodigyportfolioadvisers.com" style="background: var(--gold); color: black; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; transition: background 0.3s ease;">
-                <i class="fas fa-envelope" style="margin-right: 8px;"></i>
-                Contact Our Team
-            </a>
         </div>
     </section>
 
