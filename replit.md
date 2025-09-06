@@ -4,6 +4,15 @@
 
 Prodigy Group is a diversified financial services conglomerate that operates through three main subsidiaries: Prodigy Finance (lending solutions), Prodigy Portfolio Advisers (asset management), and Prodigy Brokercom (commodities trading). The website serves as a corporate portal showcasing the group's services, team members, and facilitating client consultations through a multi-page web presence.
 
+## Recent Changes
+
+### September 5, 2025
+- **Updated Navigation Structure**: Implemented exact FSDH Group navigation with "Who We Are" dropdown containing "Our Group" and "Our People" (with Board of Directors and Management Team sub-items)
+- **Created New PPA Page**: Completely rebuilt ppa.html to match FSDH Asset Management's design structure including hero section, offerings carousel, investment products, FAQ section, and consultation CTA
+- **Enhanced Dropdown Menus**: Added multi-level dropdown functionality with hover effects on desktop and click functionality on mobile
+- **Integrated Prodigy Logo**: Added the official blue "P" with gold arrows logo throughout the site including navigation and footer sections
+- **Fixed Sticky Header**: Resolved navigation bar visibility issues when scrolling
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -27,7 +36,7 @@ The application follows a traditional multi-page HTML architecture with client-s
 
 ### Page Structure
 - **Landing Page** (index.html): Hero slider with company introduction
-- **Portfolio Advisers** (ppa.html): Main service page with consultation booking
+- **Portfolio Advisers** (ppa.html): FSDH Asset Management-style page with wealth management services, investment products, and consultation booking
 - **Subsidiaries Overview** (subsidiaries.html): Group companies presentation
 - **Team Profiles** (navigators.html, profiles.html): Leadership and team showcase
 - **Thank You Page** (thank-you.html): Post-consultation confirmation
