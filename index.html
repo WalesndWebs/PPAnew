@@ -20,7 +20,38 @@
                     <div class="text-navy-900 text-2xl font-bold">Prodigy Group</div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="whoweare.html" class="text-navy-900 hover:text-gold transition">Who We Are</a>
+                    <!-- Who We Are Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Who We Are
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        
+                        <!-- First Level Dropdown -->
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="whoweare.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our Group</a>
+                                
+                                <!-- Our People with nested dropdown -->
+                                <div class="relative group/nested">
+                                    <button class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                        Our People
+                                        <i class="fas fa-chevron-right text-xs"></i>
+                                    </button>
+                                    
+                                    <!-- Second Level Dropdown with Gold Background -->
+                                    <div class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                        <div class="py-1">
+                                            <a href="#meet-architects" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Architects</a>
+                                            <a href="#meet-navigators" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Navigators</a>
+                                            <a href="#blog" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <a href="subsidiaries.html" class="text-navy-900 hover:text-gold transition">Our Subsidiaries</a>
                     <a href="#careers" class="text-navy-900 hover:text-gold transition">Careers</a>
                     <a href="#contact" class="text-navy-900 hover:text-gold transition">Contact Us</a>

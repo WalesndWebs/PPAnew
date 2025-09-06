@@ -267,7 +267,13 @@
             const dropdownItems = document.querySelectorAll('.dropdown-menu a, .nested-dropdown a');
             dropdownItems.forEach(item => {
                 item.addEventListener('mouseenter', function() {
-                    this.style.background = '#f3f4f6';
+                    // Check if it's in the gold nested dropdown
+                    const isInGoldDropdown = this.closest('.nested-dropdown');
+                    if (isInGoldDropdown) {
+                        this.style.background = 'rgba(218, 165, 32, 0.1)';
+                    } else {
+                        this.style.background = '#f3f4f6';
+                    }
                     this.style.color = '#daa520';
                 });
                 item.addEventListener('mouseleave', function() {
@@ -294,7 +300,32 @@
 
             <!-- Navigation Menu -->
             <div style="display: flex; align-items: center; gap: 24px;">
-                <a href="whoweare.html" style="color: #374151; text-decoration: none; font-size: 14px;">Who We Are</a>
+                <!-- Who We Are Dropdown -->
+                <div style="position: relative; display: inline-block;" onmouseover="showDropdown(event)" onmouseout="hideDropdown(event)">
+                    <a href="#" style="color: #374151; text-decoration: none; font-size: 14px; display: flex; align-items: center;">
+                        Who We Are
+                        <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-top: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000;">
+                        <a href="whoweare.html" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Our Group</a>
+                        
+                        <!-- Our People with nested dropdown -->
+                        <div style="position: relative;" onmouseover="showNestedDropdown(event)" onmouseout="hideNestedDropdown(event)">
+                            <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">
+                                Our People
+                                <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+                            </a>
+                            
+                            <div class="nested-dropdown" style="position: absolute; top: 0; left: 100%; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid rgba(218, 165, 32, 0.2); min-width: 180px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-radius: 6px; padding: 8px 0; margin-left: 8px; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1001;">
+                                <a href="#meet-architects" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Meet the Architects</a>
+                                <a href="#meet-navigators" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Meet the Navigators</a>
+                                <a href="#blog" style="display: block; padding: 12px 20px; color: #374151; text-decoration: none; font-size: 14px; transition: background 0.2s;">Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <a href="subsidiaries.html" style="color: #daa520; text-decoration: none; font-size: 14px; font-weight: 500;">Our Subsidiaries</a>
                 <a href="#careers" style="color: #374151; text-decoration: none; font-size: 14px;">Careers</a>
                 <a href="#contact" style="color: #374151; text-decoration: none; font-size: 14px;">Contact Us</a>
