@@ -109,17 +109,38 @@
                     <!-- Who We Are Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Who We Are <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                            Who We Are
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div style="position: absolute; left: 0; margin-top: 8px; width: 200px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+
+                        <!-- First Level Dropdown -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="groups.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Our Group</a>
-                                <div class="relative group/submenu">
-                                    <a href="#" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s; background: linear-gradient(90deg, var(--gold), #f59e0b); color: white;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Our People <i class="fas fa-chevron-right ml-1 text-sm float-right mt-0.5"></i></a>
-                                    <div style="position: absolute; left: 100%; top: 0; width: 200px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateX(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:translate-x-0">
+                                <a href="groups.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our
+                                    Group</a>
+
+                                <!-- Our People with nested dropdown -->
+                                <div class="relative group/nested">
+                                    <button
+                                        class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                        Our People
+                                        <i class="fas fa-chevron-right text-xs"></i>
+                                    </button>
+
+                                    <!-- Second Level Dropdown with Gold Background -->
+                                    <div
+                                        class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
                                         <div class="py-1">
-                                            <a href="meet-the-architects.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Meet the Architects</a>
-                                            <a href="meet-the-navigators.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Meet the Navigators</a>
+                                            <a href="meet-the-architects.html"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
+                                                the Architects</a>
+                                            <a href="meet-the-navigators.html"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
+                                                the Navigators</a>
+                                            <a href="blog.html"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
                                         </div>
                                     </div>
                                 </div>
@@ -130,13 +151,22 @@
                     <!-- Our Subsidiaries Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Our Subsidiaries <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                            Our Subsidiaries
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div style="position: absolute; left: 0; margin-top: 8px; width: 240px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+
+                        <div
+                            class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="finance.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Finance</a>
-                                <a href="ppa.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Portfolio Advisers</a>
-                                <a href="brokercom.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Prodigy Brokercom</a>
+                                <a href="finance.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Finance</a>
+                                <a href="ppa.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Portfolio Advisers</a>
+                                <a href="brokercom.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Brokercom</a>
                             </div>
                         </div>
                     </div>
@@ -144,11 +174,16 @@
                     <!-- Careers Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
-                            Careers <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                            Careers
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div style="position: absolute; left: 0; margin-top: 8px; width: 160px; background: white; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999;" class="group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+
+                        <div
+                            class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="join-our-team.html" style="display: block; padding: 12px 16px; font-size: 14px; color: var(--navy-900); font-weight: 500; transition: all 0.2s;" onmouseover="this.style.backgroundColor='#f9fafb'; this.style.color='var(--gold)'" onmouseout="this.style.backgroundColor=''; this.style.color='var(--navy-900)'">Join our team</a>
+                                <a href="join-our-team.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join
+                                    our team</a>
                             </div>
                         </div>
                     </div>
@@ -177,35 +212,44 @@
         </div>
     </section>
 
-    <!-- Board Members Section -->
+    <!-- Board of Directors Section -->
     <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-navy-900 mb-12">Board of Directors</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Mohammed Yinusa - Chairman -->
+                <!-- Mohammed Yunusa - Chairman -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
-                        <i class="fas fa-crown text-6xl text-gold"></i>
+                        <img src="attached_assets/mohammed_1758604026762.jpeg" alt="Mohammed Yunusa" class="w-32 h-32 rounded-full object-cover border-4 border-gold">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy-900 mb-2">Mohammed Yinusa</h3>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Mohammed Yunusa</h3>
                         <p class="text-gold font-semibold mb-4">Chairman</p>
                         <p class="text-gray-600 text-sm mb-4">Providing visionary leadership and strategic direction to guide Prodigy Group's long-term growth...</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:mohammed.yunusa@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">mohammed.yunusa@prodigygroup.com.ng</a>
+                        </div>
                         <button onclick="openModal('mohammed')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
                             View Bio
                         </button>
                     </div>
                 </div>
 
-                <!-- Bode Ojeniyi - Executive Director -->
+                <!-- Kunle Adeboye - Non-Executive Director -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
-                        <i class="fas fa-user-tie text-6xl text-gold"></i>
+                        <img src="attached_assets/kunle.png" alt="Kunle Adeboye" class="w-32 h-32 rounded-full object-cover border-4 border-gold">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy-900 mb-2">Bode Ojeniyi</h3>
-                        <p class="text-gold font-semibold mb-4">Executive Director</p>
-                        <p class="text-gray-600 text-sm mb-4">Leading executive operations and strategic implementation across all business units...</p>
-                        <button onclick="openModal('bode')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Kunle Adeboye</h3>
+                        <p class="text-gold font-semibold mb-4">Non-Executive Director</p>
+                        <p class="text-gray-600 text-sm mb-4">Providing strategic guidance and oversight to enhance corporate governance and business excellence...</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:kunle.adeboye@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">kunle.adeboye@prodigygroup.com.ng</a>
+                        </div>
+                        <button onclick="openModal('kunle')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
                             View Bio
                         </button>
                     </div>
@@ -214,12 +258,16 @@
                 <!-- Lanre Ajayi - Independent Director -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
-                        <i class="fas fa-balance-scale text-6xl text-gold"></i>
+                        <img src="attached_assets/lanre_1758604026762.jpeg" alt="Lanre Ajayi" class="w-32 h-32 rounded-full object-cover border-4 border-gold">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-navy-900 mb-2">Lanre Ajayi</h3>
                         <p class="text-gold font-semibold mb-4">Independent Director</p>
                         <p class="text-gray-600 text-sm mb-4">Providing independent oversight and governance expertise to ensure transparency and accountability...</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:lanre.ajayi@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">lanre.ajayi@prodigygroup.com.ng</a>
+                        </div>
                         <button onclick="openModal('lanre')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
                             View Bio
                         </button>
@@ -229,12 +277,16 @@
                 <!-- Chinyere Nwogu - Non-executive Director -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
-                        <i class="fas fa-user-check text-6xl text-gold"></i>
+                        <img src="attached_assets/chinyere_1758604026761.jpeg" alt="Chinyere Nwaogu" class="w-32 h-32 rounded-full object-cover border-4 border-gold">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-navy-900 mb-2">Chinyere Nwogu</h3>
-                        <p class="text-gold font-semibold mb-4">Non-executive Director</p>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Chinyere Nwaogu</h3>
+                        <p class="text-gold font-semibold mb-4">Non-Executive Director</p>
                         <p class="text-gray-600 text-sm mb-4">Contributing valuable industry insights and strategic counsel to board decisions...</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:chinyere.nwaogu@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">chinyere.nwaogu@prodigygroup.com.ng</a>
+                        </div>
                         <button onclick="openModal('chinyere')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
                             View Bio
                         </button>
@@ -244,19 +296,24 @@
                 <!-- Sanusi Ayama - Independent Director -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div class="h-64 bg-gradient-to-br from-navy-900 to-blue-800 flex items-center justify-center">
-                        <i class="fas fa-gavel text-6xl text-gold"></i>
+                        <img src="attached_assets/sanusi_1758604026762.jpeg" alt="Sanusi Ayama" class="w-32 h-32 rounded-full object-cover border-4 border-gold">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-navy-900 mb-2">Sanusi Ayama</h3>
                         <p class="text-gold font-semibold mb-4">Independent Director</p>
                         <p class="text-gray-600 text-sm mb-4">Ensuring independent judgment and strategic oversight in all board deliberations...</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:sanusi.ayama@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">sanusi.ayama@prodigygroup.com.ng</a>
+                        </div>
                         <button onclick="openModal('sanusi')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
                             View Bio
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
+
+                <!-- Placeholder for Unnamed Director -->
+               
     </section>
 
     <!-- Bio Modals -->
@@ -266,49 +323,52 @@
             <span class="close" onclick="closeModal('mohammed')">&times;</span>
             <div class="flex items-center mb-6">
                 <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
-                    <i class="fas fa-crown text-3xl text-gold"></i>
+                    <img src="attached_assets/mohammed_1758604026762.jpeg" alt="Mohammed Yunusa" class="w-24 h-24 rounded-full object-cover">
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-navy-900">Mohammed Yinusa</h2>
+                    <h2 class="text-2xl font-bold text-navy-900">Mohammed Yunusa</h2>
                     <p class="text-gold font-semibold">Chairman</p>
                 </div>
             </div>
             <div class="text-gray-700 leading-relaxed">
                 <p class="mb-4">
-                    [Bio content will be added when provided by client]
+                    <strong>Experienced Risk Management & Financial Services Leader</strong>
                 </p>
                 <p class="mb-4">
-                    As Chairman, Mohammed Yinusa brings extensive experience in corporate governance and strategic leadership to guide Prodigy Group's vision and long-term objectives.
+                    Mohammed Yunusa is a seasoned financial professional with over 23 years of experience in the Nigerian financial services sector. He holds a Bachelor's degree in Accounting from Ahmadu Bello University, Zaria. He is also a Certified National Accountant and a Chartered Commodity Broker.
+                </p>
+                <p class="mb-4">
+                    As the Head of Risk Management at Veritas Glanvills Pensions Ltd. since January 2020, Mohammed is responsible for identifying and assessing potential risks, setting risk management policy and strategy, building a risk awareness culture, and preparing risk reports for the Board and stakeholders. His extensive background includes senior management positions in various financial institutions such as AMML Microfinance Bank Limited, AMANA Capital Pension Limited, Crusader Sterling Pensions Limited, and Capital Bank International.
                 </p>
                 <p>
-                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                    Mohammed is a member of multiple professional bodies, including the Institute of Treasury Management and Financial Accountants (MTMFA), Institute of Management Consultants (MIMC), Association of National Accountants of Nigeria (ANAN), and a Fellow of the Association of Enterprise Risk Management Professional (FERP). His expertise in risk identification, measurement, monitoring, mitigation, and control, coupled with his experience in diverse financial operations, makes him a critical asset for ensuring robust and compliant financial strategies.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- Bode Modal -->
-    <div id="bode-modal" class="modal">
+    <!-- Kunle Modal -->
+    <div id="kunle-modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('bode')">&times;</span>
+            <span class="close" onclick="closeModal('kunle')">&times;</span>
             <div class="flex items-center mb-6">
                 <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
-                    <i class="fas fa-user-tie text-3xl text-gold"></i>
+                    <img src="attached_assets/kunle.png" alt="Kunle Adeboye" class="w-24 h-24 rounded-full object-cover">
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-navy-900">Bode Ojeniyi</h2>
-                    <p class="text-gold font-semibold">Executive Director</p>
+                    <h2 class="text-2xl font-bold text-navy-900">Kunle Adeboye</h2>
+                    <p class="text-gold font-semibold">Non-Executive Director</p>
                 </div>
             </div>
             <div class="text-gray-700 leading-relaxed">
                 <p class="mb-4">
-                    [Bio content will be added when provided by client]
+                    <b>Strategic Financial Leadership & Management Consulting Excellence </b> 
                 </p>
                 <p class="mb-4">
-                    Bode Ojeniyi serves as Executive Director, overseeing strategic execution and operational excellence across all Prodigy Group subsidiaries.
+                    Kunle Adeboye is a highly experienced professional in the financial sector and management consulting. He is a  graduate of the University of Ibadan. Furthering his education, he earned an MBA with a specialization in Strategic Business Management from the Metropolitan School of Business and Management, UK, complemented by diverse trainings and certifications.
                 </p>
                 <p>
-                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                    Kunle has held significant leadership roles, notably serving as the Managing Director of Radix Pension Managers Ltd.. He is also recognized as one of the 70 outstanding alumni of the University of Ibadan, marking its 70th Anniversary. His professional affiliations include being a Member of the National Institute of Marketing of Nigeria, Nigerian Institute of Public Relations, Chartered Institute of Marketing, UK, a Fellow of the Chartered Institute of Loan & Risk Management of Nigeria, and a Fellow of the Institute of Management Consulting. A Certified Management Consultant, Kunle brings a wealth of strategic insight and practical expertise to drive financial growth and operational efficiency
                 </p>
             </div>
         </div>
@@ -320,7 +380,7 @@
             <span class="close" onclick="closeModal('lanre')">&times;</span>
             <div class="flex items-center mb-6">
                 <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
-                    <i class="fas fa-balance-scale text-3xl text-gold"></i>
+                    <img src="attached_assets/lanre_1758604026762.jpeg" alt="Lanre Ajayi" class="w-24 h-24 rounded-full object-cover">
                 </div>
                 <div>
                     <h2 class="text-2xl font-bold text-navy-900">Lanre Ajayi</h2>
@@ -329,13 +389,16 @@
             </div>
             <div class="text-gray-700 leading-relaxed">
                 <p class="mb-4">
-                    [Bio content will be added when provided by client]
+                    <strong>Visionary Financial Leader: Driving Growth and Strategic Advisory</strong>
                 </p>
                 <p class="mb-4">
-                    Lanre Ajayi provides independent oversight and brings objective perspective to board decisions, ensuring the highest standards of corporate governance.
+                    Olanrewaju Ajayi is a highly accomplished financial expert with extensive experience spanning microfinance, mortgage banking, and corporate advisory, backed by an M.Sc. in Economics and a B.Sc. in Economics from the University of Lagos. As the Managing Director of Chanelle Microfinance Bank, he spearheaded significant growth, expanding the balance sheet from zero to over N2 billion within two years and establishing a pro bono SME Academy for business and financial advisory services.
+                </p>
+                <p class="mb-4">
+                    His tenure as Executive Director at Prudential Mortgage Bank involved setting up SME banking and an Advisory Department focused on the home development value chain, along with overseeing Treasury and Institutional Banking. Earlier in his career, as Divisional Head of Structured Finance at Bank of Industry, Olanrewaju packaged and financed numerous large-scale projects across power, agriculture, real estate, and manufacturing, accessing over N100 billion in direct funding.
                 </p>
                 <p>
-                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                    His expertise in strategic planning, financial analysis, project evaluation, and business process reengineering ensures robust and innovative financial solutions for clients.
                 </p>
             </div>
         </div>
@@ -347,22 +410,25 @@
             <span class="close" onclick="closeModal('chinyere')">&times;</span>
             <div class="flex items-center mb-6">
                 <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
-                    <i class="fas fa-user-check text-3xl text-gold"></i>
+                    <img src="attached_assets/chinyere_1758604026761.jpeg" alt="Chinyere Nwaogu" class="w-24 h-24 rounded-full object-cover">
                 </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-navy-900">Chinyere Nwogu</h2>
-                    <p class="text-gold font-semibold">Non-executive Director</p>
+                    <h2 class="text-2xl font-bold text-navy-900">Chinyere Nwaogu</h2>
+                    <p class="text-gold font-semibold">Non-Executive Director</p>
                 </div>
             </div>
             <div class="text-gray-700 leading-relaxed">
                 <p class="mb-4">
-                    [Bio content will be added when provided by client]
+                    <strong>Expert Legal Counsel: Driving Corporate Compliance and Sustainable Practices in Finance</strong>
                 </p>
                 <p class="mb-4">
-                    Chinyere Nwogu contributes valuable industry expertise and strategic insights as a Non-executive Director, supporting informed decision-making.
+                    Chinyere A. Nwaogu is a diligent Legal Practitioner with extensive experience in corporate legal practice, real estate law, and conflict resolution. She holds an LL.B from the University of Ibadan (1999), a B.L from Nigerian Law School, Abuja (2000), and an LL.M (Master of Laws) from the University of Ibadan (2004). As a Partner at ILS ATTORNEYS since November 2006, Chinyere has been instrumental in representing clients in corporate structuring, business formation, and regulatory licensing.
+                </p>
+                <p class="mb-4">
+                    She facilitates real estate transactions, including property searches and title perfection, and provides legal structuring for property development ventures. Her expertise extends to advising SMEs and startups on compliance, contracts, and dispute resolution, as well as liaising with regulatory agencies such as CAC, SEC, and FIRS. Notably, she leads initiatives on environmental (ESG) compliance within company operations and supports internal policy development for anti-money laundering (AML) and data protection (NDPR) compliance.
                 </p>
                 <p>
-                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                    Chinyere's background includes experience in debt recovery and advising on legal changes to ensure regulatory compliance. Her professional affiliations include the Nigerian Bar Association and the Institute of Chartered Mediators and Conciliators, Nigeria. She is a committed advocate for green technology and environmental sustainability as legal tools for national development.
                 </p>
             </div>
         </div>
@@ -374,7 +440,7 @@
             <span class="close" onclick="closeModal('sanusi')">&times;</span>
             <div class="flex items-center mb-6">
                 <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
-                    <i class="fas fa-gavel text-3xl text-gold"></i>
+                    <img src="attached_assets/sanusi_1758604026762.jpeg" alt="Sanusi Ayama" class="w-24 h-24 rounded-full object-cover">
                 </div>
                 <div>
                     <h2 class="text-2xl font-bold text-navy-900">Sanusi Ayama</h2>
@@ -383,13 +449,16 @@
             </div>
             <div class="text-gray-700 leading-relaxed">
                 <p class="mb-4">
-                    [Bio content will be added when provided by client]
+                    <strong>Seasoned Regional Leader: Driving Market Share and Client Relationships in Pensions and Public Service</strong>
                 </p>
                 <p class="mb-4">
-                    Sanusi Ayama ensures independent judgment and objective oversight in all board matters, maintaining the highest standards of governance.
+                    Sanusi Mohammed Ayama is a highly skilled professional with a strong track record in regional management, sales, and relationship building, particularly within the pensions industry and public service. His diverse educational background includes a Higher National Diploma in Public Administration from Kano State Polytechnic, an Advanced Diploma in Information Management from Bayero University Kano, and a Post Graduate Diploma in Public Policy and Administration also from Bayero University Kano (2006). He also holds a Diploma in Journalism from Ahmadu Bello University, Zaria (1993), and is awaiting final results for a Masters in Public Administration from Nasarawa State University, Keffi.
+                </p>
+                <p class="mb-4">
+                    Previously, as a Regional Manager at Veritas Glanvills Pensions Ltd (formerly FUG PENSIONS LTD) for over a decade, Sanusi was instrumental in driving the overall strategy for the North West region, significantly increasing Assets Under Management (AUM) through various growth drivers (RSA, AVC, TW-EOI, Unfunded to Funding). He was responsible for managing regional budgets and targets, presenting products and services to business prospects, facilitating contributions, and ensuring high levels of client satisfaction.
                 </p>
                 <p>
-                    [Additional biographical information, education, achievements, and professional background will be populated here]
+                    His experience also includes roles as Station Head at Fedex Red Star Express PLC, where he coordinated human and material resources to innovate service delivery, and continuously increased market share and profitability. More recently, he served as an Assistant Chief Executive Officer (GD) in the FCT - Judicial Service Committee, Abuja, with responsibilities in Procurement, Finance, and Accounts, and was promoted to Chief Executive Officer (GD) in June 2025. Sanusi's core competencies include marketing strategy, team building, customer satisfaction, sales and relationship management, and public procurement skills, making him adept at achieving organizational goals and building executive relationships.
                 </p>
             </div>
         </div>
@@ -397,44 +466,41 @@
 
     <!-- Footer -->
     <footer class="bg-navy-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Logo"
-                            class="h-8 w-8">
-                        <span class="text-xl font-bold">PRODIGY GROUP</span>
+                    <div class="flex items-center mb-4">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
+                            class="h-8 w-auto mr-3">
+                        <div class="text-gold text-2xl font-bold">Prodigy Group</div>
                     </div>
-                    <p class="text-gray-300">
-                        Empowering financial prosperity through unwavering trust, impenetrable security, radical transparency, and relentless excellence.
-                    </p>
+                    <p class="text-gray-300 mb-4">Where Sophisticated Strategy<br>Meets the serenity you deserve.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <h3 class="text-lg font-bold mb-4 text-gold">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="#subsidiaries" class="text-gray-300 hover:text-gold transition">Subsidiaries</a></li>
                         <li><a href="groups.html" class="text-gray-300 hover:text-gold transition">About Us</a></li>
-                        <li><a href="ppa.html" class="text-gray-300 hover:text-gold transition">Services</a></li>
-                        <li><a href="contact-us.html" class="text-gray-300 hover:text-gold transition">Contact</a></li>
+                        <li><a href="join-our-team.html" class="text-gray-300 hover:text-gold transition">Careers</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-gold transition">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-gold transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-gold transition">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-gold">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>+234 (0)9167629178
+                            <a href="https://wa.me/2349167629178" target="_blank" class="ml-3 text-green-400 hover:text-green-300 transition-colors" title="Chat on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@prodigygroup.com.ng</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Elephant House, Lagos, Nigeria</li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2025 Prodigy Group. All rights reserved.</p>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Prodigy Group. All rights reserved.</p>
             </div>
         </div>
     </footer>

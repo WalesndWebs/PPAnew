@@ -145,13 +145,48 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
             const menu = document.getElementById('mobile-menu');
             if (menu) {
                 menu.classList.toggle('show');
+                
+                // Toggle hamburger icon animation
+                const icon = this.querySelector('i');
+                if (icon) {
+                    if (menu.classList.contains('show')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
             }
         });
     }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        
+        if (mobileMenu && mobileMenu.classList.contains('show')) {
+            // If click is not on mobile menu button or mobile menu itself
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+                
+                // Reset hamburger icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
+    });
     
     // Dropdown menu functionality
     const dropdownButtons = document.querySelectorAll('[data-dropdown]');
@@ -206,8 +241,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Close mobile menu if open
                 const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
                 if (mobileMenu && mobileMenu.classList.contains('show')) {
                     mobileMenu.classList.remove('show');
+                    
+                    // Reset hamburger icon
+                    if (mobileMenuBtn) {
+                        const icon = mobileMenuBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                }
+            }
+        });
+    });
+
+    // Close mobile menu when clicking on regular navigation links
+    document.querySelectorAll('#mobile-menu a:not([href^="#"])').forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            
+            if (mobileMenu && mobileMenu.classList.contains('show')) {
+                mobileMenu.classList.remove('show');
+                
+                // Reset hamburger icon
+                if (mobileMenuBtn) {
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
                 }
             }
         });

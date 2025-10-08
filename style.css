@@ -45,7 +45,7 @@
 /* Mission & Vision Background */
 #about.bg-navy-900 {
     background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)),
-        url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+        url('attached_assets/lauretha_1758962136097.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -275,10 +275,91 @@ html {
 /* Mobile menu styles */
 #mobile-menu {
     display: none;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 #mobile-menu.show {
+    display: block !important;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile menu buttons */
+#mobile-menu button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    color: var(--navy-900);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mobile-menu button:hover {
+    background-color: #f9fafb;
+    color: var(--gold);
+}
+
+/* Mobile dropdown menus */
+#mobile-menu [data-dropdown-menu] {
+    background-color: #f8fafc;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 8px 16px;
+    border-left: 3px solid var(--gold);
+}
+
+#mobile-menu [data-dropdown-menu] a {
     display: block;
+    padding: 8px 12px;
+    color: var(--navy-900);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+#mobile-menu [data-dropdown-menu] a:hover {
+    background-color: var(--gold);
+    color: white;
+}
+
+/* Chevron animation for mobile */
+#mobile-menu .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+#mobile-menu .rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* Nested mobile dropdown styles */
+#mobile-menu .border-l-2 {
+    border-left: 2px solid #d1d5db;
+    margin-left: 12px;
+    padding-left: 12px;
+}
+
+#mobile-menu .bg-gradient-to-br {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
 }
 
 /* Custom form styles */
@@ -322,6 +403,70 @@ textarea:focus {
 
     .text-6xl {
         font-size: 3rem;
+    }
+
+    /* Ensure desktop dropdowns are hidden on mobile */
+    .hidden\.md\:flex {
+        display: none !important;
+    }
+    
+    .md\:hidden {
+        display: block !important;
+    }
+    
+    /* Force mobile menu button visibility */
+    #mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    #mobile-menu-btn:hover {
+        background-color: rgba(251, 191, 36, 0.1);
+    }
+    
+    /* Ensure desktop navigation is hidden */
+    .hidden\.md\:block,
+    .hidden\.md\:flex {
+        display: none !important;
+    }
+    
+    /* Mobile menu positioning */
+    #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Tablet responsive adjustments */
+@media (max-width: 1024px) {
+    .md\:hidden {
+        display: block;
+    }
+    
+    .hidden\.md\:flex {
+        display: none;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    #mobile-menu button {
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    #mobile-menu [data-dropdown-menu] a {
+        padding: 12px;
+        font-size: 14px;
     }
 }
 
