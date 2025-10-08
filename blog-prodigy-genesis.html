@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,101 +7,81 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <style>
+        .pdf-page {
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 100px;
+            min-height: 800px;
+        }
+        @media (max-width: 768px) {
+            .pdf-page {
+                padding: 40px 30px;
+            }
+        }
+    </style>
 </head>
 
-<body class="font-sans">
+<body class="font-sans bg-gray-100">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
+    <nav class="fixed w-full z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
-                        class="h-10 w-auto mr-3">
+                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
                     <div class="text-navy-900 text-2xl font-bold">PRODIGY GROUP</div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <!-- Who We Are Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
                             Who We Are
                             <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-
-                        <!-- First Level Dropdown -->
-                        <div
-                            class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="groups.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our
-                                    Group</a>
-
-                                <!-- Our People with nested dropdown -->
+                                <a href="groups.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our Group</a>
                                 <div class="relative group/nested">
-                                    <button
-                                        class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                    <button class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
                                         Our People
                                         <i class="fas fa-chevron-right text-xs"></i>
                                     </button>
-
-                                    <!-- Second Level Dropdown with Gold Background -->
-                                    <div
-                                        class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                    <div class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
                                         <div class="py-1">
-                                            <a href="meet-the-architects.html"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
-                                                the Architects</a>
-                                            <a href="meet-the-navigators.html"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
-                                                the Navigators</a>
-                                            <a href="blog.html"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
+                                            <a href="meet-the-architects.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Architects</a>
+                                            <a href="meet-the-navigators.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Navigators</a>
+                                            <a href="blog.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Our Subsidiaries Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
                             Our Subsidiaries
                             <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-
-                        <div
-                            class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="finance.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Finance</a>
-                                <a href="ppa.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Portfolio Advisers</a>
-                                <a href="brokercom.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Brokercom</a>
+                                <a href="finance.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Finance</a>
+                                <a href="ppa.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Portfolio Advisers</a>
+                                <a href="brokercom.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Brokercom</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Careers Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
                             Careers
                             <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-
-                        <div
-                            class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="join-our-team.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join
-                                    our team</a>
+                                <a href="join-our-team.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join our team</a>
                             </div>
                         </div>
                     </div>
-
                     <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
                     <button class="text-navy-900 hover:text-gold transition">
                         <i class="fas fa-search text-lg"></i>
@@ -117,140 +96,42 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-20 pb-16 bg-gradient-to-br from-navy-900 to-blue-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white py-12">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="text-gold">Prodigy Genesis</span>
-                </h1>
-                <div class="flex justify-center">
-                    <div class="w-24 h-1 bg-gold rounded-full"></div>
-                </div>
+    <!-- PDF Document -->
+    <div class="pt-24 pb-16">
+        <div class="pdf-page">
+            <h1 class="text-4xl font-bold text-navy-900 mb-6">Prodigy Genesis</h1>
+            <h2 class="text-2xl text-navy-900 mb-8">A dynamic property development fund.</h2>
+            
+            <p class="text-lg text-gray-800 leading-relaxed mb-12">
+                Focused on high-potential, mid to high-end real estate projects in prime locations. Designed for discerning investors seeking short-to medium-term returns with capital protection and performance consistency.
+            </p>
+
+            <div class="mb-12">
+                <p class="text-xl font-bold text-navy-900 mb-2">Target Returns: <span class="text-green-700">25%–33% Per Annum.</span></p>
+                <p class="text-lg text-gray-800 mb-2"><strong>Lock-in:</strong> 12 months | <strong>Horizon:</strong> 12–24 months</p>
+                <p class="text-lg text-gray-800 leading-relaxed"><strong>Risk Mitigation:</strong> Diversified exposure, Asset Securitization, Performance Guarantees, rigorous due diligence, | Expert Management | Transparent & Trackable</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <article class="bg-white">
-                <div class="prose prose-lg max-w-none">
-                    <h2 class="text-4xl font-bold text-navy-900 mb-8">Prodigy Genesis</h2>
-                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                        A dynamic property development fund.
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                        Focused on high-potential, mid to high-end real estate projects in prime locations. Designed for discerning investors seeking short-to medium-term returns with capital protection and performance consistency.
-                    </p>
-
-                    <div class="bg-gradient-to-r from-navy-900 to-blue-900 text-white p-8 rounded-lg mb-10">
-                        <h3 class="text-2xl font-bold mb-6">Investment Details</h3>
-                        <div class="space-y-4 text-lg">
-                            <p><strong>Target Returns:</strong> 25%–33% Per Annum.</p>
-                            <p><strong>Lock-in:</strong> 12 months | <strong>Horizon:</strong> 12–24 months</p>
-                            <p><strong>Risk Mitigation:</strong> Diversified exposure, Asset Securitization, Performance Guarantees, rigorous due diligence, | Expert Management | Transparent & Trackable</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 p-8 rounded-lg mb-10">
-                        <h3 class="text-2xl font-bold text-navy-900 mb-4">Contact us</h3>
-                        <p class="text-lg text-gray-700 mb-2">17th Floor, Elephant House, 214 Broad Street, Marina Lagos.</p>
-                        <p class="text-lg text-gray-700">Email: <a href="http://www.prodigygroup.com.ng" class="text-gold hover:underline">www.prodigygroup.com.ng</a></p>
-                    </div>
-
-                    <p class="text-center text-2xl text-navy-900 italic font-semibold mt-12">
-                        sophisticated strategy meets the serenity you deserve……
-                    </p>
-                </div>
-
-                <!-- Share Section -->
-                <footer class="mt-12 pt-8 border-t border-gray-200">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div class="mb-6 md:mb-0">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-gradient-to-br from-navy-900 to-blue-900 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-building text-gold text-lg"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="font-semibold text-navy-900">Prodigy Group</h4>
-                                    <p class="text-gray-600 text-sm">Investment Products</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <span class="text-gray-600 text-sm">Share this:</span>
-                            <a href="https://www.linkedin.com/in/prodigy-group-16496b386" target="_blank" class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-linkedin text-lg"></i>
-                            </a>
-                            <button class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-twitter text-lg"></i>
-                            </button>
-                            <button class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-facebook text-lg"></i>
-                            </button>
-                            <a href="https://www.instagram.com/prodigygroup_ng" target="_blank" class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-instagram text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </footer>
-            </article>
-        </div>
-    </main>
-
-    <!-- Related Posts Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">More from Prodigy Group</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="text-3xl text-gold mb-4">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 mb-3">Market Insights</h3>
-                    <p class="text-gray-600 mb-4">
-                        Weekly market highlights and analysis from our expert team.
-                    </p>
-                    <a href="blog-market-insights.html" class="text-gold hover:text-navy-900 font-semibold transition-colors">
-                        Read More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="text-3xl text-gold mb-4">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 mb-3">Company News</h3>
-                    <p class="text-gray-600 mb-4">
-                        Discover the story behind Prodigy Group.
-                    </p>
-                    <a href="blog.html" class="text-gold hover:text-navy-900 font-semibold transition-colors">
-                        Read More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="text-3xl text-gold mb-4">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 mb-3">Get in Touch</h3>
-                    <p class="text-gray-600 mb-4">
-                        Contact us for more investment opportunities.
-                    </p>
-                    <a href="contact-us.html" class="text-gold hover:text-navy-900 font-semibold transition-colors">
-                        Contact Us <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-navy-900 mb-4">Contact us</h3>
+                <p class="text-lg text-gray-800 mb-2">17th Floor, Elephant House, 214 Broad Street,</p>
+                <p class="text-lg text-gray-800 mb-2">Marina Lagos.</p>
+                <p class="text-lg text-gray-800">Email: <a href="http://www.prodigygroup.com.ng" class="text-blue-600 hover:underline">www.prodigygroup.com.ng</a></p>
             </div>
+
+            <p class="text-2xl italic text-center text-navy-900 font-light mt-16">
+                sophisticated strategy meets the serenity you deserve……
+            </p>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-navy-900 text-white py-12">
+    <footer class="bg-navy-900 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
+                <p class="text-gray-400 mb-2">
+                    <a href="blog.html" class="hover:text-gold transition">← Back to Blog</a>
+                </p>
                 <p class="text-gray-400">&copy; 2025 Prodigy Group. All rights reserved.</p>
             </div>
         </div>
@@ -258,5 +139,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>

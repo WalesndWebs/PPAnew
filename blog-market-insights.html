@@ -1,108 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Market Highlights: Sept 29 - Oct 3 | PRODIGY GROUP</title>
+    <title>Weekly Market Highlights | PRODIGY GROUP</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <style>
+        .pdf-page {
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 1100px;
+            margin: 0 auto 30px;
+            padding: 60px 80px;
+        }
+        @media (max-width: 768px) {
+            .pdf-page {
+                padding: 30px 20px;
+            }
+        }
+        .pdf-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .pdf-table th, .pdf-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .pdf-table th {
+            font-weight: 600;
+        }
+    </style>
 </head>
 
-<body class="font-sans">
+<body class="font-sans bg-gray-100">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white shadow-md" style="z-index: 9999;">
+    <nav class="fixed w-full z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
-                        class="h-10 w-auto mr-3">
+                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
                     <div class="text-navy-900 text-2xl font-bold">PRODIGY GROUP</div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <!-- Who We Are Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
                             Who We Are
                             <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-
-                        <!-- First Level Dropdown -->
-                        <div
-                            class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="groups.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our
-                                    Group</a>
-
-                                <!-- Our People with nested dropdown -->
+                                <a href="groups.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our Group</a>
                                 <div class="relative group/nested">
-                                    <button
-                                        class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                    <button class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
                                         Our People
                                         <i class="fas fa-chevron-right text-xs"></i>
                                     </button>
-
-                                    <!-- Second Level Dropdown with Gold Background -->
-                                    <div
-                                        class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                    <div class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
                                         <div class="py-1">
-                                            <a href="meet-the-architects.html"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
-                                                the Architects</a>
-                                            <a href="meet-the-navigators.html"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
-                                                the Navigators</a>
-                                            <a href="blog.html"
-                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
+                                            <a href="meet-the-architects.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Architects</a>
+                                            <a href="meet-the-navigators.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Navigators</a>
+                                            <a href="blog.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Our Subsidiaries Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
                             Our Subsidiaries
                             <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-
-                        <div
-                            class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="finance.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Finance</a>
-                                <a href="ppa.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Portfolio Advisers</a>
-                                <a href="brokercom.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
-                                    Brokercom</a>
+                                <a href="finance.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Finance</a>
+                                <a href="ppa.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Portfolio Advisers</a>
+                                <a href="brokercom.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Brokercom</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Careers Dropdown -->
                     <div class="relative group">
                         <button class="text-navy-900 hover:text-gold transition flex items-center">
                             Careers
                             <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
                         </button>
-
-                        <div
-                            class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-1">
-                                <a href="join-our-team.html"
-                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join
-                                    our team</a>
+                                <a href="join-our-team.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join our team</a>
                             </div>
                         </div>
                     </div>
-
                     <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
                     <button class="text-navy-900 hover:text-gold transition">
                         <i class="fas fa-search text-lg"></i>
@@ -117,565 +108,470 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-20 pb-16 bg-gradient-to-br from-navy-900 to-blue-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white py-12">
-                <div class="inline-block bg-gold text-navy-900 px-6 py-2 rounded-full text-sm font-bold mb-6">
-                    WEEKLY MARKET HIGHLIGHTS
-                </div>
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="text-gold">Prodigy Group</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8">Sept 29th – Oct 3rd</p>
-                <div class="flex justify-center">
-                    <div class="w-24 h-1 bg-gold rounded-full"></div>
-                </div>
+    <!-- PDF Document -->
+    <div class="pt-24 pb-8">
+        <!-- Page 1 -->
+        <div class="pdf-page">
+            <div class="text-right mb-8">
+                <p class="text-sm font-bold">WEEKLY MARKET HIGHLIGHTS</p>
+                <p class="text-sm">Sept 29th –Oct 3rd</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <article class="bg-white">
-                
-                <!-- NIGERIA MARKET REVIEW -->
-                <section class="mb-16">
-                    <h2 class="text-4xl font-bold text-navy-900 mb-8">NIGERIA MARKET REVIEW</h2>
-                    
-                    <div class="grid md:grid-cols-3 gap-8 mb-8">
-                        <div class="md:col-span-2">
-                            <h3 class="text-2xl font-bold text-navy-900 mb-4">Equities Stay Bullish</h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
-                                The Nigerian stock market continued its upward momentum for the fourth consecutive week, demonstrating investor confidence despite mixed signals in liquidity and currency markets. The NGX All-Share Index (NGXASI) rose by 1.02%, closing at 143,584.04 points. This performance added over ₦1 trillion in market capitalization, pushing the year-to-date (YTD) return to 39.50%, a strong indicator of sustained bullish sentiment.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed mb-4">
-                                Investor appetite was particularly strong in mid- and large-cap stocks, with notable gains in energy, banking, and consumer goods. The market breadth—an indicator of overall sentiment—improved to 1.17x, meaning more stocks gained than lost, a healthy sign of broad-based participation.
-                            </p>
-                        </div>
-                        <div>
-                            <div class="bg-gray-50 p-6 rounded-lg">
-                                <h4 class="font-bold text-navy-900 mb-4">Sector Performance</h4>
-                                <table class="w-full text-sm">
-                                    <thead>
-                                        <tr class="border-b">
-                                            <th class="text-left py-2">Sector</th>
-                                            <th class="text-right py-2">Weekly</th>
-                                            <th class="text-right py-2">YTD</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-b">
-                                            <td class="py-2">Oil & Gas</td>
-                                            <td class="text-right text-green-600">+5.68%</td>
-                                            <td class="text-right text-red-600">-4.68%</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2">Banking</td>
-                                            <td class="text-right text-green-600">+1.17%</td>
-                                            <td class="text-right text-green-600">+40.77%</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2">Industrial Goods</td>
-                                            <td class="text-right text-green-600">+1.66%</td>
-                                            <td class="text-right text-green-600">+42.15%</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2">Consumer Goods</td>
-                                            <td class="text-right text-green-600">+0.13%</td>
-                                            <td class="text-right text-green-600">+96.42%</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2">Insurance</td>
-                                            <td class="text-right text-red-600">-2.02%</td>
-                                            <td class="text-right text-green-600">+68.91%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+            <div class="flex items-center justify-between mb-8">
+                <h1 class="text-2xl font-bold text-navy-900">Prodigy Group</h1>
+                <p class="text-sm text-gray-600">Prodigy group<br>Asset Management</p>
+            </div>
 
-                    <div class="prose prose-lg max-w-none mb-8">
-                        <ul class="space-y-2 text-gray-700">
-                            <li><strong>Top Gainers:</strong> ETERNA (+32.80%) surged on strong oil sector momentum.</li>
-                            <li>ENAMELWA (+20.94%) and PZ (+20.87%) benefited from consumer sector rotation.</li>
-                            <li>EUNISELL and ARADEL also posted double-digit gains, reflecting renewed interest in industrial and energy plays.</li>
-                        </ul>
-                    </div>
+            <h2 class="text-xl font-bold text-navy-900 mb-4">NIGERIA MARKET REVIEW</h2>
 
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div>
-                            <ul class="space-y-2 text-gray-700">
-                                <li><strong>Top Losers:</strong> JBERGER (-17.79%) led the decline, likely due to profit-taking after previous rallies.</li>
-                                <li>INTENEGINS, MANSARD, and UPL saw steep drops, possibly reflecting sector-specific headwinds or earnings disappointments.</li>
-                            </ul>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h4 class="font-bold text-navy-900 mb-4">Market Indicators</h4>
-                            <table class="w-full text-sm">
-                                <tbody>
-                                    <tr class="border-b">
-                                        <td class="py-2">Volume Traded</td>
-                                        <td class="text-right">2.95 bn units</td>
-                                        <td class="text-right text-red-600">↓ -0.50%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="py-2">Value Traded</td>
-                                        <td class="text-right">₦90.24 bn</td>
-                                        <td class="text-right text-red-600">↓ -3.55%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="py-2">Deals</td>
-                                        <td class="text-right">27,065</td>
-                                        <td class="text-right text-red-600">↓ -17.19%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2">Market Breadth</td>
-                                        <td class="text-right">1.17x</td>
-                                        <td class="text-right text-green-600">↑ +90.91%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        <strong>Most Traded Stocks:</strong> UBA, ACCESSCORP, GTCO, ZENITHBANK, and ELLAHLAKES dominated both volume and value charts, underscoring their role as liquidity anchors in the market.
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <div class="col-span-2">
+                    <h3 class="font-bold text-navy-900 mb-2">Equities Stay Bullish</h3>
+                    <p class="text-sm text-gray-800 mb-3 leading-relaxed">
+                        The Nigerian stock market continued its upward momentum for the fourth consecutive week, demonstrating investor confidence despite mixed signals in liquidity and currency markets. The NGX All-Share Index (NGXASI) rose by 1.02%, closing at 143,584.04 points. This performance added over ₦1 trillion in market capitalization, pushing the year-to-date (YTD) return to 39.50%, a strong indicator of sustained bullish sentiment.
                     </p>
-
-                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Sector Performance</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Sectoral rotation was evident this week, with investors shifting capital into outperforming industries. Oil & Gas led the charge, supported by global supply dynamics and local corporate actions.
+                    <p class="text-sm text-gray-800 mb-3 leading-relaxed">
+                        Investor appetite was particularly strong in mid- and large-cap stocks, with notable gains in energy, banking, and consumer goods. The market breadth—an indicator of overall sentiment—improved to 1.17x, meaning more stocks gained than lost, a healthy sign of broad-based participation.
                     </p>
-                    <ul class="space-y-2 text-gray-700 mb-6">
-                        <li>• Oil & Gas rebounded sharply, reversing prior losses, thanks to strong buying in ETERNA and ARADEL.</li>
-                        <li>• Banking stocks remained attractive due to dividend expectations and liquidity support.</li>
-                        <li>• Insurance dipped as investors booked profits after recent rallies, but the sector remains one of the top YTD performers.</li>
+                    <ul class="text-sm text-gray-800 space-y-1 mb-3">
+                        <li>• <strong>Top Gainers:</strong> ETERNA (+32.80%) surged on strong oil sector momentum.</li>
+                        <li>• ENAMELWA (+20.94%) and PZ (+20.87%) benefited from consumer sector rotation.</li>
+                        <li>• EUNISELL and ARADEL also posted double-digit gains, reflecting renewed interest in industrial and energy plays.</li>
                     </ul>
-
-                    <h3 class="text-2xl font-bold text-navy-900 mb-4">Market Activity</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Trading volumes and values declined slightly, suggesting a more selective approach by investors. While overall sentiment remains positive, the drop in activity may reflect caution ahead of macroeconomic data releases and policy shifts.
+                    <ul class="text-sm text-gray-800 space-y-1 mb-3">
+                        <li>• <strong>Top Losers:</strong> JBERGER (-17.79%) led the decline, likely due to profit-taking after previous rallies.</li>
+                        <li>• INTENEGINS, MANSARD, and UPL saw steep drops, possibly reflecting sector-specific headwinds or earnings disappointments.</li>
+                    </ul>
+                    <p class="text-sm text-gray-800 mb-3">
+                        • <strong>Most Traded Stocks:</strong> UBA, ACCESSCORP, GTCO, ZENITHBANK, and ELLAHLAKES dominated both volume and value charts, underscoring their role as liquidity anchors in the market.
                     </p>
-                </section>
-
-                <!-- Currency & Money Market -->
-                <section class="mb-16 bg-gray-50 p-8 rounded-lg">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="md:col-span-2">
-                            <h3 class="text-2xl font-bold text-navy-900 mb-4">Currency & Money Market</h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
-                                The Naira strengthened across both official and parallel markets, Meanwhile, interbank rates remained elevated, signalling tight liquidity conditions.
-                            </p>
-                            <ul class="space-y-2 text-gray-700 mb-4">
-                                <li>• The appreciation of the Naira may tapper FX interventions or policy adjustments.</li>
-                                <li>• Elevated lending rates suggest banks are cautious, possibly due to upcoming regulatory changes or liquidity constraints.</li>
-                            </ul>
-                            <p class="text-gray-700 leading-relaxed mb-4">
-                                Bond yields declined slightly, indicating bullish sentiment in the fixed income space. Investors are positioning for reinvestment opportunities and anticipating smoother operations under the upcoming CBN reforms.
-                            </p>
-                            <ul class="space-y-2 text-gray-700">
-                                <li>• Demand for longer-term bonds like MAY-33 and FEB-31 reflects investor preference for locking in higher yields before potential</li>
-                                <li>• GDP growth remains solid, but inflation is still elevated, which may limit the CBN's flexibility on interest rates.</li>
-                                <li>• FX reserves are stable, but declining oil prices could pose risks in the coming weeks.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="bg-white p-6 rounded-lg mb-6">
-                                <h4 class="font-bold text-navy-900 mb-4">FX & Money Market</h4>
-                                <table class="w-full text-sm">
-                                    <tbody>
-                                        <tr class="border-b">
-                                            <td class="py-2">Official FX Rate</td>
-                                            <td class="text-right">₦1,465.68/USD</td>
-                                            <td class="text-right text-green-600">↑ 0.72%</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2">Parallel FX Rate</td>
-                                            <td class="text-right">₦1,455.89/USD</td>
-                                            <td class="text-right text-green-600">↑ 0.34%</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2">System Liquidity</td>
-                                            <td class="text-right">₦5.3 trillion</td>
-                                            <td class="text-right text-green-600">↑</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2">O/N Rate</td>
-                                            <td class="text-right">24.89%</td>
-                                            <td class="text-right text-green-600">↑ 0.01%</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2">OPR Rate</td>
-                                            <td class="text-right">24.50%</td>
-                                            <td class="text-right">—</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Domestic Highlights -->
-                <section class="mb-16">
-                    <h3 class="text-2xl font-bold text-navy-900 mb-6">Domestic Highlights</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="border-l-4 border-gold pl-6">
-                            <h4 class="font-bold text-navy-900 mb-2">CBN Reform:</h4>
-                            <p class="text-gray-700">
-                                The Central Bank will assume control of bond and FX trading platforms starting November, aiming to improve transparency and reduce settlement risks.
-                            </p>
-                        </div>
-
-                        <div class="border-l-4 border-gold pl-6">
-                            <h4 class="font-bold text-navy-900 mb-2">NNPC-Dangote Deal:</h4>
-                            <p class="text-gray-700">
-                                A two-year crude supply agreement (60% in Naira) is expected to ease FX pressure and enhance energy security.
-                            </p>
-                        </div>
-
-                        <div class="border-l-4 border-gold pl-6">
-                            <h4 class="font-bold text-navy-900 mb-2">PenCom Capital Rules:</h4>
-                            <p class="text-gray-700">
-                                New capital requirements for pension firms will strengthen industry resilience and protect contributors.
-                            </p>
-                        </div>
-
-                        <div class="border-l-4 border-gold pl-6">
-                            <h4 class="font-bold text-navy-900 mb-2">Ellah Lakes Acquisition:</h4>
-                            <p class="text-gray-700">
-                                The acquisition of ARPN expands agricultural assets and positions the company for long-term growth.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- GLOBAL MARKET REVIEW -->
-                <section class="mb-16 bg-gradient-to-r from-navy-900 to-blue-900 text-white p-8 rounded-lg">
-                    <h2 class="text-3xl font-bold mb-8">GLOBAL MARKET REVIEW</h2>
-                    
-                    <h3 class="text-2xl font-bold mb-4">Markets Defy Political Turbulence; Oil and Dollar Slide</h3>
-                    
-                    <div class="grid md:grid-cols-3 gap-8 mb-6">
-                        <div class="md:col-span-2">
-                            <h4 class="text-xl font-bold mb-4">U.S. Shutdown & Fed Outlook</h4>
-                            <p class="mb-4 opacity-90">
-                                Despite the U.S. government shutdown, equity markets rallied as investors bet on a Fed rate cut to cushion the economy. With official data releases frozen, traders relied on alternative indicators showing labour market weakness.
-                            </p>
-                            <ul class="space-y-2 mb-4 opacity-90">
-                                <li><strong>Rate Cut Odds:</strong></li>
-                                <li>• October: 96.2% chance of a 0.25% cut</li>
-                                <li>• December: 86.3% chance of another cut</li>
-                            </ul>
-                            <ul class="space-y-2 mb-4 opacity-90">
-                                <li><strong>Equities Rally:</strong></li>
-                                <li>• S&P 500: +1.1%</li>
-                                <li>• DOW & NASDAQ: +1.3%</li>
-                                <li>• Technical target: 6922.53, resistance near 7000</li>
-                            </ul>
-                            <ul class="space-y-2 opacity-90">
-                                <li>• The Fed is likely to prioritize employment over inflation in the short term, especially with signs of economic cooling.</li>
-                                <li>• Global equities are buoyed by expectations of looser monetary policy.</li>
-                                <li>• Frontier and emerging markets are showing resilience despite external headwinds.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="bg-white/10 p-6 rounded-lg">
-                                <h4 class="font-bold mb-4">Key Economic Indicators</h4>
-                                <table class="w-full text-sm">
-                                    <tbody>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">GDP Q2 2025</td>
-                                            <td class="text-right">4.23%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Inflation (August)</td>
-                                            <td class="text-right">20.12%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Monetary Policy Rate</td>
-                                            <td class="text-right">27.00%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">FX Reserves</td>
-                                            <td class="text-right">$42.35 billion</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Brent Crude</td>
-                                            <td class="text-right">$64.70/barrel</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2">Gold</td>
-                                            <td class="text-right">$3,881.20/oz</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="bg-white/10 p-6 rounded-lg mt-6">
-                                <h4 class="font-bold mb-4">Index Performance</h4>
-                                <table class="w-full text-sm">
-                                    <tbody>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">STOXX 600</td>
-                                            <td class="text-right text-green-400">+2.87%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">FTSE 100</td>
-                                            <td class="text-right">Mixed</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Ghana</td>
-                                            <td class="text-right text-green-400">+0.43%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Egypt</td>
-                                            <td class="text-right text-green-400">+0.36%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Kenya</td>
-                                            <td class="text-right text-green-400">+0.45%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">South Africa</td>
-                                            <td class="text-right text-red-400">-0.12%</td>
-                                        </tr>
-                                        <tr class="border-b border-white/20">
-                                            <td class="py-2">Emerging Mkts</td>
-                                            <td class="text-right text-green-400">+0.50%</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2">Developed Mkts</td>
-                                            <td class="text-right text-green-400">+0.57%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Fixed Income & Money Market -->
-                <section class="mb-16">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-navy-900 mb-6">Fixed income Market Yield</h3>
-                            <table class="w-full">
-                                <thead class="bg-navy-900 text-white">
-                                    <tr>
-                                        <th class="px-4 py-2 text-left">Tenor</th>
-                                        <th class="px-4 py-2 text-right">This Week</th>
-                                        <th class="px-4 py-2 text-right">Previous Week</th>
-                                        <th class="px-4 py-2 text-right">%Change</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-sm">
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">1YR</td>
-                                        <td class="px-4 py-2 text-right">18.45%</td>
-                                        <td class="px-4 py-2 text-right">18.93%</td>
-                                        <td class="px-4 py-2 text-right text-red-600">-2.53%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">3YR</td>
-                                        <td class="px-4 py-2 text-right">16.54%</td>
-                                        <td class="px-4 py-2 text-right">16.02%</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+3.23%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">5YR</td>
-                                        <td class="px-4 py-2 text-right">16.20%</td>
-                                        <td class="px-4 py-2 text-right">16.30%</td>
-                                        <td class="px-4 py-2 text-right text-red-600">-0.63%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">7YR</td>
-                                        <td class="px-4 py-2 text-right">16.16%</td>
-                                        <td class="px-4 py-2 text-right">16.61%</td>
-                                        <td class="px-4 py-2 text-right text-red-600">-2.69%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">10YR</td>
-                                        <td class="px-4 py-2 text-right">16.23%</td>
-                                        <td class="px-4 py-2 text-right">15.95%</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+1.74%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">30YR Avg</td>
-                                        <td class="px-4 py-2 text-right">15.75%</td>
-                                        <td class="px-4 py-2 text-right">15.45%</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+1.92%</td>
-                                    </tr>
-                                    <tr class="bg-gray-100 font-bold">
-                                        <td class="px-4 py-2">Avg</td>
-                                        <td class="px-4 py-2 text-right">16.27%</td>
-                                        <td class="px-4 py-2 text-right">16.54%</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+0.06%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-navy-900 mb-6">Short-Term Money Market Rates</h3>
-                            <table class="w-full">
-                                <thead class="bg-navy-900 text-white">
-                                    <tr>
-                                        <th class="px-4 py-2 text-left">Tenor</th>
-                                        <th class="px-4 py-2 text-right">This Week</th>
-                                        <th class="px-4 py-2 text-right">Previous Week</th>
-                                        <th class="px-4 py-2 text-right">%Change</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-sm">
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">1MTH</td>
-                                        <td class="px-4 py-2 text-right">16.16</td>
-                                        <td class="px-4 py-2 text-right">16.03</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+0.83%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">3MTH</td>
-                                        <td class="px-4 py-2 text-right">17.07</td>
-                                        <td class="px-4 py-2 text-right">17.00</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+0.43%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">6MTH</td>
-                                        <td class="px-4 py-2 text-right">17.98</td>
-                                        <td class="px-4 py-2 text-right">18.07</td>
-                                        <td class="px-4 py-2 text-right text-red-600">-0.47%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">9MTH</td>
-                                        <td class="px-4 py-2 text-right">22.54</td>
-                                        <td class="px-4 py-2 text-right">22.54</td>
-                                        <td class="px-4 py-2 text-right">0.00%</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="px-4 py-2">12MTH</td>
-                                        <td class="px-4 py-2 text-right">18.91</td>
-                                        <td class="px-4 py-2 text-right">19.05</td>
-                                        <td class="px-4 py-2 text-right text-red-600">-0.75%</td>
-                                    </tr>
-                                    <tr class="bg-gray-100 font-bold">
-                                        <td class="px-4 py-2">Avg</td>
-                                        <td class="px-4 py-2 text-right">18.14</td>
-                                        <td class="px-4 py-2 text-right">18.12</td>
-                                        <td class="px-4 py-2 text-right text-green-600">+0.01%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Disclaimer -->
-                <section class="bg-gray-100 p-8 rounded-lg">
-                    <h3 class="text-xl font-bold text-navy-900 mb-4">Disclaimer</h3>
-                    <p class="text-sm text-gray-700 mb-4">
-                        This report is prepared solely for informational and strategic review purposes. It does not constitute investment advice, financial recommendation, or an offer to buy or sell any securities or financial instruments. All data and analysis are based on publicly available sources believed to be reliable, but no guarantee is made as to their accuracy or completeness. Readers are advised to consult with qualified financial advisors before making any investment decisions.
-                    </p>
-                    <p class="text-sm text-gray-700">
-                        If you want further Advise contact us at <a href="http://www.Prodigygroup.com.ng" class="text-gold hover:underline">www.Prodigygroup.com.ng</a>
-                    </p>
-                </section>
-
-                <!-- Footer Badge -->
-                <div class="text-right mt-8">
-                    <p class="text-sm text-gray-500">Prodigy group<br>Asset Management</p>
                 </div>
 
-                <!-- Share Section -->
-                <footer class="mt-12 pt-8 border-t border-gray-200">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div class="mb-6 md:mb-0">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-gradient-to-br from-navy-900 to-blue-900 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-chart-line text-gold text-lg"></i>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="font-semibold text-navy-900">Prodigy Group Asset Management</h4>
-                                    <p class="text-gray-600 text-sm">Market Research Team</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <span class="text-gray-600 text-sm">Share this:</span>
-                            <a href="https://www.linkedin.com/in/prodigy-group-16496b386" target="_blank" class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-linkedin text-lg"></i>
-                            </a>
-                            <button class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-twitter text-lg"></i>
-                            </button>
-                            <button class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-facebook text-lg"></i>
-                            </button>
-                            <a href="https://www.instagram.com/prodigygroup_ng" target="_blank" class="text-navy-900 hover:text-gold transition-colors p-2">
-                                <i class="fab fa-instagram text-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </footer>
-            </article>
+                <div>
+                    <table class="pdf-table mb-4">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">Sector</th>
+                                <th class="text-xs text-right">Weekly Change</th>
+                                <th class="text-xs text-right">YTD Change</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>Oil & Gas</td>
+                                <td class="text-right text-green-600">+5.68%</td>
+                                <td class="text-right text-red-600">-4.68%</td>
+                            </tr>
+                            <tr>
+                                <td>Banking</td>
+                                <td class="text-right text-green-600">+1.17%</td>
+                                <td class="text-right text-green-600">+40.77%</td>
+                            </tr>
+                            <tr>
+                                <td>Industrial Goods</td>
+                                <td class="text-right text-green-600">+1.66%</td>
+                                <td class="text-right text-green-600">+42.15%</td>
+                            </tr>
+                            <tr>
+                                <td>Consumer Goods</td>
+                                <td class="text-right text-green-600">+0.13%</td>
+                                <td class="text-right text-green-600">+96.42%</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance</td>
+                                <td class="text-right text-red-600">-2.02%</td>
+                                <td class="text-right text-green-600">+68.91%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="pdf-table">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">Indicator</th>
+                                <th class="text-xs text-right">Value</th>
+                                <th class="text-xs text-right">Change</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>Volume Traded</td>
+                                <td class="text-right">2.95 bn units</td>
+                                <td class="text-right text-red-600">↓ -0.50%</td>
+                            </tr>
+                            <tr>
+                                <td>Value Traded</td>
+                                <td class="text-right">₦90.24 bn</td>
+                                <td class="text-right text-red-600">↓ -3.55%</td>
+                            </tr>
+                            <tr>
+                                <td>Deals</td>
+                                <td class="text-right">27,065</td>
+                                <td class="text-right text-red-600">↓ -17.19%</td>
+                            </tr>
+                            <tr>
+                                <td>Market Breadth</td>
+                                <td class="text-right">1.17x</td>
+                                <td class="text-right text-green-600">↑ +90.91%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3 class="font-bold text-navy-900 mb-2">Sector Performance</h3>
+            <p class="text-sm text-gray-800 mb-2 leading-relaxed">
+                Sectoral rotation was evident this week, with investors shifting capital into outperforming industries. Oil & Gas led the charge, supported by global supply dynamics and local corporate actions.
+            </p>
+            <ul class="text-sm text-gray-800 space-y-1 mb-4">
+                <li>• Oil & Gas rebounded sharply, reversing prior losses, thanks to strong buying in ETERNA and ARADEL.</li>
+                <li>• Banking stocks remained attractive due to dividend expectations and liquidity support.</li>
+                <li>• Insurance dipped as investors booked profits after recent rallies, but the sector remains one of the top YTD performers.</li>
+            </ul>
+
+            <h3 class="font-bold text-navy-900 mb-2">Market Activity</h3>
+            <p class="text-sm text-gray-800 leading-relaxed">
+                Trading volumes and values declined slightly, suggesting a more selective approach by investors. While overall sentiment remains positive, the drop in activity may reflect caution ahead of macroeconomic data releases and policy shifts.
+            </p>
         </div>
-    </main>
 
-    <!-- Related Posts Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">More from Prodigy Group</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="text-3xl text-gold mb-4">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 mb-3">Prodigy Genesis Fund</h3>
-                    <p class="text-gray-600 mb-4">
-                        Discover our dynamic property development fund.
+        <!-- Page 2 -->
+        <div class="pdf-page">
+            <div class="flex items-center justify-between mb-8">
+                <h1 class="text-2xl font-bold text-navy-900">Prodigy Group</h1>
+                <p class="text-sm text-gray-600">Prodigy group<br>Asset Management</p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <div class="col-span-2">
+                    <h3 class="font-bold text-navy-900 mb-2">Currency & Money Market</h3>
+                    <p class="text-sm text-gray-800 mb-2 leading-relaxed">
+                        The Naira strengthened across both official and parallel markets, Meanwhile, interbank rates remained elevated, signalling tight liquidity conditions.
                     </p>
-                    <a href="blog-prodigy-genesis.html" class="text-gold hover:text-navy-900 font-semibold transition-colors">
-                        Read More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
+                    <ul class="text-sm text-gray-800 space-y-1 mb-3">
+                        <li>• The appreciation of the Naira may tapper FX interventions or policy adjustments.</li>
+                        <li>• Elevated lending rates suggest banks are cautious, possibly due to upcoming regulatory changes or liquidity constraints.</li>
+                    </ul>
+                    <p class="text-sm text-gray-800 mb-2 leading-relaxed">
+                        Bond yields declined slightly, indicating bullish sentiment in the fixed income space. Investors are positioning for reinvestment opportunities and anticipating smoother operations under the upcoming CBN reforms.
+                    </p>
+                    <ul class="text-sm text-gray-800 space-y-1 mb-3">
+                        <li>• Demand for longer-term bonds like MAY-33 and FEB-31 reflects investor preference for locking in higher yields before potential</li>
+                        <li>• GDP growth remains solid, but inflation is still elevated, which may limit the CBN's flexibility on interest rates.</li>
+                        <li>• FX reserves are stable, but declining oil prices could pose risks in the coming weeks.</li>
+                    </ul>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="text-3xl text-gold mb-4">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 mb-3">Company News</h3>
-                    <p class="text-gray-600 mb-4">
-                        Learn about Prodigy Group's mission.
+                <div>
+                    <table class="pdf-table">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">Indicator</th>
+                                <th class="text-xs text-right">Value</th>
+                                <th class="text-xs text-right">Change</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>Official FX Rate</td>
+                                <td class="text-right">₦1,465.68/USD</td>
+                                <td class="text-right text-green-600">↑ 0.72%</td>
+                            </tr>
+                            <tr>
+                                <td>Parallel FX Rate</td>
+                                <td class="text-right">₦1,455.89/USD</td>
+                                <td class="text-right text-green-600">↑ 0.34%</td>
+                            </tr>
+                            <tr>
+                                <td>System Liquidity</td>
+                                <td class="text-right">₦5.3 trillion</td>
+                                <td class="text-right text-green-600">↑</td>
+                            </tr>
+                            <tr>
+                                <td>O/N Rate</td>
+                                <td class="text-right">24.89%</td>
+                                <td class="text-right text-green-600">↑ 0.01%</td>
+                            </tr>
+                            <tr>
+                                <td>OPR Rate</td>
+                                <td class="text-right">24.50%</td>
+                                <td class="text-right">—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3 class="font-bold text-navy-900 mb-2">Domestic Highlights</h3>
+            <div class="text-sm text-gray-800 space-y-2 mb-4">
+                <p><strong>CBN Reform:</strong><br>
+                The Central Bank will assume control of bond and FX trading platforms starting November, aiming to improve transparency and reduce settlement risks.</p>
+
+                <p><strong>• NNPC-Dangote Deal:</strong><br>
+                A two-year crude supply agreement (60% in Naira) is expected to ease FX pressure and enhance energy security.</p>
+
+                <p><strong>• PenCom Capital Rules:</strong><br>
+                New capital requirements for pension firms will strengthen industry resilience and protect contributors.</p>
+
+                <p><strong>• Ellah Lakes Acquisition:</strong><br>
+                The acquisition of ARPN expands agricultural assets and positions the company for long-term growth.</p>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="pdf-page">
+            <div class="flex items-center justify-between mb-8">
+                <h1 class="text-2xl font-bold text-navy-900">Prodigy Group</h1>
+                <p class="text-sm text-gray-600">Prodigy group<br>Asset Management</p>
+            </div>
+
+            <h2 class="text-xl font-bold text-navy-900 mb-4">GLOBAL MARKET REVIEW</h2>
+
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <div class="col-span-2">
+                    <h3 class="font-bold text-navy-900 mb-2">Markets Defy Political Turbulence; Oil and Dollar Slide</h3>
+                    
+                    <h4 class="font-bold text-navy-900 mb-2 mt-4">U.S. Shutdown & Fed Outlook</h4>
+                    <p class="text-sm text-gray-800 mb-2 leading-relaxed">
+                        Despite the U.S. government shutdown, equity markets rallied as investors bet on a Fed rate cut to cushion the economy. With official data releases frozen, traders relied on alternative indicators showing labour market weakness.
                     </p>
-                    <a href="blog.html" class="text-gold hover:text-navy-900 font-semibold transition-colors">
-                        Read More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
+                    <ul class="text-sm text-gray-800 space-y-1 mb-3">
+                        <li><strong>• Rate Cut Odds:</strong></li>
+                        <li>&nbsp;&nbsp;• October: 96.2% chance of a 0.25% cut</li>
+                        <li>&nbsp;&nbsp;• December: 86.3% chance of another cut</li>
+                    </ul>
+                    <ul class="text-sm text-gray-800 space-y-1 mb-3">
+                        <li><strong>• Equities Rally:</strong></li>
+                        <li>&nbsp;&nbsp;• S&P 500: +1.1%</li>
+                        <li>&nbsp;&nbsp;• DOW & NASDAQ: +1.3%</li>
+                        <li>&nbsp;&nbsp;• Technical target: 6922.53, resistance near 7000</li>
+                    </ul>
+                    <ul class="text-sm text-gray-800 space-y-1">
+                        <li>• The Fed is likely to prioritize employment over inflation in the short term, especially with signs of economic cooling.</li>
+                        <li>• Global equities are buoyed by expectations of looser monetary policy.</li>
+                        <li>• Frontier and emerging markets are showing resilience despite external headwinds.</li>
+                    </ul>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <div class="text-3xl text-gold mb-4">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 mb-3">Get in Touch</h3>
-                    <p class="text-gray-600 mb-4">
-                        Contact us for more investment opportunities.
-                    </p>
-                    <a href="contact-us.html" class="text-gold hover:text-navy-900 font-semibold transition-colors">
-                        Contact Us <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
+                <div>
+                    <table class="pdf-table mb-4">
+                        <thead>
+                            <tr>
+                                <th class="text-xs" colspan="2">Key Economic Indicators</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>GDP Q2 2025</td>
+                                <td class="text-right">4.23%</td>
+                            </tr>
+                            <tr>
+                                <td>Inflation (August)</td>
+                                <td class="text-right">20.12%</td>
+                            </tr>
+                            <tr>
+                                <td>Monetary Policy Rate</td>
+                                <td class="text-right">27.00%</td>
+                            </tr>
+                            <tr>
+                                <td>FX Reserves</td>
+                                <td class="text-right">$42.35 billion</td>
+                            </tr>
+                            <tr>
+                                <td>Brent Crude</td>
+                                <td class="text-right">$64.70/barrel</td>
+                            </tr>
+                            <tr>
+                                <td>Gold</td>
+                                <td class="text-right">$3,881.20/oz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="pdf-table">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">Index</th>
+                                <th class="text-xs text-right">Weekly Change</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>STOXX 600</td>
+                                <td class="text-right text-green-600">+2.87%</td>
+                            </tr>
+                            <tr>
+                                <td>FTSE 100</td>
+                                <td class="text-right">Mixed</td>
+                            </tr>
+                            <tr>
+                                <td>Ghana</td>
+                                <td class="text-right text-green-600">+0.43%</td>
+                            </tr>
+                            <tr>
+                                <td>Egypt</td>
+                                <td class="text-right text-green-600">+0.36%</td>
+                            </tr>
+                            <tr>
+                                <td>Kenya</td>
+                                <td class="text-right text-green-600">+0.45%</td>
+                            </tr>
+                            <tr>
+                                <td>South Africa</td>
+                                <td class="text-right text-red-600">-0.12%</td>
+                            </tr>
+                            <tr>
+                                <td>Emerging Mkts</td>
+                                <td class="text-right text-green-600">+0.50%</td>
+                            </tr>
+                            <tr>
+                                <td>Developed Mkts</td>
+                                <td class="text-right text-green-600">+0.57%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Page 4 -->
+        <div class="pdf-page">
+            <div class="flex items-center justify-between mb-8">
+                <h1 class="text-2xl font-bold text-navy-900">Prodigy Group</h1>
+                <p class="text-sm text-gray-600">Prodigy group<br>Asset Management</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-navy-900 mb-3">Fixed income Market Yield</h3>
+                    <table class="pdf-table">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">Tenor</th>
+                                <th class="text-xs text-right">This Week</th>
+                                <th class="text-xs text-right">Previous Week</th>
+                                <th class="text-xs text-right">%Change</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>1YR</td>
+                                <td class="text-right">18.45%</td>
+                                <td class="text-right">18.93%</td>
+                                <td class="text-right text-red-600">-2.53%</td>
+                            </tr>
+                            <tr>
+                                <td>3YR</td>
+                                <td class="text-right">16.54%</td>
+                                <td class="text-right">16.02%</td>
+                                <td class="text-right text-green-600">+3.23%</td>
+                            </tr>
+                            <tr>
+                                <td>5YR</td>
+                                <td class="text-right">16.20%</td>
+                                <td class="text-right">16.30%</td>
+                                <td class="text-right text-red-600">-0.63%</td>
+                            </tr>
+                            <tr>
+                                <td>7YR</td>
+                                <td class="text-right">16.16%</td>
+                                <td class="text-right">16.61%</td>
+                                <td class="text-right text-red-600">-2.69%</td>
+                            </tr>
+                            <tr>
+                                <td>10YR</td>
+                                <td class="text-right">16.23%</td>
+                                <td class="text-right">15.95%</td>
+                                <td class="text-right text-green-600">+1.74%</td>
+                            </tr>
+                            <tr>
+                                <td>30YR Avg</td>
+                                <td class="text-right">15.75%</td>
+                                <td class="text-right">15.45%</td>
+                                <td class="text-right text-green-600">+1.92%</td>
+                            </tr>
+                            <tr class="font-bold">
+                                <td>Avg</td>
+                                <td class="text-right">16.27%</td>
+                                <td class="text-right">16.54%</td>
+                                <td class="text-right text-green-600">+0.06%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-navy-900 mb-3">Short-Term Money Market Rates</h3>
+                    <table class="pdf-table">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">Tenor</th>
+                                <th class="text-xs text-right">This Week</th>
+                                <th class="text-xs text-right">Previous Week</th>
+                                <th class="text-xs text-right">%Change</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs">
+                            <tr>
+                                <td>1MTH</td>
+                                <td class="text-right">16.16</td>
+                                <td class="text-right">16.03</td>
+                                <td class="text-right text-green-600">+0.83%</td>
+                            </tr>
+                            <tr>
+                                <td>3MTH</td>
+                                <td class="text-right">17.07</td>
+                                <td class="text-right">17.00</td>
+                                <td class="text-right text-green-600">+0.43%</td>
+                            </tr>
+                            <tr>
+                                <td>6MTH</td>
+                                <td class="text-right">17.98</td>
+                                <td class="text-right">18.07</td>
+                                <td class="text-right text-red-600">-0.47%</td>
+                            </tr>
+                            <tr>
+                                <td>9MTH</td>
+                                <td class="text-right">22.54</td>
+                                <td class="text-right">22.54</td>
+                                <td class="text-right">0.00%</td>
+                            </tr>
+                            <tr>
+                                <td>12MTH</td>
+                                <td class="text-right">18.91</td>
+                                <td class="text-right">19.05</td>
+                                <td class="text-right text-red-600">-0.75%</td>
+                            </tr>
+                            <tr class="font-bold">
+                                <td>Avg</td>
+                                <td class="text-right">18.14</td>
+                                <td class="text-right">18.12</td>
+                                <td class="text-right text-green-600">+0.01%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-300 pt-6 mt-8">
+                <h3 class="font-bold text-navy-900 mb-2">Disclaimer</h3>
+                <p class="text-xs text-gray-700 leading-relaxed mb-3">
+                    This report is prepared solely for informational and strategic review purposes. It does not constitute investment advice, financial recommendation, or an offer to buy or sell any securities or financial instruments. All data and analysis are based on publicly available sources believed to be reliable, but no guarantee is made as to their accuracy or completeness. Readers are advised to consult with qualified financial advisors before making any investment decisions.
+                </p>
+                <p class="text-xs text-gray-700">
+                    If you want further Advise contact us at <a href="http://www.Prodigygroup.com.ng" class="text-blue-600 hover:underline">www.Prodigygroup.com.ng</a>
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-navy-900 text-white py-12">
+    <footer class="bg-navy-900 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
+                <p class="text-gray-400 mb-2">
+                    <a href="blog.html" class="hover:text-gold transition">← Back to Blog</a>
+                </p>
                 <p class="text-gray-400">&copy; 2025 Prodigy Group. All rights reserved.</p>
             </div>
         </div>
@@ -683,5 +579,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
