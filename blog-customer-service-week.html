@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Customer Service Week | PRODIGY GROUP</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .pdf-page {
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 100px;
+            min-height: 800px;
+            line-height: 1.8;
+        }
+        @media (max-width: 768px) {
+            .pdf-page {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group" class="h-10 w-auto mr-3">
+                    <div class="text-navy-900 text-2xl font-bold">PRODIGY GROUP</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Who We Are
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="groups.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our Group</a>
+                                <div class="relative group/nested">
+                                    <button class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                        Our People
+                                        <i class="fas fa-chevron-right text-xs"></i>
+                                    </button>
+                                    <div class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                        <div class="py-1">
+                                            <a href="meet-the-architects.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Architects</a>
+                                            <a href="meet-the-navigators.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet the Navigators</a>
+                                            <a href="blog.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Our Subsidiaries
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="finance.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Finance</a>
+                                <a href="ppa.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Portfolio Advisers</a>
+                                <a href="brokercom.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy Brokercom</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Careers
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="join-our-team.html" class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join our team</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
+                    <button class="text-navy-900 hover:text-gold transition">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PDF Document -->
+    <div class="pt-24 pb-16">
+        <div class="pdf-page">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold mb-2">
+                    <span class="text-red-600">Unlock</span> 
+                    <span class="text-navy-900">The</span> 
+                    <span class="text-gold">Extraordinary</span>
+                </h1>
+            </div>
+
+            <div class="mb-8 text-center">
+                <img src="attached_assets/WhatsApp Image 2025-10-08 at 19.55.19_1759978719142.jpeg" alt="Customer Service Week" class="w-full max-w-3xl mx-auto rounded-lg shadow-md">
+            </div>
+
+            <div class="text-center mb-12 text-navy-900 text-lg leading-relaxed">
+                <p class="mb-4"><strong>Dare to dream</strong></p>
+                <p class="mb-4"><strong>Prepare to conquer</strong></p>
+                <p class="mb-4">This is your moment to rise, to break barriers, and to prove that<br>
+                impossible is just a mindset.</p>
+                <p class="mb-4">Join us at Prodigy on a journey where bold vision meets<br>
+                unstoppable action.</p>
+                <p class="mb-4">Because with the right mission,<br>
+                <strong>everything is possible.</strong></p>
+            </div>
+
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold mb-2">
+                    <span class="text-purple-700">HAPPY CUSTOMER</span>
+                </h2>
+                <h2 class="text-5xl font-bold">
+                    <span class="text-gold">SERVICE WEEK</span>
+                </h2>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <h3 class="text-lg font-bold text-navy-900 mb-2">Contact us</h3>
+                <p class="text-base text-gray-800 mb-1">17th Floor, Elephant House, 214 Broad street, Marina, Lagos.</p>
+                <p class="text-base text-gray-800 mb-1">@ www.prodigygroup.com.ng, info@prodigygroup.com.ng</p>
+                <p class="text-base text-gray-800">+234(091)6762-9178</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 mb-2">
+                    <a href="blog.html" class="hover:text-gold transition">← Back to Blog</a>
+                </p>
+                <p class="text-gray-400">&copy; 2025 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
