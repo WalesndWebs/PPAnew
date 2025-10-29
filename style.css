@@ -1,0 +1,867 @@
+/* Custom CSS Variables */
+:root {
+    --navy-900: #1e293b;
+    --gold: #fbbf24;
+}
+
+/* Custom classes for Tailwind */
+.bg-navy-900 {
+    background-color: var(--navy-900);
+}
+
+.text-navy-900 {
+    color: var(--navy-900);
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+.border-gold {
+    border-color: var(--gold);
+}
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)),
+        url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Financial Services Background */
+#services {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+/* Mission & Vision Background */
+#about.bg-navy-900 {
+    background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)),
+        url('attached_assets/lauretha_1758962136097.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Why Choose Us Background */
+.why-choose-us-bg {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+/* Advisory Process Background */
+.advisory-process-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+    background-size: cover;
+    background-position: center;
+}
+
+/* Client Success Stories Background */
+.success-stories-bg {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%),
+        url('https://unsplash.com/photos/a-couple-of-tall-buildings-sitting-next-to-each-other-01pXvR9unsU');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+/* Meet the Architects Background */
+.architects-bg {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Schedule Consultation Background */
+#contact.bg-navy-900 {
+    background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)),
+        url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Visual Slider Styles - FSDH Style with Images */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    background-attachment: fixed;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slide h1,
+.slide h2 {
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.slide p {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Enhanced fade animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Mobile responsiveness for visual slider */
+@media (max-width: 768px) {
+    .slide {
+        background-attachment: scroll;
+    }
+    
+    .slide h1,
+    .slide h2 {
+        font-size: 2rem !important;
+    }
+    
+    .slide p {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Navigation - Fixed positioning with high z-index */
+nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    z-index: 9999 !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(30, 41, 59, 0.1);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Dropdown Menu Styles */
+.group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Nested dropdown positioning */
+.group\/nested:hover .group-hover\/nested\:opacity-100 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown animations and styling */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(30, 41, 59, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown hover effects */
+.dropdown-menu a:hover {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: var(--gold);
+}
+
+/* Chevron rotation */
+.group:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Mobile dropdown styling */
+#mobile-menu [data-dropdown-menu] {
+    background-color: rgba(248, 250, 252, 0.95);
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+/* Rotate chevron for mobile dropdowns */
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* Mobile Menu Show State */
+#mobile-menu.show {
+    display: block !important;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Ensure body has top padding to account for fixed nav */
+body {
+    padding-top: 0;
+}
+
+/* FSDH-style enhancements */
+.group:hover .group-hover\:bg-gold {
+    background-color: var(--gold);
+}
+
+/* Card hover effects matching FSDH */
+.bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography matching FSDH style */
+h1, h2, h3 {
+    letter-spacing: -0.025em;
+}
+
+.text-4xl {
+    font-weight: 300;
+}
+
+.text-6xl {
+    font-weight: 200;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom transitions */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Card hover effects */
+.hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Backdrop blur for stats cards */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    display: none;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#mobile-menu.show {
+    display: block !important;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile menu buttons */
+#mobile-menu button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    color: var(--navy-900);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mobile-menu button:hover {
+    background-color: #f9fafb;
+    color: var(--gold);
+}
+
+/* Mobile dropdown menus */
+#mobile-menu [data-dropdown-menu] {
+    background-color: #f8fafc;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 8px 16px;
+    border-left: 3px solid var(--gold);
+}
+
+#mobile-menu [data-dropdown-menu] a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--navy-900);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+#mobile-menu [data-dropdown-menu] a:hover {
+    background-color: var(--gold);
+    color: white;
+}
+
+/* Chevron animation for mobile */
+#mobile-menu .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+#mobile-menu .rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* Nested mobile dropdown styles */
+#mobile-menu .border-l-2 {
+    border-left: 2px solid #d1d5db;
+    margin-left: 12px;
+    padding-left: 12px;
+}
+
+#mobile-menu .bg-gradient-to-br {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+/* Custom form styles */
+input,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+}
+
+/* Animation for process steps */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-bg {
+        background-attachment: scroll;
+    }
+
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+
+    .text-6xl {
+        font-size: 3rem;
+    }
+
+    /* Ensure desktop dropdowns are hidden on mobile */
+    .hidden\.md\:flex {
+        display: none !important;
+    }
+    
+    .md\:hidden {
+        display: block !important;
+    }
+    
+    /* Force mobile menu button visibility */
+    #mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    #mobile-menu-btn:hover {
+        background-color: rgba(251, 191, 36, 0.1);
+    }
+    
+    /* Ensure desktop navigation is hidden */
+    .hidden\.md\:block,
+    .hidden\.md\:flex {
+        display: none !important;
+    }
+    
+    /* Mobile menu positioning */
+    #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Tablet responsive adjustments */
+@media (max-width: 1024px) {
+    .md\:hidden {
+        display: block;
+    }
+    
+    .hidden\.md\:flex {
+        display: none;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    #mobile-menu button {
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    #mobile-menu [data-dropdown-menu] a {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Custom star rating styles */
+.text-gold i {
+    margin-right: 2px;
+}
+
+/* Profile Modal Styles */
+#profileModal {
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+}
+
+#profileModal .bg-white {
+    animation: slideUp 0.3s ease;
+    max-height: 90vh;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile template styles */
+.profile-template {
+    display: block;
+}
+
+/* Modal responsive adjustments */
+@media (max-width: 768px) {
+    #profileModal .bg-white {
+        margin: 1rem;
+        max-height: 85vh;
+    }
+
+    #profileModal .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Gradient overlay for better text readability */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Stats animation on scroll */
+.stats-counter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.stats-counter.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Professional Team Member Image Styling */
+.team-member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    border: 3px solid rgba(251, 191, 36, 0.3);
+}
+
+.team-member-image:hover {
+    transform: scale(1.05);
+    border-color: var(--gold);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+.board-member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+}
+
+.board-member-image:hover {
+    transform: scale(1.02);
+}
+
+/* Uniform gradient backgrounds for all team cards */
+.board-gradient-1 {
+    background: linear-gradient(135deg, #1e293b 0%, #3730a3 50%, #1e40af 100%);
+}
+
+.board-gradient-2 {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+}
+
+.board-gradient-3 {
+    background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+}
+
+.board-gradient-4 {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+}
+
+.board-gradient-5 {
+    background: linear-gradient(135deg, #64748b 0%, #6b7280 50%, #9ca3af 100%);
+}
+
+.board-gradient-6 {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+}
+
+.management-gradient-1 {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+}
+
+.management-gradient-2 {
+    background: linear-gradient(135deg, #64748b 0%, #6b7280 50%, #9ca3af 100%);
+}
+
+.management-gradient-3 {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+}
+
+.management-gradient-4 {
+    background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #f9a8d4 100%);
+}
+
+.management-gradient-5 {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+}
+
+/* Professional card styling */
+.professional-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.professional-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    height: 256px;
+}
+
+.status-indicator {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+/* Architect cards animations */
+.architect-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.architect-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+    animation: mountainRise 2s ease-in-out;
+}
+
+/* Mountain rise animation */
+@keyframes mountainRise {
+    0% {
+        transform: translateY(100px) scale(0.8);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-20px) scale(1.05);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(10px) scale(1.02);
+        opacity: 0.9;
+    }
+
+    75% {
+        transform: translateY(-5px) scale(1.01);
+        opacity: 0.95;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.architect-card:hover .architect-image-container {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+.architect-image-container {
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.architect-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(251, 191, 36, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.architect-card:hover .architect-image-container::before {
+    transform: translateX(100%);
+}
+
+/* Floating animation for status indicator */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.architect-card:hover .animate-pulse {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Card shadow animation */
+.architect-card .bg-white {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.architect-card:hover .bg-white {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Social icons hover effect */
+.architect-card .w-8 {
+    transition: all 0.3s ease;
+}
+
+.architect-card .w-8:hover {
+    transform: translateY(-2px);
+}
+
+/* Architect details animation */
+.architect-details {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height: 1000px;
+}
+
+.architect-details.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Read more button styles */
+.read-more-btn {
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(251, 191, 36, 0.3);
+}
+
+.consultation-box {
+    width: 300px;
+    height: 300px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.consultation-box p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.consultation-box p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Modal Styles */
+.max-h-90vh {
+    max-height: 90vh;
+}
+
+#profileModal .bg-white {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+@media (max-width: 768px) {
+    #profileModal .bg-white {
+        margin: 1rem;
+        max-width: calc(100vw - 2rem);
+    }
+}
+
+/* Profile Modal Animation */
+#profileModal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#profileModal .bg-white {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add any additional custom styles here */

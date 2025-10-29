@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Architects - Prodigy Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --navy-900: #1e3a8a;
+            --gold: #fbbf24;
+        }
+
+        .text-navy-900 {
+            color: var(--navy-900);
+        }
+
+        .bg-navy-900 {
+            background-color: var(--navy-900);
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .bg-gold {
+            background-color: var(--gold);
+        }
+
+        .border-gold {
+            border-color: var(--gold);
+        }
+
+        .hover\:text-gold:hover {
+            color: var(--gold);
+        }
+
+        .hover\:bg-gold:hover {
+            background-color: var(--gold);
+        }
+
+        .hover\:border-gold:hover {
+            border-color: var(--gold);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Logo"
+                            class="h-12 w-12">
+                        <span class="text-2xl font-bold text-navy-900 hover:text-gold transition">PRODIGY GROUP</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Who We Are Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Who We Are
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+
+                        <!-- First Level Dropdown -->
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="groups.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Our
+                                    Group</a>
+
+                                <!-- Our People with nested dropdown -->
+                                <div class="relative group/nested">
+                                    <button
+                                        class="w-full text-left px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition flex items-center justify-between">
+                                        Our People
+                                        <i class="fas fa-chevron-right text-xs"></i>
+                                    </button>
+
+                                    <!-- Second Level Dropdown with Gold Background -->
+                                    <div
+                                        class="absolute left-full top-0 mt-0 w-48 bg-gradient-to-br from-yellow-50 to-amber-50 border border-gold/20 rounded-md shadow-lg opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                        <div class="py-1">
+                                            <a href="meet-the-architects.html"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
+                                                the Architects</a>
+                                            <a href="meet-the-navigators.html"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Meet
+                                                the Navigators</a>
+                                            <a href="blog.html"
+                                                class="block px-4 py-2 text-sm text-navy-900 hover:bg-gold/10 hover:text-gold transition">Blog</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Subsidiaries Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Our Subsidiaries
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+
+                        <div
+                            class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="finance.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Finance</a>
+                                <a href="ppa.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Portfolio Advisers</a>
+                                <a href="brokercom.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition">Prodigy
+                                    Brokercom</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Careers Dropdown -->
+                    <div class="relative group">
+                        <button class="text-navy-900 hover:text-gold transition flex items-center">
+                            Careers
+                            <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+
+                        <div
+                            class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-1">
+                                <a href="join-our-team.html"
+                                    class="block px-4 py-2 text-sm text-navy-900 hover:bg-gray-50 hover:text-gold transition font-medium">Join
+                                    our team</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact-us.html" class="text-navy-900 hover:text-gold transition">Contact Us</a>
+                    <button class="text-navy-900 hover:text-gold transition">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-navy-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Meet the Management Team</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                "Every great expedition needs seasoned navigators" - The executive leadership driving Prodigy Group's strategic vision and operational excellence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               
+
+                <!-- Chidi Egbufor - CTO -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 flex items-center justify-center" style="background-image: url('attached_assets/bg_1758934862905.png'); background-size: cover; background-position: center;">
+                        <img src="attached_assets/Paschal.jpg" alt="Chidi Egubjor Paschal" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Chidi Egubjor Paschal</h3>
+                        <p class="text-gold font-semibold mb-4">Group Head Operations & IT</p>
+                        <p class="text-gray-600 text-sm mb-4">Leveraging IT Excellence for Financial Operational Efficiency and Security.</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto: paschal.egbujor@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">paschal.egbujor@prodigygroup.com.ng</a>
+                        </div>
+                        <button onclick="openModal('chidi')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Juliet Njoku - Group HR -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 flex items-center justify-center" style="background-image: url('attached_assets/bg_1758934862905.png'); background-size: cover; background-position: center;">
+                        <img src="attached_assets/Juliet.jpeg" alt="Njoku Nkemdilim Juliet" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Njoku Nkemdilim Juliet</h3>
+                        <p class="text-gold font-semibold mb-4">Group Head HR & Admin</p>
+                        <p class="text-gray-600 text-sm mb-4">Dedicated Human Resources expert with over 15 years of experience fostering dynamic workplaces.</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:juliet.njoku@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">juliet.njoku@prodigygroup.com.ng</a>
+                        </div>
+                        <button onclick="openModal('juliet')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Raphael Famuyiwa - Investment Portfolio Manager -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 flex items-center justify-center" style="background-image: url('attached_assets/bg_1758934862905.png'); background-size: cover; background-position: center;">
+                        <img src="attached_assets/Raphael Famuyiwa_1758934384604.jpeg" alt="Raphael Famuyiwa" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" style="object-position: center 20%;">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Raphael Famuyiwa</h3>
+                        <p class="text-gold font-semibold mb-4">Investment Portfolio Manager</p>
+                        <p class="text-gray-600 text-sm mb-4">Dynamic finance leader with over eight years of experience in portfolio management and derivatives trading.</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:raphael.famuyiwa@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">raphael.famuyiwa@prodigygroup.com.ng</a>
+                        </div>
+                        <button onclick="openModal('raphael')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Yomi - CFO -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 flex items-center justify-center" style="background-image: url('attached_assets/bg_1758934862905.png'); background-size: cover; background-position: center;">
+                        <img src="attached_assets/CFO_1758934530498.jpeg" alt="Abayomi Adegboyega" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" style="object-position: center 20%;">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Abayomi Adegboyega</h3>
+                        <p class="text-gold font-semibold mb-4">Group Head Finance & Strategy</p>
+                        <p class="text-gray-600 text-sm mb-4">Over a decade of impeccable experience in finance, accounting, tax management and audit.</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:abayomi.adegboyega@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">abayomi.adegboyega@prodigygroup.com.ng</a>
+                        </div>
+                        <button onclick="openModal('yomi')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Isabella Ozobu - Business Development -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 flex items-center justify-center" style="background-image: url('attached_assets/bg_1758934862905.png'); background-size: cover; background-position: center;">
+                        <img src="attached_assets/isabella_new.jpeg" alt="Isabella Chizoba Ozobu" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Isabella Chizoba Ozobu</h3>
+                        <p class="text-gold font-semibold mb-4">Business Development </p>
+                        <p class="text-gray-600 text-sm mb-4">Highly adaptable professional with diverse experience in business developments.</p>
+                        <div class="mb-4 flex items-center">
+                            <i class="fas fa-envelope text-gold mr-2"></i>
+                            <a href="mailto:isabella.ozobu@prodigygroup.com.ng" class="text-blue-600 hover:text-gold text-sm">isabella.ozobu@prodigygroup.com.ng</a>
+                        </div>
+                        <button onclick="openModal('isabella')" class="bg-gold text-navy-900 px-4 py-2 rounded font-semibold hover:bg-yellow-400 transition">
+                            View Bio
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Modals -->
+    <!-- Lauretha Modal -->
+    <div id="lauretha-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lauretha')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <img src="attached_assets/logo-removebg-preview_1758934664288.png" alt="Chigozirim Irunokhai" class="w-20 h-20 rounded-full object-contain">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Chigozirim Irunokhai</h2>
+                    <p class="text-gold font-semibold">Group Managing Director</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    <strong>An Impact-Driven Investment Professional: Leading Sustainable Growth and Portfolio Management</strong>
+                </p>
+                <p class="mb-4">
+                    A dynamic investment professional with extensive experience in managing portfolios, developing financial strategies, and executing impactful investment projects, with a strong focus on ESG integration and sustainable sectors. Holds an MBA in Financial Management from Lagos State University and a B.Sc. in Microbiology from the University of Ibadan. She is also a Sponsored Individual (Fund Manager) certified by the Securities & Exchange Commission, and a member of the Chartered Institute of Stockbrokers and The Association of Investment Advisers and Portfolio Managers.
+                </p>
+                <p class="mb-4">
+                    As the founding Managing Director/CEO of Sky Capital Asset Management Ltd, has been instrumental in leading strategic direction, overseeing investments, and establishing trusted relationships with shareholders and regulatory bodies. Prior to this, as Head of Portfolio Management, has managed multi-asset portfolios, directed policy formulation, and executed investment strategies to align with client objectives.
+                </p>
+                <p>
+                    Career highlights include successfully growing global investment portfolios from N35 billion to over N60 billion at Veritas Pensions Ltd, achieving 100% targeted returns on fixed-income portfolios, and designing innovative financial products like Dollar Mutual Funds and Treasury Bill Notes. With expertise in financial modeling, due diligence, valuation, and a deep understanding of the African investment landscape, She is adept at driving value creation and fostering sustainable development through strategic investment and active ownership.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chidi Modal -->
+    <div id="chidi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('chidi')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <img src="attached_assets/Paschal.jpg" alt="Chidi Egubjor Paschal" class="w-20 h-20 rounded-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Chidi Egubjor Paschal</h2>
+                    <p class="text-gold font-semibold">Group Head Operations & IT</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    <strong>Leveraging IT Excellence for Financial Operational Efficiency and Security</strong>
+                </p>
+                <p class="mb-4">
+                    Chidi Egubjor Paschal brings over 19 years of extensive post-graduate experience in Computer Engineering and Information Technology, with a strong foundation in Mathematics from Obafemi Awolowo University, Ile-Ife, Osun State. His expertise spans critical areas such as Computer Hardware/Software Installation, Management, Network Administration (Windows 2008/2012 platforms), Systems Security, Integration, Configuration, and Disaster Planning.
+                </p>
+                <p class="mb-4">
+                    As a Chief Operating Officer and former Group Head of ICT at leading pension management firms in Nigeria, Chidi has a proven track record of overseeing day-to-day business operations, preparing strategic ICT plans, implementing IT policies and security strategies, managing IT infrastructure, and ensuring regulatory compliance. His background includes significant roles in managing critical financial software like Fundfusion Manager and overseeing data integrity and backup procedures.
+                </p>
+                <p>
+                    A Senior Member of the Chartered Portfolio Management Institute and an Associate Chartered Economist, Chidi combines technical prowess with a deep understanding of financial sector operations. He is adept at leading teams, managing complex projects, and ensuring continuous improvement in ICT services, making him a valuable asset for driving technological advancement and operational resilience within financial institutions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Juliet Modal -->
+    <div id="juliet-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('juliet')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <img src="attached_assets/Juliet.jpeg" alt="Njoku Nkemdilim Juliet" class="w-20 h-20 rounded-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Njoku Nkemdilim Juliet</h2>
+                    <p class="text-gold font-semibold">Associate HR Consultant</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    <strong>Dedicated Human Resources Expert</strong>
+                </p>
+                <p class="mb-4">
+                    Njoku Nkemdilim Juliet is a dedicated Human Resources expert with over 15 years of experience, renowned for her strategic approach to fostering dynamic and inclusive workplaces. Holding a Professional Diploma in Human Resource Management and Associate Membership (ACIPM) from the Chartered Institute of Personnel Management of Nigeria, complemented by an MBA in Marketing from Ladoke Akintola University of Technology, Juliet excels in talent management, employee engagement, and organizational efficiency.
+                </p>
+                <p class="mb-4">
+                    Her CIPM credentials underpin her ability to drive impactful HR initiatives, such as designing cost-free training programs that enhanced staff performance and restructuring salary frameworks to boost productivity. With a strong foundation in recruitment, performance management, payroll administration, and policy compliance, Juliet has delivered measurable results across pensions, banking, and consulting sectors.
+                </p>
+                <p class="mb-4">
+                    A collaborative leader with a data-driven mindset, Juliet leverages her HR expertise to create thriving work environments. Her commitment to excellence and adaptability makes her an invaluable asset to our team.
+                </p>
+                <div class="mb-4">
+                    <p class="text-sm">
+                        <strong>Contact:</strong> <a href="mailto:juliet.njoku@prodigygroup.com.ng" class="text-blue-600 hover:text-gold">juliet.njoku@prodigygroup.com.ng</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Raphael Modal -->
+    <div id="raphael-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('raphael')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <img src="attached_assets/Raphael Famuyiwa_1758934384604.jpeg" alt="Raphael Famuyiwa" class="w-20 h-20 rounded-full object-cover" style="object-position: center 20%;">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Raphael Famuyiwa</h2>
+                    <p class="text-gold font-semibold">Group Head, Investment Portfolio Manager</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    <strong>Leadership Overview</strong>
+                </p>
+                <p class="mb-4">
+                    Raphael Famuyiwa is a dynamic finance leader with over eight years of experience in portfolio management, derivatives trading, and quantitative research. As the founder and Portfolio Manager of Ocean-Ways Partners (2023–August 2025), he built a successful investment firm, leading a team to outperform benchmark indices across major markets in 2023 and achieve a 20% ROI through strategic restructuring. Since August 2025, he has served as Group Head of Finance at Prodigy Investment, where he oversees financial strategy, drives advanced analytics initiatives, and enhances group-wide portfolio performance.
+                </p>
+                <p class="mb-4">
+                    <strong>Innovation and Expertise:</strong> A pioneer in financial technology, Raphael independently designed and developed "Mcmarket," a cutting-edge, pre-launch software for options and derivatives trading, completed in August 2025. This functional platform integrates Monte Carlo, Black-Scholes, and Binomial models with real-time API data, streamlining strategy execution and improving efficiency by an estimated 20%.
+                </p>
+                <p class="mb-4">
+                    <strong>Education:</strong> Raphael holds an ACCA/MBA qualification earned through the integrated program at the London School of Business and Finance (LSBF, 2013–2016), complemented by a Bachelor's Degree in Marketing from Madonna University, Okija, Nigeria (2008–2011). He is currently pursuing CFA Level 1 (planned for 2026).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yomi Modal -->
+    <div id="yomi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('yomi')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <img src="attached_assets/CFO_1758934530498.jpeg" alt="Abayomi Adegboyega" class="w-20 h-20 rounded-full object-cover" style="object-position: center 20%;">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Abayomi Adegboyega</h2>
+                    <p class="text-gold font-semibold">Chief Financial Officer</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    <strong>Financial Leadership Excellence</strong>
+                </p>
+                <p class="mb-4">
+                    Abayomi Adegboyega has over a decade impeccable experience in finance, accounting, tax management and audit from engineering, health sector and financial services company. He is a member of prestigious Institute of Chartered Accountants of Nigeria.
+                </p>
+                <p class="mb-4">
+                    He holds Bachelor of Science and Master of Science in Economics of Ekiti State University and University of Lagos respectively.
+                </p>
+                <p>
+                    He relates well with professional courtesy and brings deep financial expertise to drive organizational growth and regulatory compliance.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Isabella Modal -->
+    <div id="isabella-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('isabella')">&times;</span>
+            <div class="flex items-center mb-6">
+                <div class="w-24 h-24 bg-gradient-to-br from-navy-900 to-blue-800 rounded-full flex items-center justify-center mr-6">
+                    <img src="attached_assets/isabella_new.jpeg" alt="Isabella Chizoba Ozobu" class="w-20 h-20 rounded-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-navy-900">Isabella Chizoba Ozobu</h2>
+                    <p class="text-gold font-semibold">Business Development</p>
+                </div>
+            </div>
+            <div class="text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    <strong>Dynamic Business Development</strong>
+                </p>
+                <p class="mb-4">
+                    Isabella Chizoba Ozobu is a highly adaptable professional with diverse experience in business development and operations, holding a BA in History & International Studies from Lagos State University demonstrating a strong ability to drive growth and enhance customer relationships. In her current role as a Business Developer, she excels at cultivating and maintaining client relationships, identifying new business opportunities, negotiating terms, and ensuring high levels of customer satisfaction.
+                </p>
+                <p class="mb-4">
+                    Her background also includes significant experience as an Operations Supervisor, where she managed teams, oversaw inventory, implemented quality control standards, and coordinated distribution logistics. Isabella possesses strong core competencies in organizational planning, customer relationship management, problem-solving, and decision-making.
+                </p>
+                <p>
+                    While her primary experience is not directly in financial services, her proven ability to drive business growth, manage complex operations, build strong client relationships, and maintain confidentiality makes her a versatile asset for roles focused on business expansion, client engagement, or operational efficiency within a financial company.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="attached_assets/blendBoard (5) (1)_prev_ui_1757115004311.png" alt="Prodigy Group"
+                            class="h-8 w-auto mr-3">
+                        <div class="text-gold text-2xl font-bold">Prodigy Group</div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Where Sophisticated Strategy<br>Meets the serenity you deserve.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-gold">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
+                        <li><a href="#subsidiaries" class="text-gray-300 hover:text-gold transition">Subsidiaries</a></li>
+                        <li><a href="groups.html" class="text-gray-300 hover:text-gold transition">About Us</a></li>
+                        <li><a href="join-our-team.html" class="text-gray-300 hover:text-gold transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-gold">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>+234 (0)9167629178
+                            <a href="https://wa.me/2349167629178" target="_blank" class="ml-3 text-green-400 hover:text-green-300 transition-colors" title="Chat on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@prodigygroup.com.ng</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Elephant House, Lagos, Nigeria</li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/prodigy-group-16496b386" target="_blank" class="hover:text-gold transition-colors">
+                                <i class="fab fa-linkedin mr-2"></i>Follow us on LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/prodigygroup_ng" target="_blank" class="hover:text-gold transition-colors">
+                                <i class="fab fa-instagram mr-2"></i>Follow us on Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Prodigy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(person) {
+            document.getElementById(person + '-modal').classList.add('show');
+        }
+
+        function closeModal(person) {
+            document.getElementById(person + '-modal').classList.remove('show');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        }
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Add mobile menu functionality here if needed
+        });
+    </script>
+</body>
+
+</html>
